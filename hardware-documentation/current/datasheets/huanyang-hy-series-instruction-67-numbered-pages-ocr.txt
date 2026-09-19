@@ -1,0 +1,3673 @@
+(' 2006068887
+
+o —
+Y,
+
+Huanyang Inverter
+
+-
+Add : rm19,Block D,10/F,Wongking Ind Bldg,2 Tai
+Yau St,San Po Kong,Kowloon,Hongkong
+
+Huanyang Inverter
+
+Instruction
+
+HONG KONG Y&F GROUP LIMITED
+
+[OCR skipped on page(s) 2]01
+
+! ’ As THE USE OF MANUAL
+
+| . Introduction
+
+Thank you for purchasing and using the general-purpose inverter of HY series of multi-functions
+and high performance.
+
+Please read carefully the operation manual before putting the inverter to use so as to correctly
+install and operate the inverter, give full play to its functions and ensure the safety. Please keep the
+operation manual handy for future reference, maintenance, inspection and repair.
+
+Due to the inverter of a kind of electrical and electronic product it must be installed , tested and
+adjusted with parameters by specialized engineering persons of motors.
+
+The marks of and other symbols in the manual remind you of the safety and
+prevention cautions during the handling, installation, running and inspection. Please follow these
+instructions to make sure the safe use of the inverter. In case of any doubt please contact our local
+agent for consultation. Our professional persons are willing and ready to serve you.
+
+The manual is subject to change without notice.
+
+N Danger indicates wrong use may kill or injure people.
+A Caution indicates wrong use may damage the inverter or mechanical system.
+
+® Be sure to turn off the input power supply before wiring.
+
+® Do not touch any internal electrical circuit or component when the charging lamp is still on after the
+AC power supply is disconnected, which means the inverter still has high voltage inside and it is very
+dangerous.
+
+® Do not check components and signals on the circuit boards during the operation.
+
+® Do not dissemble or modify any internal connecting cord, wiring or component of the inverter by
+yourself.
+
+® Be sure to make correct ground connection of the earth terminal of the inverter.
+
+® Never remodel it or exchange control boards and components by yourself. It may expose you to an
+electrical shock or explosion, etc.
+
+® Do not make any voltage-withstanding test with any component inside the inverter. These semi-
+conductor parts are subject to the damage of high voltage.
+
+® Never connect the AC main circuit power supply to the output terminals U.-VW of the inverter.
+
+® The main electric circuit boards of CMOS and IC of the inverter are subject to the effect and damage
+of static electricity. Don't touch the main circuit boards.
+
+® Installation, testing and maintenance must be performed by qualified professional personnel.
+
+® The inverter should be discarded as industrial waste. It is forbidden to burn it.
+
+B
+
+1. Checks upon Delivery
+
+The inverter has been strictly and well packed before ex-work. In consideration of various factors
+during the transportation special attention should be paid to the following points before the
+assembly and installation. If there is anything abnormal please notify the dealer or the relevant
+people of our company.
+
+® Check ifthe inverter has got any damage or deformation during the transportation and handling.
+® Checkifthere is one piece of HY series inverter and one copy of the instruction manual
+
+available when unpacking it.
+
+Check the information on the nameplate to see if the specifications meet your order ( Operating
+voltage and K VA value).
+
+Check if there is something wrong with the inner parts, wiring and circuit board.
+
+Check if each terminal is tightly locked and if there is any foreign article inside the inverter.
+Check if the operator buttons are all right.
+
+Check if the optional components you ordered are contained.
+
+2. Nameplate Description of HY Series Inverter
+
+Model: HY A 07D5 43 B
+
+Software Version
+
+Voltage Rating, 43 means 3-phase 380V
+
+Inverter Capacity, 07D5 means 7.5KW
+Serial No.,
+Trade Mark
+
+02
+
+\
+
+03
+
+Il . Safety Precautions
+
+1. Before the Power-up
+
+/4" — THE USE OF MANUAL
+
+Check to be sure that the voltage of the main circuit AC power supply matches the input voltage of
+the inverter.
+
+The symbol, [E], represents ground terminals. Be sure to make correct ground connection of the
+earth terminals of the motor and the inverter for safety.
+
+No contactor should be installed between the power supply and the inverter to be used for starting
+or stopping of the inverter. Otherwise it will affect the service life of the inverter.
+
+R.S.T terminals are power input terminals, never mixed with U.V.W terminals. Be sure that the wiring
+of the main circuit is correct. Otherwise it will cause damages of the inverter when the power is applied
+To it.
+
+Do not carry the front cover of the inverter directly when handling. It should be handled with the
+base to prevent the fall-off of the front cover and avoid the dropping of the inverter, which may
+possibly cause the injuries to people and the damages to the inverter.
+
+Mount the inverter on a metal or other noncombustible material to avoid the risk of fire.
+
+Install the inverter in a safe location, avoiding high temperature, direct sunlight, humid air or
+water.
+
+Keep the inverter from the reach of children or persons not concerned.
+
+The inverter can only be used at the places accredited by our company. Any unauthorized
+working environment may have the risks of fire, gas explosion, electric shock and other incidents.
+Install a heat sink or other cooling device when installing more than one inverter in the same
+enclosure so that the temperature inside the enclosure be kept below 40°C to avoid overheat or the
+risk of fire.
+
+Be sure to turn off the power supply before dissembling or assembling the operation keypanel and
+fixing the front cover to avoid bad contact causing faults or non-display of the operator.
+
+® Do not install the inverter in a space with explosive gas to avoid the risk of explosion.
+
+® [fthe inverter is used at or above 1000m above seal level, the cooling efficiency will be worse, so
+please run it by de-rating.
+
+® Do not install any contactor and other components of capacitor or varistor on the output side of
+the inverter. Otherwise it will cause malfunctions and damages of components of the inverter.Do
+not install any switch component like air circuit breaker or contactor at the output of the inverter.
+If any of such components must be installed because of the requirements of process and others, it
+must be ensured that the inverter has no output when the switch acts. In addition, it is forbidden to
+
+install any capacitor for improvement of power factor or any varistor against thunder at the output.
+
+Otherwise it will cause malfunctions, tripping protection and damages of components of the
+inverter. Please remove them as shown in the below diagram.
+
+® ]t will affect the service life of the inverter if a contact is connected to the front end of input of the
+inverter to control its starts and stops. Generally it is required to control it through FOR or REV
+terminals. Special attention should be paid to its use in the case of frequent starts and stops.
+
+® Please use an independent power supply for the inverter. Do avoid using the common power
+supply with an electrical welder and other equipment with strong disturbance. Otherwise it will
+cause the protection or even damage of the inverter.
+
+U
+
+Inverter v
+
+® Do not plug the connectors of the inverter during the power up to avoid any surge into the main
+control board due to plugging, which might cause the damage of the inverter.
+® Always have the protective cover in place before the power up to avoid electrical shock injury.
+
+2.During the Power-up
+
+3. During the Operation
+
+® Never connect or disconnect the motor set while the inverter is in running. Otherwise it will
+cause over-current trip and even burn up the main circuit of the inverter.
+
+® Never remove the front cover of the inverter while the inverter is powered up to avoid any injury
+of electric shock.
+
+® Do not come close to the machine when the fault restart function is used to avoid anything
+unexpected. The motor may automatically restart after its stop.
+
+® The function of STOP Switch is only valid after setting, which is different with the use of
+emergent stop switch. Please pay attention to it when using it.
+
+04
+
+74"\ — THE USE OF MANUAL
+
+e B
+
+05
+
+Do not touch the heat sink, braking resistor, or other heat elements to avoid being scald.
+
+Be sure that the motor and machine is within the applicable speed ranges before starting
+operation because the inverter is quite easy to run from lower speed to higher speed.
+
+Do not check the signals on circuit boards while the inverter is running to avoid danger.
+
+Be careful when changing the inverter settings. The inverter has been adjusted and set before ex-
+work. Do not adjust it wantonly. Please make proper adjustments according to the required
+functions.
+
+® Do consider the vibration, noise and the speed limit of the motor bearings and the mechanical
+devices when the inverter is running at or above the frequency of 50Hz.
+
+Il . Standards and Specifications
+1. Particular Specifications
+
+Type Input Voltage m)'v")e" c'%‘é%ré?; 8&:%% sn‘(h:(ct,a%:e
+HY00D423B | SndefifeePhase | g4 1.0 25 04
+HYOD7523B | SndleiraePhase | 75 2.0 5.0 0.75
+HY01D523B Single Ve 1ese |15 28 7.0 1.5
+HY02D223B Single & Inee Phase | 92 4.0 10 22
+HYOD75438 30 380V 50Hz | 0.75 2.2 27 | 075
+HY01D543B 30 380V 50Hz 15 3.2 4.0 15
+HY02D243B 30 380V 50Hz 22 4.0 5.0 2.2
+HY03D743B 30380V G0Hz | 3.7 6.8 8.5 37
+HY05D543B 30 380V 50Hz 5.5 10 125 | 55
+HY07D543B 30 380V 50Hz 7.5 14 175 | 75
+HY001143B 30 380V 50Hz 1 19 24 11
+HY001543B 30 380V 50Hz 15 26 33 15
+HY18D543B 30380V 50Hz | 185 32 40 185
+HY22D243B 30 380V 50Hz 22 37 47 22
+HY30D043B 30 380V 50Hz 30 52 65 30
+HY37D043B 30 380V 50Hz 37 64 80 37
+HY45D043B 30 380V 50Hz 45 72 91 45
+HY55D043B 30 380V 50Hz 55 84 110 55
+HY75D0438B 30 380V 50Hz 75 116 152 75
+
+HY90D043B 30380V 50Hz 90 134 | 176 90
+HY110D43B 30380V 50Hz | 110 160 | 210 110
+HY132D43B 30380V 50Hz | 132 193 | 253 132
+HY160D43B 30380V 50Hz | 160 230 | 304 160
+HY200D43B 30380V 50Hz | 200 200 | 380 200
+HY220D43B 30380V 50Hz | 220 325 | 426 220
+HY250D43B 30380V 50Hz | 250 381 | 500 250
+HY280D43B 30380V 50Hz | 280 427 | 560 280
+HY315D43B 30380V 50Hz | 315 | 460 | 605 315
+Mini Specifications
+
+Type Input Voltage | {ONE" g%éfa’%; &:%:\tt STEE‘;:;P
+HY-MOD4A S 30t 0.4 1.0 2.5 0.4
+HY-MOD75A S a0k 075 | 20 | 50 | 075
+HY—M1D5A S o 15 28 | 70 | 15
+HY-MO0D4B Three, Ehase 0.4 1.0 15 0.4
+HY—-MOD758 oY S0 075 | 22 27 | 075
+HY-M1D58B oY 5o 15 32 | 40 15
+
+2. General Specifications
+
+Inverter Series | HY-[[]
+Control Mode SPWM
+Input Power 330~440Vfor 380V power; 170~250for 220V power: 50Hz/60Hz
+
+5-Digits Display &
+Status Indicator Lamp
+
+Displaying frequency, current, revolution, voltage, counter,
+temperature, forward or reserve running, and fault, etc.
+
+Communication Control | RS-485
+Operation Temperature | —10~40T
+Humidity 0-95% Relative Humidity ( without dew )
+Vibration Below 0.5G
+- Range 0.10~400.00Hz
+8| Accuracy | Digital: 0.01% (~10~40C ) , Analog: 0.1% (25%10C)
+5 Setting Resolution | Digital: 0.01Hz, Analog: 1%. of Max. Operating Frequency
+E Output Resolution| 0.01Hz
+g Operator SettingMethod | Press directly —[A][V] to set
+% Analog SettingMethod| External Voltage 0-5V, 0-10V, 4-20mA, 0-20mA.
+
+06
+
+74"™"— THE USE OF MANUAL
+
+_ e —
+
+Ramp Control Selectable 4-speed steps ramp-up and —down time (0.1-6500s).
+V/F Curve Set V/F curve at wil
+Torque Control | Torqueincrease is settable by max. 10.0%. The starting torque can reach 150% at 1.0Hz.
+Q 6 multi-function input terminals for 8—speed steps control, program operation,
+3 | Multi-Inputs switching of 4-speed Ramp, UP, DOWN function, counter, extenal emergency
+2 stop and other functions.
+S
+3 - 5 multi-function output terminals for displaying of running, zero speed, counter,
+g Multi-Outputs extermnal abnormity, program operation and other information and wamings.
+AVR (auto voltage regulation), Deceleration stop or free—stop, DC brake, auto reset
+Other Functions | and restart, frequency track, PLC control, traverse function, drawing control, auto
+energy-savings, carrier adjustable by max. 20KHz, etc.
+Overload Electronic relay protection motor Drive ( for constant torque 150%/1 min.
+Protection For the kinds of fan 120%/1min. )
+- FUSE Protection | FUSE broken, Motor stops.
+.
+% Over-voltage | DC Voltage > 400V for220V class  DC Voltage > 800V for 380V class
+%‘ Low Voltage | DC Voltage <200V for220V class  DC Voltage <400V for 380V class
+3
+;:," L“'ﬁa;:sf;f_’tp Restarted by frequency track after instantaneous stop.
+%. Stall Prevention | Anti—stall during Acc/Dec run
+3
+@ | Output End Shorts | Electronic circuit protecting
+Other Functi Fin over—heat protection, restriction of reverse running, direct start after
+ther Functions power on, fault reset, parameter lock PID, one—drive-more, etc.
+
+|V. Storage and Installation
+1. Storage
+
+The inverter must be kept in its original package box before installation. Pay attention to the
+followings when keeping it in storage if the inverter is not used for the time being;:
+
+It must be stored in a dry place without rubbish or dust.
+
+The suitable temperature for storage is between -20°C and +65°C.
+The relative humidity required is 0-95% without condensation.
+There is no corrosive gas or liquid in the storage ambience.
+
+It's better to lay the inverter on a rack and keep it in a proper package.
+
+07
+® [tisbetter not to store the inverter for long time. Long time storage of the inverter will lead to the
+
+2.
+
+deterioration of electrolytic capacity. If it needs to be stored for a long time make sure to power it
+up one time within a year and the power-up time should be at least above five hours. When
+powered up the voltage must be increased slowly with a voltage regulator to the rated voltage
+value.
+
+Installation Site and Environment
+
+The inverter should be installed at the following location:
+
+Ambient temperature -5°C to 40°C with good ventilation.
+
+No water drop and low moisture.
+
+Free from direct sunshine, high temperature and heavy dust fall.
+Free from corrosive gas or liquid.
+
+Less dust, oil gas and metallic particles
+
+Free from vibration and easy for service and inspection.
+
+Free from the interference of electromagnetic noise.
+
+Attention: The ambient conditions of the inverter will affect its service life.
+
+. Installation and Direction
+
+There must be enough space left around the inverter for easy maintenance and cooling. See
+Diagram .
+
+The inverter must be installed vertically with the smooth ventilation for effective cooling.
+
+If there is any instability when installing the inverter, please put a flat board under the inverter
+bottom base and install it again. If the inverter is installed on a loose surface, stress may cause
+damage of parts in the main circuit so as to damage the inverter.
+
+The inverter should be installed on non-combustible materials, such as iron plate.
+
+If several inverters are installed, upper and lower, together in one cabinet, please add heat
+dissipation plates and leave enough space between the inverters. See Diagram.
+
+_ 120
+N
+—>
+//7
+
+o
+
+« 50 __, [ 50
+
+Fy
+
+v
+8sg
+=
+
+\
+
+&
+
+—
+
+UNIT:mm =
+—» —
+
+120
+!
+B8
+o
+
+—_—
+
+09
+
+/4" — THE USE OF MANUAL
+
+V. Wiring
+
+1. Main Circuit Wiring Schematic Diagram
+
+Power supply: Verify that the inverter's rated voltage coincides with the power supply
+voltage to avoid a damage of the inverter.
+
+No fuse breaker:Refer to the related list.
+Ground fault circuit interrupter: Use one of anti-high harmonic.
+
+Electromagnetic contactor:
+Note: Do not use the electromagnetic contactor as the on/off button of power supply for
+the inverter.
+
+AC reactor:Itis recommended to install an AC reactor for power factor improvement if
+the input capacity is more than 1000K'VA.
+
+Inverter:
+
+® Be sure to make correct connections of the main circuit wires and control signal
+wires of the inverter.
+
+® Be sure to make correct setting of parameters for the inverter.
+
+2. Description of Terminal Block
+
+1) Arrangement of Main circuit Terminals
+
+HYOD4043B~HY02D243B  HY0D4023B~HY03D4023B
+
+R S T P Pr U Vv W E
+
+DD DD DD D DD
+
+L |
+
+HY04D043B~HY05D043B HY04D023B
+
+E R S T P Pr U V W
+
+DD DD DD D DD
+
+HY11D043B~HY30D043B
+R S T E U Vv W
+
+DD D o | DPID D
+
+Mini Specifications: HY-MJA  HY-MOB
+
+The power source is put into through the R.S.T terminals and put out of the U.V.W terminals.The 220v
+can connect willfully two phase of R.S.T.
+
+(2) Arrangement of Control Circuit Terminals
+
+|@F| DRVIDCM| sPL|sPM SPHRST] REV] FOR|ACM| V0 | 10v) 5
+| Fa | FC | FB \+24v|DCM| — |45V P\CMI ALl Vi |RS+|RS-J T2 3
+
+Notes:Please short circuit the 2-3 foot of J1 terminal when using the board potentiometer .
+Like chart:
+12 3
+Please short circuit the 2-3 foot of J1terminal when using the external connection potentiometer
+or the external power supply.
+Like chart:
+12 3
+
+Mini inverter terminals
+
+| MB I MA | MA | |DRV|COM| SPLISPMlSPHl RST| REV| FORl RS+| RS-I Al |GND| VO |+5V|
+
+Note: Al is the exterior analogue voltage or current input end, joint the parameter menu of Pd070.
+
+3) Function Description of Main circuit Terminals
+
+Symbol Function Description
+RST Iljput terminal of AC line power. ( 220V class, for both single/three phase,
+single phase connected to any two phases )
+u.v.w Output terminal of the inverter
+P.Pr Connector for braking resistor.
+
+P1P Connector for DC reactor (When using a DC reactor the jumper shall be
+removed.
+
+E Ground terminal: the third method of grounding for 220V and special
+grounding for 380 V of Electrical Engineering Regulations.
+
+10
+
+.
+
+THE USE OF MANUAL
+
+o ———
+
+4) Function Description of Control Circuit Terminals
+
+Symbol Function Description Factory setting
+FOR Multi-Input 1 Forward run
+REV Multi-Input 2 Reverse run
+RST Multi-Input 3 Reset
+SPH Multi-Input 4 High speed
+SPM Multi-Input 5 Middle Speed
+SPL Multi-Input 6 Low Speed
+DCM Common Terminal of Digital and
+(COM) Control Signals
++10 Power Supply for Speed Setting +10V
+Vi Analog Voltage Frequency Reference Input gpggaﬁl\{]g?:é%i%%”d'"g to the highest
+Al Analog Current Frequency Reference Input g‘;g?a"tmgcgggﬁggggmg to the highest
+ACM Common Terminal of Analog and
+(GND) Control Signals
+DRV Multi-Output 1 (Optical couple output)
+DC24V/100mA
+UPF Multi-Output 2 (Optical couple output)
+FA(MB)
+FB(MA) Multi—-Output 3 (N/O or N/C) 3A/250V
+FC(MA)
+VO Output terminals of digital frequency 0~10V
+RS+ RS- RS485 Communication port
+
+11
+
+3. Basic Connection Diagram
+
+The wiring of the inverter is divided into two parts, main circuit terminal connections and control
+circuit terminal connections. The user can see the main circuit terminals, and the control circuit
+terminals after removing the cover of enclosure. The terminals must be connected correctly as the
+following wiring circuit diagrams.
+
+Braking Resistor
+
+R.S.T Input current . T
+If the single—phase
+source meets two
+willfully J bR P N
+N\ i uo N U.V.W Qutput current.
+—O0 _O0—9 s VvV p———— Connect the three-phase
+5 o T wo——" electric appliance
+—E
+24 vRitovisv +5V
+10K Q I S VI
+Potentiometer Control ACM(GND) +24V
+
+FC(MA) Multi-Output
+FA(MB) 3A/250VAC
+FB(MA) 3A/30VDC
+
+Input current
+
+DRV  Multi-Output
+UPF 24V/100mA
+
+ndui-nniy
+
+Output terminals of digital
+frequency
+
+L iQ sPL Vo
+TP DOMCOM) rée«(] | 485 0~10V/10mA
+Note: The above wiring diagram explained that only supplies the reference, take the actual product as the
+standard. The diagram is subject to change without notice.
+
+4. Precautions on Wiring
+
+1)For the main circuit wiring:
+
+® While wiring the sizes and specifications of wires should be selected and the wiring should be
+executed according to the electrical engineering regulations to ensure the safety.
+
+® [t is better to use shielded wire or wire and conduit for power cord and ground the shielded layer
+or two ends of wire conduit.
+
+® Be sure to install a Non Fuse Breaker (NFB) between the power supply and the input terminals
+
+(R.S.T). (If using ground fault circuit interrupter, please choose one corresponding to high
+
+frequency)
+
+Never connect AC power to the output terminal (U.V.W) of the inverter.
+
+Output wires mustn't be in touch of the metal part of the inverter enclosure, or it will result in
+
+earth short-circuit.
+
+® Phase-shifting capacitors, LC, RC noise filters, etc, can never be connected to the output
+terminals of the inverter.
+
+® The main circuit wire must be enough far away from other control equipments.
+When the wiring between the inverter and the motor exceeds 15 meters for 220V class or 30
+meters for 380V class, much higher dV/dT will be produced inside the coil of the motor, which
+will cause the destruction to the interlay or insulation of the motor. Please use a dedicated AC
+motor for the inverter or add a reactor at the inverter.
+
+12
+
+/4" — THE USE OF MANUAL
+\
+
+® Please lower the carrier frequency when there is a longer distance between the inverter and the
+motor. Because the higher the carrier frequency is the bigger the leakage current of high-order
+harmonics in the cables will be. The leakage current will have unfavorable effect on the inverter
+and other equipment.
+
+2) For control circuit wiring (signal line)
+
+® The signal line should be separately laid in a different conduit with the main circuit wire to avoid
+any possible interference. ‘
+
+® Please use the shielded cable with the size of 0.52mm for signal lines.
+
+® Use the control terminals on the control panel correctly according to your needs.
+
+3) Grounding
+
+® Grounding terminal E. Be sure to make correct grounding
+220V class: The third grounding method (Grounding resistance should be 100Q or lower.)
+380V class: The special third grounding method (Grounding resistance should be 10Q or lower.)
+
+® Choose grounding wires according to the basic length and size of the technical requirements of the
+electric equipment.
+
+® Do avoid sharing grounding wire with other large power equipment such as electric welder, power
+machine, etc. The grounding wire should be kept away from the power supply wires forlarge
+equipment.
+
+® The grounding method for several inverters together should be done as the first and second diagrams
+below. Avoid the third loop.
+
+® The grounding wire must be as shorter as possible.
+
+e
+S
+
+(1) Good (2) Good (3) Not good
+
+13
+
+VI. Instruction of the Digital Operator
+1. Description of the Digital Operator
+
+LED Display Zone
+indicating For., Rev.,
+frequency, current,” | [ ]
+revolution, etc.
+
+POWER FOR  REV Hz A ROTT
+
+Run key —
+
+RUN STOP
+
+Stop/Reset key
+
+FOR/REV Switch —— PRGM
+
+A
+
+<II
+Al
+
+(DISP)Shiftkey —
+
+Main Display Zone
+indicating frequency,
+current, ACV,DCV,
+revolution, counter,
+temperature, etc.
+
+Speed controller
+
+—— Function key
+
+—— Set Key(Enter)
+
+power
+Value change key
+
+UG TAL KEYPAD
+
+LED Display Zone
+
+indicating For., frequency,
+
+current, revolution
+
+FORJ Hz | A JROTT]
+
+FOR/REV Switch
+
+(DISP)Shift key
+
+Value change key
+
+Speed controller
+
+-FIR A PROG—
+-SHIFT W SET—
+
+_
+L2 Ia;!ﬁ-— Stop/Reset key
+
+Main Display Zone 1
+indicating frequency,
+current, ACV, DCV,
+revolution, counter,
+temperature, etc.
+
+Function key
+
+Reset key
+
+Run key
+
+Main Display Zone 2
+
+NOTE:The LED main display zone demonstrates by 5 nixietubes, the main display zone 2
+
+demonstrates the 5th d1g1t
+
+Example: 12345, 1234 digit in the main display zone 1, digit 5 in the main display zone 2.
+
+14
+
+.
+
+THE USE OF MANUAL
+
+o —
+
+2.Description of Indicator Lamp Status
+
+1) Description of Indicator Lamp Status
+
+Indicator lamp Status Description
+FOR on The motor is in forward rotation.
+REV on The motorisin reverse rotation.
+HZ on Displaying set frequency or output frequency.
+A on Displaying output current.
+ROTT on Displaying rated motor revolution
+HZ A on Displaying DC voltage.
+A ROTT on Displaying AC voltage.
+HZ ROTT on Displaying counting value.
+HZ AROTT on Displaying internal temperature of the inverter.
+
+2 ) Description of Display Items
+
+Display
+
+CCrmn
+
+O
+3
+3
+
+=
+Il
+
+T
+)
+
+1M
+=3
+
+Indic.lamp {{ on Meaning
+
+HZ A R/min Present output frequency is 50.00HZ
+g o O
+
+HZ A R/min Present set frequency is 50.00HZ
+g O O
+
+HZ A R/min Present set frequency is 50.00HZ 3.0A
+O O d
+
+HZ A R/min Present output revolution is 1440r/min
+O O d
+
+HZ A R/min Present DC voltage is 510.1V
+o O d
+
+HZ A R/min Present AC voltage is 380.0V
+o o d
+
+HZ A R/min Present inverter's temperature is 35.0C
+IONN ORI O
+
+C
+o
+
+“nCcitn
+A0S
+
+J
+J
+[
+1
+
+HZ A R/min
+
+g o O
+
+HZ A R/min
+
+o O
+
+HZ A R/min
+
+o O
+
+HZ A R/min
+
+o O
+
+HZ A
+o O
+
+R/min
+
+O
+
+O
+
+O
+
+0]
+
+3. Description of Operation Examples
+
+Present target value of PID is 50.0%
+
+Present feedback value of PID is 48.0%
+
+Present time of power-onis 12 hours
+
+Total run time of inverteris 108 hours
+
+Procedures Display Indicator Lamp Explanation
+OP%V!:tiro%péf Dsp2.0 Flash FOR HZ Self detect when power-up, display version no.
+? —Vr2.00
+power —000.00 @] (Flashing) and finally set frequency.
+PRGM Pd000 FOR HZ Enter programming Display the
+i ¢ @] function of Pd000
+I(E';E_EFF; ooo,oﬁ FOR }g Display the contents of Pd003
+A~ 50.00 FOR HZ Change the content of PD003
+ENYER END—50.00 ¢ @} Confirm changed value.
+PdOO Display END 50.00 Pd004
+| Q FOR HZ
+PRGM 050.;§ 0 Back from programming
+\ £50.00 FOR HZ Display running and operating
+RUN I ) d @] frequency
+i o | T 50.00 - FOR HZ Monitor screen switching, display
+E,_lﬁcf r000~r 50.00 @] @] output current
+! F: 50.00 FOR HZ Monitor screen switching, display
+PRGM Q Q output current
+
+Present counter's value is 105
+
+16
+
+17
+
+/4™ — THE USE OF MANUAL
+
+4 01440 FOR A Monitorscreen switching, display
+DISP @) @) revolution
+| r FOR ROTT /| Switchback to main screen, display
+PROG r50.00 @) @] set frequency
+| r FOR HZ Switch of For.Rev. rotation, display
+JOG r 50.00 O g the status of Rev rotation
+l ] FOR HZ 1 S iteh to adjustable
+A O50./Q o o witch to adjustable frequency
+| \ FOR HZ Adjust set frequency, i.e. the value
+~A 00-00 o d of Pd003
+| , ,
+030.00 FOR HZ Confirm changed value, write to
+ENTER o d Pd003 as value
+\ C¥%0.00 FOR HZ Stop
+STOP R0 Z o
+Note:
+
+@ ¢ means flashing. & means bright.
+@ For monitoring AC, DC, T and other items they can be only switched and displayed after the
+
+parameter setting.
+@ When it is powered up again after a power breakdown the inverter will display the screen previous
+to the power breakdown after its self detection.
+
+VI. Commissioning
+
+1. Important Checks before the Commissioning
+
+If there is any wrong connected wires? Pay special attention to the terminal of U.V.W; Make sure
+the power supply wires are connected to R.S.T, not U.V.W.
+If there is any metal powder or wires left on the base plate of the inverter or the terminal block,
+which may cause short circuit.
+If screws are tightly locked and if the connecting parts are loose.
+If there is any short circuit or earth fault at outputs.
+
+2. Commissioning Methods
+
+The procedure of the operator is factory set up for the control mode of HY series. The
+commissioning can be carried out through the digital operator. Generally, the commissioning can be
+conducted at 5.00 Hz.
+
+o ——
+
+¢ O
+
+Procedures Display Indicator Lamp Explanation
+Powerup | disp1.1—=Vr2.0 FOR HZ Self detect when power up, display
+y D¢de @] version no. and finally set frequency
+v/ FOR HZ Switch to adjustable frequency
+A 000.60 O on the panel
+) \/ FOR HZ Change set frequency, i.e.
+< A 0R0.00 ¢ @] The value of Pd003
+\ T 50.00 FOR HZ Confirm changed value
+ENTER C ¢ O
+| C FOR HZ
+|
+RUN - 50.00 o o Run at 50Hz
+' Cl FOR HZ
+STOP F papd Stop
+
+Note: I means indicator lamps is on; ¢ means indicator lamps flash;
+
+18
+
+.
+
+n\
+
+THE USE OF MANUAL
+
+VIl.Function List
+
+Parameters Function List 1
+
+. Ran Factor
+gglt’s Code Function gs:ct?ogzgplanation Settin;
+PDO000 Parameter Lock | O: Invalid 1: Valid 0
+Source of Run 0: Operator 1: Externalterminal
+PDOO1 Commands 2: Communication port 0
+Source of 0: Operatorboard 1: Simulation
+Frequency 2: Communication port
+PD003 Main Frequency | 0.00~400.00 Hz *
+PD004 Base Frequency | 0.01~400.00 Hz 50.00
+PD005 | MaxOperating Frequency | 50.00~400.00 Hz 50.00
+g PD006 | Intermediate Frequency [ 0.01~400.00 Hz 2.50/3.0
+g. PDO07 Min. Frequency | 0.01~20.00 Hz 0.50
+: PD008 Max. Voltage 0.1V——-* 220/380
+o PDO009 Intermediate Voltage | 0.1V—-—-* *
+3 PD010 | Min. Voltage 0.1~50.0V *
+o PDO11 Frequency Lower Limit | 0.00~400.00 Hz 0
+» PD012 | Reserved
+PD013 Parameter Reset| 1: Restorethe factory setting. No other function. 00
+PD014 Accel. Time 1 0.1~6500.0S *
+PD015 Decel. Time 1 0.1~6500.0S *
+PD0O16 Accel. Time 2 0.1~6500.0S *
+PDO017 Decel. Time 2 0.1~6500.0S *
+PDO018 Accel. Time 3 0.1~6500.0S *
+PDO019 Decel. Time 3 0.1~6500.0S *
+PDO020 Accel. Time 4 0.1~6500.0S *
+PD021 Decel. Time 4 0.1~6500.08 *
+PD022 Reserved
+PD023 Rev. Rotation Select | 0: Rev Run forbidden; 1: Rev Run Enable 0
+PDO024 STOP key select | 0: STOP Invalid 1: STOP Valid 1
+oS -
+g g PD026 | Stopping Mode (1) ggzziﬁ:gtggp“"p 0
+® ©| PD027 | StartingFrequency | 0.1~10.0 Hz 0.5
+3 PD028 Stopping Frequency [ 0.1~10.0 Hz 0.5
+
+19
+
+PDO029 Braking time at start 0~25.0 0.0
+PD030 Braking time at stop 0~25.0 0.0
+PD031 DC Braking level 0.0~20.0% 2.0
+PD032 Frequency track time 0.1~20.0S 5.0
+PD033 Current level for frequency track | 0.0~200.0S 150.0
+Voltage rise time during
+PD034 0.1~10S 0.5
+frequency track
+PDO035-
+PD040 Reserved
+PD041 Carrier frequency 0~15 *
+PD042 Jogging Frequency 0.00~400.00Hz 5.00
+PD043 S—-Curve Time 0~6500S 0
+Parameters Function List 2
+Cate . Set Range & Factory
+gory Code Function Function Explanation| Setting
+PD044 FOR (D1) 0: Invalid; 1:Run; 2: For rotation; 02
+3: Rev rotation; 4: Stop; 5: FOR/
+REV(D2 REV.; 6: Jog; 7: Jog For rotation; 03
+PD045 (b2) 8: Jog Rev Rotation; 9:Timer1;
+- 10:Timer2; 11:Reserved; 12:
+o PD046 RST(D3) Overheat of heat sink or motor; 04
+3 13:Emergent stop; 14:Reset;
+5 PD047 SPH(D4) 15~16: Reserved ;17: Ramp 07
+I~ select 1;18 :Ramp select2;19:
+) PD048 SPL(D5) Multi-speed1 ; 20: Multi-speed 19
+-] 2; 21: Multi-speed 3; 22: High
+= speed; 23: Middle speed;24:
+_g Low speed; 25: PID Start; 26:
+Reserved; 27: UP function
+[~ s
+- PD049 SPM(DS) Counter 28: DOWN function; 20
+o 29: Drawing;30: Reserved;31:
+E- Counter; 32: Counter reset
+2
+= PD050 Y1 Output 0: Invalid; 1: Run; 2: Zero 01
+Speed; 3: Fault indication; 4:
+PDO051 Y2 Output Braking indication; 5: Set 03
+Frequency reach; 6: In Accel.;
+PD052 Terminals of FA,FB,FC |7:InDecel.; 8: Arbitrary 01
+Frequency 1 reach;
+9:Arbitrary Frequency 2 reach;
+
+20
+
+21
+
+7y,
+
+THE USE OF MANUAL
+
+o ——
+
+s|jeulwaa] 3ndinQ pue }nduj
+
+10:Motor Overload alarm;
+
+11:Overtorquealarm;
+
+12:InverterOverloadalarm;
+
+13:Counterreach;14~16:
+
+Reserved;17:Low voltage
+
+alarm; 18: Single stage end
+
+’ indication; 20~26: Reserved,;
+
+27: Drawing reach; 28:
+
+PIDlower limit alarm; 29: PID
+
+upper limitalarm; 30: Reserved;
+
+31:Braking resistor act ;32:
+
+Fan act.
+
+Output of digital frequency
+PD054 VO Output signals 0-7 0
+PDO055 VO Analog output Gain | 0.0~100.0% 100
+PD056 Skip Frequency 1 0.00~400.00 Hz 0.00
+PD057 Skip Frequency 2 0.00~400.00 0.00
+PD058 Skip Frequency 3 0.00~400.00 0.00
+PDO059 Skip Frequency Range | 0.10~10.00 0.50
+PD060 Uniform Frequency 1 0.00~400.00 Hz 0.00
+PD061 Uniform Frequency 2 0.00~400.00 Hz 0.00
+PD062 Uniform Frequency Range | 0.10~10.00 Hz 0.50
+PD063 Timer 1 time 0~10.0 0.1
+PD064 Timer 2 time 0~100 1
+PDO065 Counting value set 00~65500 00
+PD066 Intermediate Counter 0~65500 0
+PDO067-
+PD069 Reserved
+
+Parameters Function List 3
+
+Cate . Set Range & Factory
+gory | Code Function Function Explanation| Setting
+0:0~10V
+1:0~5v
+PD0O70 Analog Input 20~ 0
+7 ginp 34-20mA
+4:0~10V ,stacked 4~20mA
+Exterior pulse of input
+PDO071 Analog Filtering Constant | 0~50 20
+PDO072 Lower Analog Frequency 0.00~400.00 Hz 50.00
+PDO0O73 Higher Analog Frequency 0.00~400.00 Hz 0
+s . 0: Positive direction
+Bias Direction at Higher Frequenc :
+Pdo74 9 quency 1: Negative direction 0
+N 0: Positive direction
+PDO75 Bias Direction at Lower Frequency . o 0
+1: Negative direction
+Analog Negative Bias 0: Not allowable.
+PDO076 0
+Reverse 1: Allowable.
+. 0: Not memorized
+PDO77 Up/Down Function 0
+1: Memorized
+0: 0.01HZ
+PD078 Up/Down Speed 0
+1: 0.1HZ
+PDO079 Reserved
+Cate . Set Range & Factory
+gory | Code Function Function Explanation | Setting
+= 0: Normal run;
+=8 1: Internal control 16-speed;
+~
+1 . 2: External control 4 —speed;
+% PD080 PLC Operation 3: External control 8-speed 0
+3 4: Drawning
+-y 5: Disturbance;
+O
+T
+] 0: Stop after running for one cycle;
+N Internal Control 1: Cycling run;
+(=3 H 2: Auto stop after running for one cycle
+6' PDO81 Multl—slpeeds (SuTOP(;Er inter\%ntilor?); ' Y 0
+= Ope ration 3: Auto Run and Cycling
+
+(STOP for intervention)
+
+22
+
+.
+
+THE USE OF MANUAL
+
+uonesadQ spaads-3}n
+
+PDO82 | Rumna Breciaa e 0~255 (0: For 1: Rev) 0
+PDO83 | RiCiferS speeds 0~255 (0: For 1: Rev) 0
+PDO84 | parorespeedsPLC 0-65535 0
+PDO85 | Rt C 0~65535 0
+PDO86 Frequency 2 0.00-400.00 Hz 15.00
+PDO87 Frequency 3 0.00-400.00 Hz 20.00
+PDO88 Frequency 4 0.00-400.00 Hz 25.00
+PD089 Frequency 5 0.00-400.00 Hz 30.00
+PD090 Frequency 6 0.00-400.00 Hz 35.00
+PDO091 Frequency 7 0.00-400.00 Hz 40.00
+PD092 Frequency 8 0.00-400.00 Hz 0.50
+PD093 Frequency 9 0.00-400.00 Hz 10.00
+PD094 Frequency 10 0.00-400.00 Hz 15.00
+PD095 Frequency 11 0.00-400.00 Hz 20.00
+PD096 Frequency 12 0.00-400.00 Hz 25.00
+b el Frequency 13 0.00-400.00 Hz 30.00
+PDO98 Frequency 14 0.00-400.00 Hz 35.00
+PD099 Frequency 15 0.00-400.00 Hz 40.00
+PD100 Frequency 16 0.00-400.00 Hz 45.00
+PD101 Timer 1 0.0-6500.0S 10.0
+PD102 Timer 2 0.0-6500.0S 10.0
+PD103 Timer 3 0.0-6500.08S 0.0
+PD104 Timer 4 0.0-6500.08S 0.0
+PD105 Timer 5 0.0-6500.08 0.0
+PD106 Timer 6 0.0-6500.08S 0.0
+PD107 Timer 7 0.0-6500.08 0.0
+PD108 Timer 8 0.0-6500.0S 0.0
+PD109 Timer 9* 0.0-6500.0S 0.0
+PD110 Timer 10 0.0-6500.0S 0.0
+PD111 Timer 11 0.0-6500.0S 0.0
+PD112 Timer 12 0.0-6500.08 0.0
+PD113 Timer 13 0.0-6500.08S 0.0
+PD114 Timer 14 0.0-6500.0S 0.0
+PD115 Timer 15 0.0-6500.0S 0.0
+PD116 Timer 16 0.0-6500.0S 0.0
+
+Parameters Function List 4
+
+Cate . Set Range & Factory
+gory | Code Function Function Explanation| Setting
+PD117 AutoPLC Memory Function 0-1 0
+PD118 Over-voltage Stall Prevention 0-1 1
+PD119 Stall Prevention Level at Accel. 0-200 150
+Stall Prevention Level at
+PD120 Constant Speed 0-200 0
+PD121 The Decel Time of Stall Prevention 0.1-25.5 5
+Level at Constant Speed
+. 0-200 150
+PD122 Stall Prevention Level at Decel.
+PD123 | Over-torque Detect Mode 0-3 0
+PD124 Over-torque Detect Level 0-200 0
+PD125 Over-torque Detect Time 0.1-20.0 1.0
+PD126 Pulse Counter Memory 0-1 0
+PD127-
+Reserved
+PD129
+s PD130 Number of Auxiliary Pump 0~2 0
+gn- PD131 Continuous Operating Time of Aux. Pumps 1~9000mim 60
+=
+g> PD132 Interlocking Time of Aux. Pumps 1~250s 5s
+T
+=2 PD133 High Speed Running Time 1~250s 60s
+<
+g PD134 | Low Speed Running Time 1~250s 60s
+=
+-
+o PD135 Stopping Voltage Level 1~150% 95%
+-]
+z PD136 Lasting Time of Stopping Voltage Level 1~250s 30s
+Y
+=4 PD137 Wakeup Level 1~150% 80%
+v
+g PD138 Sleep Frequency 0.00~400.0 20.00
+»
+£ PD139 Lasting Time of Sleep Frequency 1~250s 20s
+o©
+PD140 Reserved
+o=
+Py = PD141 Rated Motor Voltage Set according to Motor nameplate *
+% 9_:1 PD142 Rated Motor Current Set according to Motor nameplate *
+E':S PD143 Motor pole number. 0210 04
+@ 8- PD144 Rated Motor Revolution | 24000 1440
+<)
+3
+
+24
+
+25
+
+THE USE OF MANUAL
+
+PD145 Auto Torque Compensation
+PD146 Motor no-load current
+PD147 Motor slip compensation
+PD148-
+Reserved
+PD149
+PD150 Auto Voltage Regulation 0-1 1
+PD151 Auto Energy Saving 0-20 0
+PD152 Fault Restart Time 0.2-25 1
+PD153 Restart after Instantaneous Stop | 0. Invalid 1: Frequency track 0
+PD154 Allowable Power-Breakdown Time 0.1-5.0S 0.5
+PD155 Number of Abnormal Restart 0-10 00
+Parameters Function List5
+Cate . Set Range & Factory
+gory | Code Function Function Explanation| Setting
+PD156 Proportional Constant (P) 0.0~1000.00% 100%
+PD157 Integral Time (1) 0.1~3600.00S 5.0
+S | PD1s8 | Differential Time (D) 0.01~10.00S 0
+> Pd159 Target value 0.0~100.0% 0
+o 0: set by the operator
+3 T tval lect 1: setby external terminals
+® Pd160 arget value selec (0-10V) 0
+3 presert
+PD161 PID upper limit 0~100% 100%
+PD162 PID lower limit 0~100% 0%
+no PD163 Communication Addresses 0-250 0
+co
+Eg PD164 Communication Baud Rate 0-3 0
+g g PD165 Communication Data Method 0-5 0
+=
+= | Pdiee-
+° Reserved
+I~ Pd169
+
+PD170 Display Items 0-5 7
+
+PD171 Display Items Open 0-15 7
+PD172 Fault Clear 00 10( 01 for Fault Clear ) *
+PD173 Voltage Rating of Inverter | Set according to the model *
+
+PD174 Rated Current of Inverter Set according to the model
+PD175 Inverter Model
+PD176 Inverter Frequency Standard 0: 50Hz 1: 60Hz 0
+
+PD177 Fault Record 1
+PD178 Fault Record 2 —
+Note:
+
+PD17 Fault R —
+9 aultRecord 3 Means no fault record.
+
+PD180 Fault Record 4 —
+
+uoI3ouUNg 10}UOAl
+
+PD181 Software Version
+
+PD182 Manufacture Date Year: Month: Week: *
+PD183 Serial No. *
+Pd184-
+
+Reserved
+Pd250
+
+X.Descriptions of Functions
+PDO0O00 Parameter Lock
+Set Range: 0-1 Unit: 1 Factory Setting: 0
+
+0: Invalid.
+
+1: Valid, i.e. the parameters are locked. Except this parameter other parameters can not be changed.
+This parameter is set to prevent non-maintenance personnel from setting other parameters by mistake.
+After the parameters are locked the operating frequency can be changed by pressing A or [J.
+
+PDO001 Source of Operation Commands
+Set Range: 0-2 Unit: 1 Factory Setting: 0
+
+0: Setby the Operator
+Operation commands are given via the digital operator.
+1: Setby external terminals.
+Operation commands are given via external terminals, i.e. multi-input terminals
+
+26
+
+/4"™\ — THE USE OF MANUAL
+\
+
+2: Setby communication ports.
+Operation commands are given via communication ports.
+
+PD002 Source of Operating Frequency
+Set Range: 0-3 Unit: 1 Factory Setting: 0
+
+0: Setby the operator. The operating frequency which given via the digital operator is Pd003.
+
+1: Setby external terminals. Operating frequency is controlled by analog signals inputvia external
+terminals. The signal type is determined by PD070. For the related parameters refer to PD070-PD076.
+2: The MODBUS is given. Operating frequency is given via the serial communication.
+
+PD003 Main Frequency **
+Set Range: 0.00-400.00 Hz Unit: 0.01 Hz Factory Setting: 0.00
+
+In the digital operator mode, the inverter will run at the set value of PD003. During running, the
+operating frequency can be changed by pressing A or V. During multi- speed running, the main
+frequency is taken as the frequency of Speed 1.
+
+In the external control multi-speed mode, if PD002 is set to 1, i.e. given by an external terminal,
+Speed 1 will be given by the analog of the external terminal.
+
+The setting of main frequency is limited by the maximum operating frequency.
+
+The related parameters of PD002, PD080 are adjustable during operation.
+
+PD004 Base Frequency
+Set Range: 0.01-400.00 Hz Unit: 0.1Hz Factory Setting: 50.00
+
+This parameter must be set according to the rated frequency of operating voltage on the motor's
+nameplate. Under normal conditions do not change the set value of base frequency at will. If it is
+equipped with a special motor this value should be set properly according to the characteristics of
+the motor's parameters. Otherwise it may cause the damage to the equipment.
+
+PD005 Max. Operating Frequency
+Set Range: 10.00-400.00 Hz Unit: 0.01 Hz Factory Setting: 50.00
+
+This parameter is set for the maximum operating frequency of the inverter.
+The following are several curves and set values often used for reference. Specific curves must be
+set according to concrete characteristics of mechanical load.
+
+27
+
+00525 50 00525 s »
+Curve of constant torque Curve of lower torque Curve of higher torque
+PDO006 Intermediate Frequency
+
+Set Range: 0.01-400.00 Hz Unit: 0.01 Hz Factory Setting: 2.50
+
+Note: ** means this parameter is adjustable during operation.
+
+This parameter is set for intermediate frequency of arbitrary V/F curve. If it is set improperly,
+it will cause over-current or under-torque of the motor, or even tripping of the inverter.
+
+This set value of intermediate frequency is limited by the set value of base frequency.
+
+PD007 Min. Frequency
+Set Range: 0.12-0.00 Hz Unit: 0.01 Hz Factory Setting: 0.50
+
+This parameter is set for the min. starting frequency of V/F curve.
+The following table has specific factory settings of V/F curve, accel./decal., time and carrier for
+the inverter of AA. AB. AM series:
+
+MOd(;:)de P4009 Pd001 P(ZO] Pd5O’I P04 1 MOd(::)de P%O] Pd001 P014 Pd501 Pd104
+HY0OD423B | 15.0] 756 | 5 5 9 | 003043A 17 | 85] 30 | 30 4
+HYOD75238 | 14.0 [ 7 8 8 9 | 003743A 16 | 8 35 | 35 4
+HY01D5238 | 14.0 [ 7 10 | 10 [ 8 | 004543A 16 | 8 40 | 40 4
+HY02D223B | 13.0| 65 | 10 | 10 | 8 [ 005543A 156 | 75| 456 | 45 3
+HY03D7238 | 13.0 65 | 15 [ 15 | 7 [ 007543A 15 | 75| 50 [ 50 3
+HYOD75438 | 22 | 11 8 8 9 | 022043A " 55| 260 | 250 | 2
+HYOID543B | 22 | 11 10 | 10 | 8 | 025043A " 55| 260 | 250 | 2
+
+28
+
+29
+
+/4™ — THE USE OF MANUAL
+
+Code Pd01|Pd01|PdO1 Code|Pd01|Pd01 Pd01|Pd04
+Pd009 Pd041 Pd014
+Model 0] 4165 Mode 910 5 |1
+HY0202438 21 |105( 15 | 15 8 | 028043A N 551 250 250 ( 2
+HY03D7438 21 | 105 15 | 15 7 | 030043A 10 5 250 250 | 2
+HY05D5438 20 | 10 15 ] 15 6 | 031543A 10 5 250 250 | 2
+HY07D5438 20 | 10 | 20 | 20 6 | 034543A 10 5 250 ( 260 | 2
+HY11D0438 | 19 | 95 | 20 | 20 | © [037543A | 10 | 5 | 250 250 | 2
+HY15D0438 19 [ 95| 20 | 20 5 | 040043A 10 5 250 250 | 2
+HY1gDs438 | 18 | 9 | 256 [ 25 | 5 |041543A | 10 | 5 | 250| 250 | 2
+Hv200438 | 18 | 9 [ 25 | 25 | 5
+Note: ®Ramp Time 2 = Ramp Time 1 x 2
+@Ramp Time 3 = Ramp Time 2 x 2
+@Ramp Time 4 = Ramp Time 3 x 2
+@Min.Voltage Value = Intermediate Voltage Value/2
+®The intermediate frequency is 2.5 for the system of 50Hz.
+®The intermediate frequency is 3.0 for the system of 60Hz.
+PD008 Max. Voltage
+Set Range: 0.1-* Unit: 0.1V Factory Setting: 220/380V
+
+This parameter should be set according to the rated value of the motor's namep late . The factory
+setting is 380V for 380V class motor and 220V for 220V class motor. The setting range of this
+parameter is restricted by the voltage rating of the inverter. In case of the motor relatively far away
+from the inverter this set value can be increased properly.
+
+PDO009 Intermediate voltage
+SetRange: 0.15-10.0V Unit: 0.1V Factory Setting: *
+
+This parameter is set for an intermediate voltage value of arbitrary VF curve. If it is set improperly,
+it will cause over-current or under-torque of the motor, or even tripping of the inverter.
+
+When the intermediate frequency is increased the voltage will increase the output torque and at the
+same time also the output current. When changing this parameter please pay attention to monitoring
+the output current to avoid the inverter's tripping due to over-current.
+
+The factory setting of intermediate voltage for 220V class inverter is 15, while the factory setting
+of intermediate voltage of 380V class inverter is 27.5.
+
+This set value of intermediate voltage is limited by the set value of max voltage. When the voltage
+is increasing to a certain value at intermediate frequency the torque compensation will lose its function.
+
+When adjusting this parameter the output current of the inverter should be increased from low to
+high slowly according to the load of machines until it meets the starting requirement. Do not be quick
+to increase it by large amplitude. Otherwise it might cause the tripping of the inverter or the damage of
+the machines.
+
+PD010 Min. Voltage
+Set Range: 0.1-50.0V Unit: 0.1V Factory Setting: *
+
+This parameter is set for the min. starting voltage of V/F curve.
+The factory setting of min. voltage for 220V class inverters is 8, and the factory setting of min.
+voltage for 380V class inverters is 13.5.
+This set value is limited by the voltage at the max. Frequency.
+
+PDO011 Frequency Lower Limit
+Set Range: 0.00-400.00 Unit: 0.01 Hz Factory Setting: 0.00
+
+This is set for preventing workers from false operation to avoid over-heat or some other mechanical
+faults, which might be caused due to too low operating frequency.
+The setting of Frequency Lower Limit must be less than the set value of Frequency Upper Limit.
+
+| PD012 Reserved |
+
+| PD013 Parameter Reset |
+
+When the value for a parameter is set improper or is abnormal for some reasons this parameter can
+be setto 01 to restore it to the factory setting and then reset. After the parameters are locked (in case
+of PD000=1) the parameters can't be reset. They can only be reset after unlock. For related parameters
+refer to Pd000.
+
+PDO14Accel. Time 1 **
+
+Set Range: 0.16-500.0S Unit: 0.1S Factory Setting: *
+PDO015 Decel. Time 1 **
+
+Set Range: 0.16-500.0S Unit: 0.1S Factory Setting: *
+PDO016 Accel. Time2 **
+
+Set Range: 0.16-500.0S Unit: 0.1S Factory Setting: *
+PD17 Decel. Time 2 **
+
+SetRange: 0.16-500.0S Unit: 0.1S Factory Setting: *
+PD18 Accel. Time 3 **
+
+Set Range: 0.16-500.0S Unit: 0.1S Factory Setting: *
+PD019 Decel. Time 3 **
+
+Set Range: 0.16-500.0S Unit: 0.1S Factory Setting: *
+PD020 Accel. Time 4 **
+
+Set Range: 0.16-500.0S Unit: 0.1S Factory Setting: *
+PD021 Decel. Time4 **
+
+Set Range: 0.16-500.0S Unit: 0.1S Factory Setting: *
+
+30
+
+/4" — THE USE OF MANUAL
+=
+
+Ramp-up time means the time needed for the inverter to increase the frequency from 0Hz to the
+maximum operating frequency (See t1 in the diagram). Ramp-down Time means the time needed for
+the inverter to decrease the frequency from the maximum operating frequency to OHz (See t2 in the
+
+diagram).
+F
+Max Oper. F :
+:
+1
+[ > T
+f— fe—s]
+11 t2
+Note:
+
+The versions previous to Vr2.0 took SOHz as the base of ramp time.
+HY-A Series inverter have altogether 4 Ramp Times. For Ramp Time 2.3.4 the user can select the different
+ramp up or down time through the external terminals or switching of ramp time according to the actual needs.
+In the internal control multi-speed operation, different ramp time can be selected through easy PLC.
+Generally the default of the inverter is Ramp Time 1, which is factory set depending on the model.
+Ramp Time 4 is for the jogging ramp time. For the factory setting of parameters refer to the table in Pd007.
+The related parameters: PD044~PD049 and PD084,PD085
+
+PD022 Factory Reserved
+
+PD023 Rev Rotation Select
+Set Range: 0-1 Unit: 1 Factory Setting: 0
+
+0: Rev Rotation disable
+
+1: Rev Rotation Enable
+
+This function is suitable for the motor, which is not allowed to rotate reversely, to prevent workers from
+false operation. When the reverse rotation is disabled, the motor can only rotate forward, not reverse.
+
+PD024 STOP key
+Set Range: 0-1 Unit: 1 Factory Setting: 1
+
+0: STOP invalid.
+
+1: STOP valid.
+
+This parameter set is only valid when PD001 is setto 1 or 2.
+
+When the control mode is set for external terminals or communication control, STOP key on the panel
+can be chosen to be valid or invalid. When choosing it as valid, STOP key can stop the inverter in running.
+When it needs to restart, the former running signal must be released before restarting the inverter.
+
+PDO025 Starting Mode
+Set Range: 0-1 Unit: 1 Factory Setting: 0
+
+Two starting modes are available for the needs of different equipment.
+
+31
+
+0: Start from the starting frequency.
+
+When PD029 is set to 0, i.e. DC braking is invalid at start, it starts running from the starting frequency.
+When PD029 is set to any non-zero value, i.e. DC braking is valid at start, itl first performs a DC braking at
+start, and then starts from the starting frequency.
+
+For the Related parameters refer to PD027, PD029 and PD031.
+1: Start by frequency track
+
+This setting can be used for the restarting of large inertia load. When restarting, the inverter will trace the
+former frequency from the set frequency downward. In case of large inertia equipment, when restarting, it
+can implement the running command and track the former frequency right away without waiting for the
+complete stop of the equipment to save time.
+
+Note: When the inverter is restarted by frequency track, it will start tracking the frequency from its set
+frequency downward, and search it at the highest speed. When restarting, the current becomes higher, and
+over-current or stall may occur. So attention must be paid to the adjustment of current level of frequency
+track. Generally, PD033 is adjusted around 100. The concrete value can be set according to the characteristics
+of mechanical load.
+
+Run comm. __]
+
+SetF.
+Ouput F
+Output Power
+PD026 Stopping Mode
+Set Range: 0-1 Unit: 1 Factory Setting: 0
+
+0: Decelerating Stop
+
+When PD030 is set to 0, DC braking is invalid. When DC braking is invalid, the inverter will
+decelerate to the stopping frequency, and then stop outputs, and the motor will coast to stop. When
+PDO030 is set to any non-zero value, DC braking is valid, and the inverter will first decelerate to the
+stopping frequency, and then stop by DC braking.
+
+DC braking at stop is usually used for high position stop or for positioning control. It must be
+noticed that frequent uses of DC braking will cause over-heat of the motor.
+
+For the related parameters refer to PD028, PD030 and Pd031.
+1: Coasting Stop
+
+When the inverter receives a STOP command, it will immediately stop output and the motor will
+coast to stop. When the coasting stop mode is selected, DC braking is invalid.
+
+PDO027 Starting Frequency
+SetRange: 0.1-10.0 Hz Unit: 0.1Hz Factory Setting: 0.5
+
+32
+
+/4" — THE USE OF MANUAL
+
+Starting frequency is the initial frequency when the inverter is started. If the starting frequency is set
+to 5.0Hz, the inverter will run between 5.0 Hz and the maximum operating frequency after its start at
+5.0Hz.
+
+For the related parameters refer to PD025, PD029 and PD031.
+
+PD028 Stopping Frequency
+Set Range: 0.1-10.0 Hz Unit: 0.1Hz Factory Setting: 0.5
+
+When stopping the inverter will decrease its frequency to the stopping frequency and then stop
+running or start DC braking to stop.
+
+IfPDO030 is set to 0, DC braking is invalid at stop and the inverter will stop running.
+
+If PDO030 is set for valid, the inverter will stop by DC braking when the inverter reduce to PD028.
+
+For the related parameters refer to PD026, PD031 and Pd030.
+
+PD029 DC Braking Time at Start
+Set Range: 0.02-5.0S Unit: 0.1S Factory Setting: 0.0
+
+Pd027
+
+Pd029
+
+This parameter is set for DC braking at start and the lasting time of DC braking current to the motor.
+If it is set to zero it means DC braking is invalid.
+DC braking at start is normally used in the application, in which the load is movable when the machine
+is at stop, such as windmill. Because of the load existing before the inverter drives, the motor is often
+in coasting with an uncertain rotation direction. So the DC braking can be executed before starting the
+motor to prevent the inverter from tripping.
+
+This setting is valid only when PD025 is set to 0. For the related parameters refer to PD025, PD029
+and Pd031.
+
+PD030 DC Braking Time at stop
+Set Range: 0.0-25.0 Unit: 0.1S Factory Setting: 0.0
+
+paozs | Y/ _
+
+Pd030
+
+33
+
+Note: When this parameter is set to any non-zero value it starts DC brake at stop and sends the DC
+braking time to the motor. DC braking at stop is often used for a high-level stop or positioning control.
+When this parameter is set to zero it closes DC braking at stop.
+This setting is valid when PD026 is set to 0. For the related parameters refer to PD026, PD028 and
+Pdo31.
+
+PD031 DC Braking Voltage Level
+
+Set Range: 0.0-20.0% Unit: 0.1% Factory Setting: 2.0
+
+This parameter is set for the DC braking voltage to the motorat start and stop.Itcan be adjusted for
+different braking voltage. When adjusting the parameter it must be increased slowly from lower value
+to high value until the sufficient braking torque is achieved.
+
+The voltage at maximum frequency is 100% voltage.
+
+PD032 Frequency Track Time
+Unit: 0.1S
+
+Set Range: 0.12-0.0S Factory Setting: 5.0
+
+This parameter is set as frequency track time when the inverter is started by frequency track after
+an external abnormality or temporary power breakdown. For starting or stopping of some large inertia
+load, if restarting a machine after its complete stop, it will waste much time because of its large inertia
+of load. But if the frequency track is started, it is not necessary to wait for the machine to come to a full
+stop for restart. The inverter will trace the frequency from high to low with the set frequency. After
+searching it will continue to accelerate to reach the set frequency.
+
+PD033  Current Level for Frequency Track
+
+Set Range: 0-200% Unit: 1% Factory Setting: 150
+
+When the inverter is tracing the frequency this set value is taken as the level for output current.
+When the output current is higher than this level the inverter will decrease the frequency to restore
+the current below the level and then it will execute the frequency track again.
+
+PDO034 Inverter Track Time of Up/down Factory Setting: 0.5
+
+When the inverter is started by frequency track ,in the track process ,the voltege will up.when the
+voltege up-speed increase ,the current will higher,the track process will faster. When the voltegr up-
+speed decrease , the current will lower,the track process will slower.The generally setting way is the
+low power machine establishes small, the high power machine establishes big.
+
+PD035 Pd040 Reserved
+
+PD041 Carrier Frequency
+Set Range: 0-15
+
+( Note: 015 corresponds to 020K Hz )
+Unit: 1 Factory Setting: 5
+
+The carrier frequency has some relation with the electromagnetic noise of the motor, and mean
+while the level of the carrier frequency has certain relation with the heating capacity of the inverter
+and the interference to the environment. See the following table:
+
+Carrier Electromagnetic Heating Interference to
+Frequency Noise Capacity the Environment
+Low High Small Little
+| | ! |
+High Low Large Great
+
+34
+
+/4™ — THE USE OF MANUAL
+
+Carrier Frequency Corresponding Table
+
+Set Value 0[1]12(3|4]5]|6[7]|8]9(10{11(12|13{14]|15
+
+Carrier
+
+Frequency 011152 3[4[5]|7|8]9]10(11]13]|15(17]20
+
+As shown in the table above, the higher the carrier is, the lower the electromagnetic noise of the
+motor will be, but the stronger its interference to other systems will be and the greater the heating
+capacity of the inverter will have. Under higher ambient temperature and heavier load of the motor
+the carrier frequency should be decreased properly to improve the heat characteristics of the inverter.
+
+The factory setting of carrier frequency is depending on the model.
+
+*k
+
+PDO042 Jogging Frequency
+Set Range: 0.00-400.00 Unit: 0.01 Factory Setting: 5.00
+
+The parameter set can realize the jogging function when the inverter is tested. The jogging operation
+can be only achieved through the external terminals, which can be set by multi-input terminals. Jogging
+frequency is limited by the frequency upper/lower limits. While the jogging function is implemented,
+other running commands are invalid. The ramp-up time of jogging frequency is set by Ramp-up Time 4.
+When the jog button is released the inverter will stop output immediately. In case of jogging function
+please set the corresponding multi-input terminals to 07 or 08.
+
+This function is only valid at stop. It is invalid at running. For the related parameters refer to PD044-
+PD049.
+
+PD043 S-Curve Time
+Set Range: 0-6500S Unit: 1 Factory Setting: 1
+
+This parameter can be set for no impact slow start or slow stop of the inverter when starting or
+stopping. When starting S-curve the inverter will make accelerating or decelerating curve of different
+speed rates according to Ramp Time.
+
+AF
+
+When PD043 is set as
+0, S—curveisinvalid, @ | - - - -- - PDO043
+i.e. it will accelerate
+or decelerate in linear.
+Without consideration [~ PDO14
+of stall the actual
+accel/decal time =
+(PD014+PD043)/2.
+The parameteris only
+valid when Pd014 is
+less than Pd043. PD043
+
+BT
+
+35
+PD044 FOR (D1) Function Factory Setting: 02
+Pd045 REV (D2) Function Factory Setting: 03
+Pd046 RST (D3) Function Factory Setting: 04
+Pd047 SPH (D4) Function Factory Setting: (7
+Pd048 SPM (D5) Function Factory Setting: 19
+Pd049 SPL (C6) Function Factory Setting: 20
+Set Range: 00-32 Unit: No
+01: RUN Running. It can be combined with other terminals to compose multiple control modes.
+02: FOR Forward Rotation
+03: REV Reverse Rotation
+04: STOP Stopping
+05: FOR/REV  Switching of FOR/REV rotation
+06: JOG Jogging
+07: Jog FOR
+08: JogREV
+09: External Control Timer 1 Start: When the contact is closed, the timer will start and begin to
+count time. When the timer reaches the set point the corresponding multi-inputs will act.
+10: External Control Timer 2 Start.
+12: Over-heat of heat sink or motor: This contact can be used to detect over-heat of the heat sink or
+motor to protect the motor and inverter.
+13: Emergent Stop: Emergent stop. It can receive external emergent stop command or other fault
+signals.
+14: Reset: This terminal can be used for reset after a fault is removed.
+15~16: Reserved.
+17: Ramp Time 1: This terminal can be used to select the ramp time of the inverter.
+18: Ramp Time 2: 4 kinds of ramp time are available for choice.
+19: Multi-speed 1: 8-speed setting can be composed through Multi-speed 1, 2, 3.
+20: Multi-speed 2
+21: Multi-speed 3
+22: Highspeed: High, middle and low speed can compose three kinds of operation mode
+23: Middle speed with different frequencies. In the three terminals the high-end signal has
+24: Low speed priority. Low, Middle and High Speed are determined respectively by Frequency 2,3,4.
+25: PID Valid: When this contact is closed, PID function starts. PID Function start is only valid
+during operation.
+26: PLC Reset Suspend: This contact can be used to achieve the function of AutoPLC clear suspend.
+27: UP Function: When the switch of this terminal acts the frequency setting of the inverter will be
+
+increased or decreased by one unit. When the switch of the terminal is hold the frequency will
+increase or decrease rapidly to a point and then increase or decrease.
+
+36
+
+\
+
+37
+
+28:
+
+29:
+31:
+
+32:
+
+/4" — THE USE OF MANUAL
+
+Down Function at even speed. When the power is up again after the power breakdown the changed
+frequency will not be memorized.
+
+Drawing Start When this contact is triggered the drawing action starts.
+
+Pulse Counter When this terminal is set for the counter it can receive the pulse signal of <250HZ
+and counts.
+
+Counter Reset When this contact acts it will clear the present counting values displayed, restore
+C00 and restart counting.
+
+Explanation:
+
+1. Three multi-function terminals can be used for the connection
+method of three-wire system for the realization of switching of
+FOR/REV rotation, which is extensively applied in the cases of
+FOR/REV switching of photoelectric switches.
+
+(@ Select the multi-function terminals of D1, D2 and D3
+
+@ Parameter setting:
+PDO001=1 for external control PD044=02 for FOR rotation
+PD045=03 for REV Rotation PD046=04 for Stop
+
+® Action Description:
+When triggering D1, the inverter will rotate forward (start);
+When triggering D2, the inverter will rotate reverse;
+When pressing STOP, the inverter will stop.
+
+2. RUN, DCM, F/R can be used for Start, Stop and switching
+
+K1 of FOR/REV:
+b1 @ Select the terminals of D1 and D2
+@ Parameter setting:
+K2 PDO001=1 for external control
+
+b2 PD044=01 for RUN function
+
+PD045=05 for switching of F/R
+DCM When K2 is opened it rotates forward, while K2 is closed it rotates
+reverse.
+
+3. Description of Ramp Time 1 and 2:
+
+(@ This function is only valid when PD080 is set to 0, 2 and 3. Under
+the disturbance and internal control multi-speed it is invalid.
+
+@ Any two multi-inputs can be combined for 4 kinds of ramp time
+for selection.
+
+@ The related multi-inputs are set for Ramp Time 1,2. Take the
+terminals of D4 and D5 as example, when the terminal of D4 PD 047
+is set to 22 and the terminals of D5 PD048 is set to 23, D4 and D5
+are now Ramp Time 1, 2.
+
+D4 D5 Result
+
+OFF OFF Ramp Time 1
+ON OFF Ramp Time 2
+OFF ON Ramp Time 3
+ON ON Ramp Time 4
+
+4. Function description of High, Middle and low speed terminals:
+
+F A
+
+H. speed
+M.speed
+L.speed
+
+Main frequency
+
+Run command
+
+L. speed
+
+L. Speed
+RUN D6 D5 D4 Result
+Main speed, the frequency runs
+ON OFF OFF OFF at the set value of Pd003.
+Low speed, the frequency runs
+S ON OFF OFF at the set value of Pd086.
+Middle speed, the frequency runs
+ON ON/OFF ON o at the set value of Pd087.
+ON ON/OEE ON/OEE ON High speed, the frequency runs
+at the set value of Pd088.
+
+Note:
+(1) This function is only valid when PD08O is set to 2, i.e. for 4-Speed of external control.
+(2 ) Ramp time is determined by Ramp Select terminal.
+(3) When all high, middle and low speeds have signal inputs it will give priority in the sequence of
+high, middle and low speed.
+
+74"™— THE USE OF MANUAL
+
+_ ¥ B
+
+5. Description of UP and DOWN Function:
+
+Max.operating Frequency A F
+Set frequency
+
+F.Lower Limit
+
+Up Command
+Down Command
+
+uUpP DOWN Result
+
+ON OFF Frequency increase
+
+OFF ON Frequency decrease
+
+ON ON Notincrease or decrease
+
+Note:
+
+(1) The function of UP and DOWN is only valid when the operator is selected for the source of the
+
+operating frequency,i.e. PD002=0.
+
+(2) When the UP terminal is closed the frequency of the inverter will increase.
+
+(3) When the DOWN terminal is closed the frequency of the inverter will decrease.
+
+(4) When both UPand DOWN terminals are closed at the same time the frequency will neither increase
+
+nor decrease. Itisregarded as invalid.
+
+(5) When the frequency reaches the max operating frequency it will stop increasing.
+
+(6) When the frequency reaches the min frequency or its lower limit, it will stop decreasing.
+
+(7) After a power breakdown the set value of PD003 will be memorized instead of the frequency.
+
+(8) When using the function of UP and DOWN, the keys of A [Jof the panel are valid. After changing
+the values it needs to press SET (ENTER) key for confirmation and then the inverter can implement
+the action. Meanwhile the value will write to PD003, which will be memorized after a power
+breakdown.
+
+(9) When keeping pressing UP or DOWN, the frequency will increase or decrease rapidly to a point
+and then increase or decrease at even speed.
+
+(10) The value changed by UP or DOWN can be set through PD077 for confirmation of whether it
+should be memorized or not memorized. For details refer to Pd077.
+
+39
+6.Function Description of Counter:
+
+A CO0 C00
+
+(O [ een [0 [T 00 0]
+
+|
+L
+
+I
+Counting Value reach ,—l—:—
+I
+
+Counting Value reset
+
+Note:
+(1) The signal width triggered should not be lower than 2 msec (t1. t2=2msec) .
+(2) When the counting value is reached the corresponding multi-output contact will act.
+(3) This counter can only count again after reset.
+(4) When reaching to 65535 the counter will not count again.
+
+PDO050 Y1-input Function Factory Setting: 01
+
+PDO051 Y2-input Function Factory Setting: 03
+
+PD052 FA. FB. FCInput Function Factory Setting: 01
+
+PD053 Ka. KB Input Function Factory Setting: 03
+Set Range: 00-32 Unit: 1
+
+01:
+02:
+
+03:
+04:
+05:
+
+06:
+07:
+08:
+
+09:
+
+In Run: The contact will act when the inverter has output or receives the running command.
+
+Zero Speed: The contact will act when the output frequency of the inverter is less than its starting
+frequency.
+
+Fault Indication: The contact will act when the inverter detects abnormal conditions.
+
+DC Braking Indication: The contact will act when the inverter is in DC braking.
+
+Set Frequency Reach: The contact will act when the output frequency of the inverter reaches the
+
+set frequency.
+
+In Accel: The contact will act when the inverter is in ramp-up.
+
+In Decel: The contact will act when the inverter is in ramp-down.
+
+Uniform Frequency 1 Reach: The contact will act when the output frequency of the inverter reaches
+the designated frequency (PD060).
+
+Uniform Frequency 2 Reach: The contact will act when the output frequency of the inverter reaches
+the designated frequency (PD061).
+
+: Motor Overload Alarm: The contact will act when the inverter detects over-load of the motor.
+
+40
+
+/4" — THE USE OF MANUAL
+
+11: Over-torque Detect: The contact will act when the inverter detects over-torque.
+12: Inverter Over-load Alarm: The contact will act when the inverter detects over-load.
+13: Set Counter Reach: The contact will act when the inverter implements the external counter and the
+counting value is equal to the set value (PD065).
+14: Middle Counter Reach: The contact will act when the inverter implements the external counter and
+the counting value is greater than or equal to the set value (PD066).
+15: External Control Timer 1 reach: The contact will act when the timer 1 reaches the set value..
+16: External Control Timer 2 reach: The contact will act when the timer 2 reaches the set value
+17: Low Voltage Alarm: The contact will act when the inverter detects low voltage.
+18: Single Step End: The contact will act and generate one pulse when the inverter finishes a single
+step in implementation of program operation.
+19: Process End: The contact will act and generate one pulse when the inverter finishes all the steps(i.e.
+after one cycle) in implementation of program operation
+20: 4-°20mA disconnected: When Al input signal is disconnected and PD072 more than 2, the contact
+will act.
+: Auxiliary Pump 1: This contact controls the starting and stopping of auxiliary pumps . For details
+refer to Operation of Multi-pumps.
+26: Auxiliary Pump 2
+27: Drawing reach: The contact will act when the drawing action is finished. The contact will auto
+matically reset when the inverter stops.
+28: PID Lower Limit Alarm: This contact will act when the PID feedback is smaller than the lower limit
+(the set value of PD162).
+29: PID Upper Limit Alarm: This contact will act when the PID feedback is greater than the upper limit
+(the set value of PD161).
+30: Braking Resistor Act: When the inverter is in running and the DC voltage reaches the braking voltage
+the contact will act.
+Electromagnetic Relay Act: When the contact pulls in, the corresponding multi-function terminal
+will act.
+32: Fanact: When the temperature of the inverter is increased or it is in running, this contact will act.
+
+2
+
+W
+
+N
+
+31:
+
+—
+
+PD054 Vo Input
+Set Range: 0-7 Unit: 1 Factory Setting: 0
+
+Functions: Output terminal of digital frequency, generating pulse or 010V analog. In combination with Pd055
+it can be connected with a corresponding instrument with the measuring range below 10 to be used for external
+monitoring.
+
+0: 0~10V analog output, corresponding to output frequency. 0~ 10V corresponds to 0~Maximum operating
+frequency
+
+1: 0~10V analog output, corresponding to output current. 0~10V corresponds to 0~two times of the rated
+current of the inverter.
+
+2: Analog output, corresponding to DC bus voltage. 0~ 10V corresponds to 0~1000V.
+
+3: Analog output, corresponding to AC output voltage. 0~10V corresponds to 0~510V/255V.
+
+(Note: The machine type of three phase, 380V corresponds to 510V and the machine type of single phase, 220V
+corresponds to 255V)
+
+41
+PD055 Vo Analog Output Gain
+Set Range: 0.0-100.0% Unit: 0.1% Factory Setting: 100.0
+
+This parameter can be used to adjust the output voltage value of Multi-output 6 to adapt to frequency
+meters with different measuring range and also used to correcta frequency meter. For example, foran
+externally connected frequency meter with the measuring range of 0~5V, a multi-function terminal
+can be used to display its operating frequency. Then it can be corrected with this parameter. It can be
+achieved by setting PD055=50 .
+
+PD056 Skip Frequency 1 **
+PDO057 Skip Frequency 2
+PDO058 Skip Frequency 3
+
+Set Range: 0.00-400.00 Hz Unit: 0.01Hz Factory Setting: 0.0
+PD059 Skip Frequency Range >
+Set Range: 0.10-10.00 Hz Unit: 0.01Hz Factory Setting: 0.5
+F1
+PDO058
+PDO057
+PD056
+
+These three frequency skipping points are set for avoiding a mechanical resonance point. In case of PD05
+9=0, all skip frequencies are invalid. The actual skip frequency range is two times that of PD059, as shown
+inthe above diagram.
+
+PD060 Uniform Frequency 1
+PD061 Uniform Frequency 2
+
+Set Range: 0.00-400.00 Hz Unit: 0.01 Hz Factory Setting: 0.00
+Pd062 Uniform Frequency Range **
+Set Range: 0.10-10.00 Hz Unit: 0.01 Hz Factory Setting: 0.50
+
+Uniform
+Frequency
+Cdo61
+
+Multi-Output T
+
+Uniform Fequency
+
+42
+
+/4" — THE USE OF MANUAL
+
+When the output frequency is more than the uniform frequency the corresponding multi-outputs will act.
+The uniform frequency range acts as a hysteresis loop.
+
+When the inverter is in the operation of multi-pumps, PD060 is used as high speed
+frequency and PDO061 is set as low speed operating frequency. The definitions of the corresponding multi-
+function contacts are changed.
+
+PD063 Timer 1 Time
+
+Set Range: 0.1~10.00 Unit: 1 Factory Setting: 0.1
+PD064 Timer2 Time
+Set Range: 1~100 Unit: 1 Factory Setting: 1
+
+Timer 1 is a timer of 0.1s ~ 10.0s and Timer 2 is a timer of 1s ~ 100s. When the timer start at multi-inputs
+is closed (on) the timer starts to count time. When it reaches the set time the corresponding multi-output contact
+will act. When the timer start is opened (off) the timer time at the multi-output will be reset.
+
+(At Input) Timer start E i > T
+—
+ON
+A ON
+(At Output) Timer T I > T
+
+Pd063
+
+For example, set PD063=5.0s. When the external control terminal (Multi-Input) is valid the output terminal
+will be valid after five (5.0) seconds, the signal of which can be used to control other corresponding signals.
+
+**
+
+PD065 Counting Value
+Set Range: 0-65500 Unit: 1 Factory Setting: 0
+
+An external terminal of multi-function can be used as a trigger for the counter. When the counter reaches the
+set value of PD065 the corresponding multi-output contact will act. After the counter is cleared and reset it will
+start counting again. A proximity switch or optoelectronic switch can be used for the triggering signals.
+
+PD066 Intermediate Counter
+Set Range: 0-65500 Unit: 1 Factory Setting: 0
+
+43
+Refer to PD065.
+
+PD067 PD069 Reserved
+
+PDO070 Analog Input
+Set Range: 0-4 Unit: 1 Factory Setting: 0
+
+0: 0~10V 1: 0~5V 2: 0~20mA
+3: 4~20mA 4: 0-10V 4-20mA stacked
+This parameter can be set for different analog input signals.
+When PD070=4, the output frequency =1/2 (U/Umax + I/Imax) X 50Hz
+Among which: U: Analog Voltage =~ Umax: Maximum Analog Voltage
+I: Analog Current  Imax: Maximum Analog Current
+
+PD071 Analog Filtering Constant
+Set Range: 0-50 Unit: 1 Factory Setting: 20
+
+The setting of this parameter is related to the analog responding speed. The higher the value of PD071 is
+set, the lower the analog responding speed will be.
+
+PD072 Higher Analog Frequency
+
+Set Range: 0.00-400.00 Hz Unit: 0.01Hz Factory Setting: 50.00
+PDO073 Lower Analog Frequency
+
+Set Range: 0.00-400.00 Hz Unit: 0.01 Hz Factory Setting: 0.00
+PD074 Bias Direction at Higher Frequency
+
+Set Range: 0-1 Unit: 1 Factory Setting: 0
+PDO075 Bias Direction at Lower Frequency
+
+Set Range: 0-1 Unit: 1 Factory Setting: 0
+
+0: Positive direction
+
+1: Negative direction
+
+Bias direction means the instruction of FOR/REV rotation command. Positive bias indicates forward rotation
+while negative bias indicates reverse rotation. For details refer to the diagram in Pd076.
+
+PD076 Analog Negative Bias Reverse
+Set Range: 0-1 Unit: 1 Factory Setting: 0
+
+0: Negative bias Rev is not allowable.
+
+1: Negative bias Rev is allowable.
+
+The parameter group is set for the measuring range and zero point of the external analog terminals and can be
+combined for any kind of curve to control the operation of the motor.
+
+AF Setting: PD073=50 PD075=1 PD072=50
+PD074=0 PD076=1
+Rev. Area | 50 Hz For. Area Note: this curve can be easily used incomplicated applications
+in combination with other curves. When using it the
+instruction of FOR/REV run from external terminals is
+still valid. When switching, the curve will turn reverse.
+
+44
+
+45
+
+74"™— THE USE OF MANUAL
+
+PD074=0 PD076=1
+Note: this curve is a kind of special application of reverse ramp
+setting. When using transmitter for the control of pressure,
+temperature and others and while the control has higher
+pressure and output signals but requiring the corresponding
+commands of stop or deceleration on the inverter this curve
+
+W Setting: PD073=50 PD075=1 PD072=50
+
+—> can satisfy the demand properly.
+ov 5V 10V B Properly
+A F
+40
+Setting: PD073=50 PD075=1 PD072=50
+PD074=0 PD076=1
+> Note: this method is used extensively. The user can use it flexibly.
+0 10V
+4mA  20mA
+M F
+Setting: PD073=10 PD075=1 PD072=40
+PD074=0 PD076=0
+Note: the signal of 0Hz-40Hz (4~4.8mA) is invalid. It canbe
+used to avoid noice disturbance. In harsh environment it is
+. — better not to use signals below 1V for setting the operating
+yd frequency of the inverter.
+0 10V
+4mA  4.8mA  20mA
+2V-10V(4.8mA~20mA)
+
+PD077 UP/DOWN Function
+Set Range: 0-1 Unit: 1 Factory Setting: 0
+
+0: Notmemorizedl: Memorized
+
+This parameter can be sct for the selection of whether the values changed by the UP or DOWN shall be
+memorized or not after stop. The changed values whether to be memorized or not means when they are
+changed by UP or DOWN during operation and the inverter is restarted after stop these changed values
+shall be memorized or not after restart. When PD077 is set to 0, the changed value will not be memorized
+and when it is set to 1, the changed values will be memorized. The set values of PD003 will be memorized
+after restart.
+
+For the related parameters refer to PD044-PD049.
+
+PD078 UP/DOWN Speed
+Set Range: 0-1 Unit: 1 Factory Setting: 0
+
+0: 0.01Hz. Minimum UP/DOWN speed is 0.01Hz.
+
+1: 0.1Hz. Minimum UP/DOWN speed is 0.1Hz.
+
+Through the changes of this set value the UP/DOWN speed unit can be adjusted to meet the needs of
+different customers.
+PDO079 Reserved —I
+
+PD080 PLC Operation
+Set Range: 0-5 Unit: 1 Factory Setting: 0
+
+0: Normal operation, i.e. the inverter is running in the normal control mode.
+
+1: Internal control Multi-speeds(16-speeds)
+
+Note:
+
+(D Main speed and 7-speeds composes 8-speeds.
+
+@ The ramp time of each speed step is set by PD084,PD085.
+
+® Running Time is set by Timer PD101~PD116. For the control steps not to be used the timer can be set to 0.
+
+@ Running direction of each speed step is determined by PD082,PD083.
+
+®In the internal control multi-speed operation the running time and direction are determined by the setting
+of internal parameters. Any switching of external time and FOR/REV rotation is invalid.
+
+2:External control 4-Speeds (Refer to the function description and diagram of three terminals of high,
+middle and low speed in PD044~PD049)
+
+3: External control Mulit-speeds
+
+Multi-function Terminals Results
+
+Specd1 | Spesd2 | Spesds
+OFF OFF OFF Main frequency and frequencies are determined by PD003 or potentiometer.
+ON OFF OFF Multi-speed 1 and frequency are determined by PD086.
+OFF ON OFF Multi-speed 2 and frequency are determined by PD087.
+ON ON OFF Multi-speed 3 and frequency are determined by Pd088.
+OFF OFF ON Multi-speed 4 and frequency are determined by PD089.
+ON OFF ON Multi-speed 5 and frequency are determined by PD090.
+OFF ON ON Multi-speed 6 and frequency are determined by PD091.
+ON ON ON Multi-speed 7 and frequency are determined by Pd092.
+
+Note:
+
+@ It is only valid to realize the external control 8-Speeds operation when Multi-inputs are set for Multi-
+speed 1, 2, 3 and PD080 is set to 3.
+
+@ Multi-speed 1, 2, 3 can be used to make up 7-Speeds and 8-Speeds adding the main frequency .
+
+®) The frequencies of Speed Step 1 ~ Step 7 are determined by PD086~PD092.
+
+@ Each ramp time is determined by the external multi-function terminal D1-D6.
+
+® The directions of each program operation are determined by the external multi-function terminalsD1
+-D6.
+
+® The main frequency can be set in two ways. One method is to set it through PD003 and another is to
+set it through the potentiometer. When PD002 is set to 1 the frequency of Main Frequency is set by
+the potentiometer. For the related parameters refer to PD003, PD002 and PD086~PD092.
+
+46
+
+/4" — THE USE OF MANUAL
+
+4: Drawing
+This is a special parameter for the constant speed of unwinding and rewinding. By using this function
+the linear speed constant in certain accuracy can be realized.
+
+- A
+
+PD086 |-----——-
+PDO87 f-----Ff-—-----—----"S .
+Pdoo3 |- { :
+! :
+T L Y > T
+! 1
+ﬂ ? :
+Multi-input l_]_
+Multi-output
+
+Note:
+
+O Through triggering of the external multi-function terminal the drawing action begins.
+
+@ In implementation of the drawing action the actual running time is T=PD101 X 10.
+
+® when the drawing action is finished the inverter will run at the constant seed of PD087 and the corre-
+sponding multi-output contact will act at the same time. Until receiving the STOP command the
+inverter will stop running and the multi-output contact will reset.
+
+5:Disturbance (Traverse function)
+This is a special parameter in the chemical fiber and printing and dying industries to realize the traverse
+function. Except the commands of stop, external faults and emergency stop all other commands are
+not accepted at running.
+
+Note:
+
+( The frequency at each inflection point is determined by PD003 and PD086.
+
+@ Skip Frequency is determined by PD092.
+
+® Running Time is determined by Timer PD101 and PD102.
+
+@ The related parameters: PD003, PD086~PD116.
+
+PDO081 Auto PLC
+Set Range: 0-3 Unit: 1 Factory Setting: 0
+
+: Stop after the program runs one cycle.
+
+: Cycling running.
+
+: Stop after it runs one cycle automatically (STOP for intervention) .
+
+: Auto running and cycling (STOP for intervention)
+This parameter setting is only valid when PDO08O0 is set to 4. For relevant parameters refer to PD003,
+Pd080 and CD082~PD116.
+
+W N - O
+
+47
+
+Explanation:
+
+1.Stop after the program runs one cycle.
+When the command of auto program operation is given, the inverter will run with each setvalue of
+internal parameters. It will run for one cycle and then stop automatically. The inverter will not restart
+and run until it receives another command of operation.
+
+2.Cycling run.
+When the command of operation is given, the inverter will run in sequence with the frequency of
+every speed step and running time set by each of the internal parameters and will recycle. During
+the cycling run, except the commands of stop, external faults and emergency stop, all other com
+mands will not be accepted.
+
+3.Stop after it runs one cycle automatically (STOP for intervention)
+
+F Pd087
+Pd0s8 Pd091
+
+P4003 Pd092
+
+Pd089
+
+Pd101 \P‘“Of Pd103  Pd104 Pd105N9 1% pd107  pgos T
+55055 Pd090
+
+Note:
+
+(D When the command of auto program operation is given the inverter will run with each parameters.
+But it will stop first and then restart at changing of each step and will stop automatically after running
+for one cycle. The inverter will not restart and run until it receives another command of operation.
+
+(2 The frequencies of each speed step are set by PD003 and PD086 ~ PD092.
+
+@ The running times of each speed step are set by PD101 ~PD108.
+
+@ The running direction is set by P082
+
+PDO082 PLC Running Direction of the Front 8-Speeds
+PD083 PLC Running Direction of the Follow 8-Speeds
+Set Range: 0-255 Unit: 1 Factory Setting: 0
+
+This parameter is only valid when PD080 is set to 1 This parameter setting determine the
+running direction of each frequency of PD086~PD092 and PD003 in the program operation.
+The setting method is as follows:
+
+The rotation direction is set first in the binary 8 bits mode, and then converted to a decimal
+value for the setting of this parameter. For instance:
+
+The parameter value 01001010 is converted to a decimal value:
+1x2°%1x2%1x2'=64+8+2=74
+Then PD082=74
+
+PD083 means that set running direction of the follow 8-speeds(the algorithm likes Pd082)
+
+PD084 Ramp Time of the Front 8—-Speeds
+
+48
+
+/4" — THE USE OF MANUAL
+
+. £ B —
+
+PD085 Ramp Time of the Follow 8—Speeds
+Set Range: 0-65535 Unit: 1S Factory Setting: 0
+
+This parameter is only valid when PD080 is set to 1.
+This parameter is set to determine the ramp time values for the internal control multi-speed and each
+speed. The setting method is as follows:
+
+(D Determine each Ramp Time in the binary 2 bit mode
+
+Bit1 Bit0 Ramp Time
+0 0 Ramp Time 1 PD014, PD0O15
+0 1 Ramp Time 2 PD016, PD017
+1 0 Ramp Time 3 PD018, PD019
+1 1 Ramp Time 4 PD020, Pd021
+
+(@ Determine the Ramp time of each speed step in the binary 16 bit mode
+
+Step 8 Step 7 Step 6 Step 5 Step 4 Step 3 Step 2 Step 1
+
+t8 t7 t6 t5 t4 t3 t2 t1
+
+OIO O|O 0|0 OIO 0|1 1|O O|01|1
+
+t1 Select Ramp Time 4
+t2 Select Ramp Time 1
+
+t3 Select Ramp Time 3 The setting value:
+
+t4 Select Ramp Time 2 IX2°+1 X241 X2°+1X2°=99
+
+t5 Select Ramp Time 1 So PD084 is set to 99
+
+t6 Select Ramp Time 1 Attach: 2°=1 2'=2 2°=4 2'=8
+
+t7 Select Ramp Time 1 2'=16 2°=32 2°=64 2'=128
+
+t8 Select Ramp Time 1
+
+PD085 means that set ramp time of the follow 8-speeds(the algorithm likes Pd084)
+
+PD086 Frequency 2 Factory Setting 15
+PD087 Frequency 3 Factory Setting 20
+PD088 Frequency 4 Factory Setting 25
+PD089 Frequency5 Factory Setting 30
+PD090 Frequency 6 Factory Setting 35
+PD091 Frequency 7 Factory Setting 40
+PD092 Frequency 8 Factory Setting 0.5
+
+49
+
+PD093 Frequency 9 Factory Setting 10
+PD094 Frequency 10 Factory Setting 15
+PD095 Frequency 11 Factory Setting 20
+PD096 Frequency 12 Factory Setting 25
+PD097 Frequency 13 Factory Setting 30
+PD098 Frequency 14 Factory Setting 35
+PD099 Frequency 15 Factory Setting 40
+PD100 Frequency 16 Factory Setting 45
+Set Range: 0.00-400.00 Hz Unit: 0.01 Hz
+
+This parameter is set for cooperate the multi-terminals , can choose the external 4-speeds\the external control
+multi-speeds and the internal control multi-speeds.For the relevant parameter refer to PD080 and PD086~PD100
+
+PD101 Timer1
+PD102 Timer2
+PD103 Timer3
+PD104 Timer4
+PD105 Timer5
+PD106 Timer®6
+PD107 Timer7
+PD108 Timer8
+PD101 Timer9
+PD102 Timer10
+PD103 Timer 11
+PD104 Timer12
+PD105 Timer13
+PD106 Timer 14
+PD107 Timer 15
+PD108 Timer 16
+Set Range: 0.06500.0S
+
+Factory Setting 10.0
+Factory Setting 10.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Factory Setting 0.0
+Unit: 0.1S
+
+This parameter is set for the internal control multi-speeds and the running time of drawing function.
+For the relevant parameter refer to PD080 and PD101~PD116.
+
+Pd117 Internal Control Multi-Speeds Memory Function
+
+Set Range: 01 Factory Setting: 0
+
+0: Notmemorized
+1: Memorized
+
+51
+
+/4™ — THE USE OF MANUAL
+
+This parameter is set to determine whether the inverter is to realize the suspending function in Auto
+PLC mode. In case of PD115=1 it can memorize the status in which the inverter is running and will
+memorize it at stop or fail. It will continue to run when returning to normal. In case of PD115=0 it will
+not memorize.
+
+PD118 Over-voltage Stall Prevention
+Set Range: 0-1 Unit: 1 Factory Setting: 1
+
+0: Over-voltage stall prevention invalid
+1: Over-voltage stall prevention valid.
+
+When the inverter is in deceleration, due to the effect of load inertia, the motor will produce a return
+energy to the inverter and cause the DC voltage of the inverter to increase. So when the function of over
+-voltage stall prevention is started, if the DC voltage of the inverter becomes too high, the inverter will
+stop decelerating till the voltage at DC decreases below the set value, then the inverter will go on to
+decelerate and the ramp-down time will be extended automatically.
+
+PD119 Stall Prevention Level at Ramp-up
+Set Range: 0-200% Unit: 1% Factory Setting: 150
+
+When the inverter is in ramp-up, due to overload or too short ramp-up time, the output current of the
+inverter will go up quickly and exceed the set standard level. When this happens, the inverter will stop
+accelerating. When the current returns under its set value, the inverter will go on to accelerate.
+
+100% current is the rated current of the motor. When this parameter is set to 0, the stall prevention
+function is invalid.
+
+PD120 Stall Prevention Level at Constant Speed
+Set Range: 0-200% Unit: 1% Factory Setting: 0
+
+When the inverter is running at constant speed, due to load fluctuation and other reasons, the current
+will increase. When the current exceeds its set standard value, the inverter will lower the output frequency.
+When the output current returns to its normal range, the inverter will accelerate again to its set frequency.
+
+100% current is the Rated Current of the motor. When this parameter is set to 0 the stall prevention
+function is invalid.
+
+PD121 Decel. Time for Stall Prevention at Constant Speed Factory Setting: 5.0
+
+When the inverter is used for the loads of kinds of fan and pump PD119 can be set to 120. When the current
+of the inverter is greater than 120% the output frequency will decrease and the current will also decrease
+accordingly. After the current returns to normal the frequency will return to normal slowly, so as to achieve
+the stall prevention function. The decreasing speed of the frequency is determined by PD119. For the Related
+parameters refer to PD 119.
+
+PD122 Stall Prevention Level at Deceleration
+
+Set Range: 0-200% Unit: 1 Factory Setting: 150
+
+Refer to Pd120.
+100% current is the rated current of the motor.
+
+PD123 Over-torque Detect Mode
+
+Set Range: 0-3 Unit: 1 Factory Setting: 0
+
+0: Whenreaching the frequency it starts to detect over-torque and when over-torque is detected it
+continues to run.
+
+1: Whenreaching the frequency it starts to detect over-torque and when over-torque is detected it
+stop running.
+
+2: Itdetects over-torque during running and when over-torque is detected it continues to run.
+
+3: Itdetects over-torque during running and when over-torque is detected it stop running.
+
+PD124 Over-torque Detect Level
+Set Range: 0-200% Unit: 1% Factory Setting: 0
+
+When the output current exceeds the over-torque detection level and also exceeds half of the set
+time of over-torque detection (factory setting: 1.0s), the over-torque detection will indicate, and the
+corresponding multi-function alarm contact will act. When it exceeds the set time, the inverter will
+turn to self-protection. When this parameter is set to 0, the over-torque detection will be invalid
+
+PD125 Over-torque Detect Time
+Set Range: 0.1-20.0s Unit: 0.1s Factory Setting: 1.0
+
+When the inverter detects that the output current has exceeded the motor current set value, the inverter
+begins to calculate the over-torque time. When the over-torque time has exceeded half of the set detect
+time, the corresponding multi-function output contact will act, and produce the over-torque alarm, while
+the inverter will keep running. When the over-torque time has exceeded the set detect time (set by PD125),
+the inverter will turn to self-protection, display the fault information and stop output..
+
+For the related parameters refer to Pd123.
+
+PD126 Counter Memory
+Set Range: 0-1 Unit: O Factory Setting: 0
+
+0: Notmemorized
+1: Memorized
+
+The function of counter memory, the function of inverter power-breakdown memory
+
+PD127PD129 Reserved J
+
+PD130 Number of Auxiliary Pump
+Set Range: 0-2 Unit: 1 Factory Setting: 0
+
+This parameter is set for the number of auxiliary pump. The start or stop of the auxiliary pumps is
+controlled by using the multi-output contacts and Auxiliary Pump 1 or Auxiliary Pump 2 is controlled
+through the peripheral control circuit.
+
+PD131 Continuous Running Time of Auxiliary Pumps
+Set Range: 19000 ( min) Unit: 1 Factory Setting: 60
+
+In case of two pumps with only one pump in duty, in order to ensure each pump to work evenly, it will
+be switched to another pump when its running time reaches the set value of PD131.
+
+PD132 Interlocking Time of Auxiliary Pump
+Set Range: 1-250S Unit: 1 Factory Setting: 5S
+
+This parameter is set to determine the interlocking time of two auxiliary pumps when switching with
+each other.
+
+52
+
+;\
+
+53
+
+74"\ — THE USE OF MANUAL
+
+Aux. Pump 1 —|OF
+
+Aux. Pump 2 N
+F PD13 N .
+2 >T
+PD133 High Speed Running Time
+Set Range: 1-250S Unit: 1 Factory Setting: 60S
+
+In the application of water supply with constant pressure, when the master pump is running at the
+frequency of high speed (set by PD060) due to larger water volume and the high speed running time is
+reached, the corresponding multi-function contacts act and the auxiliary pumps start.
+
+PD134 Low Speed Running Time
+Set Range: 1-250S Unit: 1 Factory Setting: 60S
+
+In the application of water supply with constant pressure, when the master pump is running at the
+frequency of low speed (set by PD061) due to smaller water volume and the low speed running time
+(PD134) is reached, the corresponding multi-function contacts act and the auxiliary pumps stop.
+
+PD133 and PD134 must be used in combination of PD060, PD061 and multi-outputs. Their main
+function is to increase or decrease the number of auxiliary pump.
+
+output
+frequency
+
+P06
+
+Aux. Pump 1
+Aux. Pump 2
+
+PD135 Stopping Voltage Level
+Set Range: 0-150% Unit: 1 Factory Setting: 95%
+
+This parameter is set for the voltage level of the master pump entering into sleep mode. For details
+refer to the following description.
+
+PD136 Lasting Time of Stopping Voltage Level
+Set Range: 1-250S Unit: 1 Factory Setting: 30S
+
+This parameter is set for the lasting time under the stopping voltage level before entering into sleep
+mode. For details refer to the following description.
+PD137 Wakeup Voltage Level
+
+Set Range: 1-150% Unit: 1 Factory Setting: 80%
+
+This parameter is set for the wakeup voltage level from sleep to wakeup.
+
+PD138 Sleep Frequency
+Set Range: 0.00-400.0 Unit: 1 Factory Setting: 20.00
+
+PD139 Lasting Time of Sleep Frequency
+Set Range: 1-250S Unit: 1 Factory Setting: 20S
+
+Lasting time of
+stop voltage level
+
+Stop voltage level
+P13
+
+5
+Wakeup Voltage Level
+P13
+
+Sleep frequency
+P13
+
+Start to
+sleep
+
+8
+
+This parameter is set for the lasting time to run at sleep frequency when entering into sleep mode.
+
+| PD140 Reserved |
+
+| PD141 Rated Motor Voltage Unit: 0.1V Factory Setting: * |
+
+Itis set according to the rated voltage value of the nameplate of the motor. For the inverters of 230V class the factory
+setting is 220, while for the inverters of 400 V class the factory setting is 380.
+
+PD142 Rated Motor Current Unit: 0.1A Factory Setting: * |
+
+It is set according to the rated value of the nameplate of the motor. This parameter can be used to restrict the output
+current of the inverter to prevent over-current and protect the motor. If the current of the motor has exceeded this value
+the inverter of AC motor will turn to self-protection.
+
+PD143 Motor Pole Number
+Set Range: 02-10 Unit: 1 Factory Setting: 04
+
+This parameter is set for the number of the motor's pole according to the nameplate of the motor.
+
+PD144 Rated Motor Revolution
+
+Set Range: 0-9999 Unit: 1r/min Factory Setting: 1440
+
+This is set according to the actual revolution of the motor. The displayed value is the same as this set value. It can be
+used as a monitoring parameter, which is convenient to the user. This set value corresponds to the revolution at 50Hz.
+
+PD145 Auto Torque Compensation
+SetRange: 0.1-10.0% Unit: 0.1% Factory Setting: 2.0%
+
+This parameter can be set for the auto output of extra voltage when the inverter is running to achieve higher torque,
+which can compensate for the under-torque at lower frequency. The torque compensation should not be too big and it
+should be set slowly from low to high according to the actual situation.
+
+Insufficient compensation will result in the under-torque of the motor at lower frequency. And over compensation will
+lead to too bigger torque, which will produce a shock to the machine and even result in a trip of the inverter under serious
+situation.
+
+54
+
+74"\ — THE USE OF MANUAL
+
+. R
+
+V Y
+
+100%
+
+1
+
+PD146 Motor No-load Current
+Set Range: 0-99 Unit: 1 Factory Setting: 40
+
+The setting of motor no-load current will affect the value of slip compensation. The current is 100%
+of the rated current of the motor.
+
+PD147 Motor Slip Compensation
+Set Range: 0.0-10.0 Unit: 0.1 Factory Setting: 20
+
+When the inverter drives the motor the slip becomes bigger due to the increase of load. This param
+eter can be set for slip compensation to decrease the slip and make the running speed of the motor closer
+to the synchronous revolution.
+
+PD148-PD149 Reserved 1
+
+PD150 Auto Voltage Regulation
+
+Set Range: 0-1 Unit: 1 Factory Setting: 1
+0: Invalid
+1: Valid
+
+When the input power is not stable and if the voltage is too high the operation of the motor with the
+power exceeding the rated voltage will cause increase of the temperature of the motor, damage ofits
+insulation and unstable output torque. This auto voltage regulation can automatically stabilize the output
+voltage within the rated voltage range of the motor under the condition of unstable output power supply
+
+When this function is set to invalid the output voltage will fluctuate.
+
+PD151 Auto Energy Saving
+Set Range: 0-10% Unit: 1% Factory Setting: 0
+
+When it is set to zero this function is invalid. When Auto energy saving function is started the inverter
+will run at the full voltage during ramp-up or -down. During the operation at constant speed the inverter
+can automatically calculate the optimum voltage value according to the power of load and supply power
+to the load to achieve the goal of energy saving.
+
+PD152 Fault Restart Time Factory Setting: 1.0s
+
+When the inverter is set for fault restart and if it has a fault trip with the time exceeding the set value of
+Pd152 the inverter will restart. When using this function pay more attention to the safety.
+
+PD153 Restart after Instantaneous Stop
+
+Set Range: 0-1 Unit: 1 Factory Setting: 0
+
+55
+
+0: Invalid, i.e. the inverter will not restart after an instantaneous power breakdown.
+1: Start by frequency track. Refer to PD025.
+
+PD154  Allowable Power-Breakdown Time
+Set Range: 0.1-5.0S Unit: 0.1S Factory Setting: 0.5
+
+This parameter is set for the maximum allowable power failure time. If exceeding the set time the
+inverter will continue to stop output after power on. Torestart the inverter it needs to follow the general
+starting procedures.
+
+PD155 Number of Abnormal Restart
+Set Range: 00-10 Unit: 1 Factory Setting: 00
+
+After the abnormal conditions ( such as over-current and over-voltage ) happens the inverter will
+automatically reset and restart. If the starting mode is set to normal mode it will start according to the
+normal procedures. If it is set to start by frequency track it will start in the frequency track mode. After
+starting it will restore the set number again if there is no more abnormality happened within 60 seconds.
+If there is still any error and it reaches the set number the inverter will stop output. It can only be started
+after reset. When PD155 is set to zero the inverter will not carry out the functions of automatic reset
+and restart.
+
+PD156 Proportional Constant (P) **
+Set Range: 0.0-1000.0% Unit: 0.1% Factory Setting: 100%
+
+This proportional constant is set for the error value gain. In case of I=0, D=0, it is only for proportional control.
+
+PD157 Integral Time () **
+Set Range: 0.1-3600.0s Unit: 0.1s Factory Setting: 5.0s
+
+The integral time (1) is set for the responding speed for PID. The larger the I value is set the slower the
+responding speed will be. To the contrary, if the responding speed is quick butthe integral time value is set
+too small, it will cause oscillation.
+
+Pd158 Differential Time (D) >
+Set Range: 0.01~10.00s Unit: 0.01s Factory Setting: 0
+
+This differential time (D) is set for the depression operation of PID. The larger the D value is, the more
+obvious the depression operation will be. When D is set to zero, this function is invalid.
+
+PD159 Target Value **
+Set Range: 0~100.0% Unit: 1% Factory Setting: *
+
+This target value can be set through external voltage signal or the digital operator. 100% target value is
+corresponding to the analog frequency at +10V.
+
+PID closed-loop control is usually used in the process control with physical quantity not changing fast,
+such as the controls of pressure and temperature, etc. The feedback signal is usually taken from temperature
+transmitter, or pressure transmitter, etc. Under PID control, the feedback signal input path is the analog current
+signal of 4-20mA.
+
+PID closed-loop control is valid when Multi-input PID is started.
+
+PID Control Block Diagram:
+
++
+e
+
+| %
+1y
+
+56
+
+/4" — THE USE OF MANUAL
+
+_ _{ B —
+
+General operating methods of PID control:
+(1) Choose the correct transmitter (with the output specification of standard current signal 4-20mA).
+(2) Settheright target value.
+(3) Ifthe output does not have oscillation, increase the proportional constant (P).
+(4) If the output does not have oscillation, decrease the integral time (Ti).
+(5) Ifthe output do not have oscillation, increase the differential time (Td).
+(6) Concrete applications can be referred to the example application descriptions in Appendix 1.
+
+Output4  Before regulation
+—
+
+Target value
+1.Suppress the Over Output
+a:Decrease the differential time (Dvalue)
+b:Increase the integral time (I value)
+
+After regulation
+
+» Time
+
+Output 4 Before regulation
+Target value
+2.Suppress the oscillation
+a: Decrease the differential time (D value) or set
+. it to zero.
+After regulation > Time b: Decrease Proportional Constant (P value)
+PD160 PID Target Value **
+Set Range: 0-1 Unit: Factory Setting: 0
+
+The target value can be set through the selection of the panel orexternal analog. The external analog
+is 0~10V signal or given by the potentiometer.
+
+When PD160=0, the target value of PID is the value set by PD159.
+
+When PD160=1,the target value of PID is the value of the external analog 0-10V (corresponding to
+0-100%), the setting of PD159 is invalid.
+
+PD161 PID Upper Limit >
+Set Range: 0-100% Unit: Factory Setting: 100%
+
+When PID feedback value is more than the set value of PD161 the corresponding multi-output will
+act and the inverter will not stop.
+
+PD162 PID Lower Limit >
+Set Range: 0-100% Unit: Factory Setting: 0%
+
+When PID feedback value is less than the set value of PD162 the corresponding multi-output will
+act and the inverter will not stop.
+
+PD163 Communication Addresses
+Set Range: 00-250 Unit: Factory Setting: 00
+
+57
+
+When the inverter is set for RS-485 Communication interface control, each of the inverters will be
+
+set for its individual identification .
+00: No communication function.
+01~250: Address for the inverters
+
+PD164 Communication Baud Rate
+
+Set Range: 0-3 Unit:
+
+Factory Setting: 0
+
+0: 4800b/s 1: 9600b/s 2: 19200b/s
+
+3: 34800b/s
+
+PD165 Communication Data Method
+Set Range: 0-5 Unit: 1
+
+Factory Setting: 0
+
+0: 8N1For ASCII 1: 8E1 For ASCII
+3: 8N1 For RTU 4: 8E1For RTU
+
+2: 801 For ASCII
+5: 801 For RTU
+
+PD166~PD168 Reserved
+
+PD170
+Set Range:
+
+Display Items
+
+0-5 Unit: 1
+
+Factory Setting: 7
+
+This parameter is only valid when Bit 2 is set to 1 in PD171. For the details refer to PD171.
+
+: Inverter Temperature
+: Counter Value
+
+: PID Target Value
+
+: PID Feedback Value
+
+W= O
+
+PD171 Display Items Open
+
+Set Range: 0-15 Unit: 1
+
+Factory Setting: 7
+
+This parameter is set for selection of displaying of DC voltage, AC voltage and other items so that
+the customer can monitor and view them in sequence through the switch key.
+It can be is set first in the binary 3 bits mode, and then converted to a decimal value.
+
+Bit2 | Bit1 [ Bit0
+— >
+|
+»
+|
+>
+
+0: Invalid 1: Valid
+DC Voltage
+AC Voltage
+Select to display items of Pd170.
+
+In the contents displayed the factory setting is to show output frequency, set frequency , output
+current and output revolution through the switch key. If it is necessary to view and monitor other items
+
+they can be set through PD170 and Pd171.
+
+PD172 Fault Clear
+
+Set Range: 00-10 Unit: 1
+
+Factory Setting: **
+
+01 is for fault clear. Others have no function.
+
+PD173 Voltage Rating of Inverter
+
+Unit: 1V Factory Setting: **
+
+Itis factory setting.It is depending on the model .It can be observed, but not set.
+
+58
+
+4™ — THE USE OF MANUAL
+
+_ ¢ s —
+
+| PD174 Rated Current of Inverter Unit: 1A Factory Setting: * |
+
+It is depending on the model and can't be changed.
+
+PD175 Inverter Model
+
+Set Range: 01 Unit: 1 Factory Setting: 0
+0: Constanttorque 1: Forkinds of fan. It can be observed, but not changed.
+
+PD176 Inverter Frequency Standard  Unit: 1 Factory Setting: *
+0: 50Hz 1: 60Hz Itis factory setting. It can be observed, but not set.
+
+PD177 Fault Record 1 Factory Setting:
+
+PD178 Fault Record 2 Factory Setting:
+
+PD179 Fault Record 3 Factory Setting:
+
+PD180 Fault Record 4 Factory Setting:
+
+When it has no fault record it shows . After access to this parameter the fault display can be checked.
+
+| PD181 Software Version Factory Setting: * |
+
+It can be observed, but not set.
+
+| PD182 Manufacture date Factory Setting: * |
+
+It is factory setting. It can be observed, but not set.
+
+| PD183 Serial No. Factory Setting: * l
+
+It is factory setting. It can be observed, but not set.
+
+| PD183~-PD250 Factory Setting: * |
+
+Note:
+
+* means the said parameter has a variety of set values or should be set specifically according to concrete
+conditions.
+** means the said parameter can be set during the operation.
+
+59
+
+X. Care & Maintenance, Fault Information and Troubleshooting
+Periodical maintenances and inspections will keep your inverter in its normal state for long time.
+
+® -
+
+3.
+
+. Precautions about Inspection and Maintenance
+
+Be sure to turn off the power supply to the inverter (R.S.T) first before the inspection and
+maintenance.
+
+After confirming the main circuit power supply has been turned off and the display has
+disappeared, wait until the internal indicator lamp for high voltage goes out before performing
+the inspection and maintenance.
+
+During the inspection, do not pull out or wrongly distribute the internal power supply, wires and
+cables. Otherwise it will cause malfunction or damage to the inverter.
+
+Do not leave any screw or other part inside the inverter during the installation, or it will result in
+the short circuit of circuit board.
+
+Keep the inverter clean, free from dust, oil mist and moisture after the installation.
+
+. Periodical Inspection and Maintenance Items
+
+Check whether the power supply voltage conforms to the rated voltage of the inverter.
+
+(Pay special attention to that whether there is any damage on the power supply wires and the
+motor.)
+
+Check whether the wiring terminals and the connectors are tight
+
+(Check whether the power supply wires and terminal connection wires have any broken strand).
+Check whether there is dust, iron filings or corrosive fluid in the inverter.
+
+Measuring the insulation impedance of the inverter is forbidden.
+
+Examine the output voltage, output current and output frequency of the inverter.
+
+(The measuring results should not have too big difference.)
+
+Check whether the ambient temperature of the inverter is between -5°C and 40°C and whether the
+installation environment has good ventilation.
+
+Check whether the humidity is kept below 90% (without condensation).
+
+Check whether the motor makes unusual noises or abnormal vibration in running.
+
+(The inverter should not be installed in a place with high vibration.)
+
+Please make periodical cleaning of vent holes.
+
+Fault Indication and Troubleshooting
+
+The inverter of HLP series is relatively perfective with the protection functions of overload, inter-
+phase short circuit, earth short circuit, under-voltage, overheating and over-current, etc. When a
+protection function happens with the inverter please check the reasons of faults according to the
+information listed in the table below. The inverter can be restarted after the disposal. If the fault
+cannot be disposed please contact the local distributor.
+
+Fault Fault Contents
+
+Display | & Description Disposal methods
+
+1: Check whether the motor has got short circuit or
+partial short circuit and whether the insulation of
+
+oo Over—current outputwire is good.
+
+[ | during ramp-up 2: Extend the ramp-up time.
+
+3: The configuration of the inverter is not reasonable.
+The inverter's capacity should be increased.
+
+4: Decrease the torque and increase the set value.
+
+60
+
+THE USE OF MANUAL
+
+.
+
+\
+
+Over-current at
+constant speed
+
+N
+
+w
+
+B
+
+: Check whether the motor has got short circuit
+and whether the insulation of the output wires
+is good.
+
+: Check whether the motor is blocked and whether
+there is a sudden change of mechanical load.
+
+: Check whether the inverter's capacity is too small
+and increase its capacity.
+
+: Check whether there is a sudden change in the
+power supply voltage.
+
+|
+M
+
+Over-current at decel
+Over—current at stop
+
+—_
+
+: Check whether the insulation of the output wires
+
+is good and whether the motor has got short circuit.
+Extend the Ramp-down Time.
+
+Replace it with an inverter of larger capacity.
+
+DC braking is too high. Decrease DC braking.
+
+The inverter has failure. Please send it to the factory
+for repair.
+
+-
+
+Output short circuit
+
+—_
+
+N
+
+@
+
+: Check whether the connection wire of the motor
+
+has got short circuit.
+
+: Check whether the insulation of the output wires
+
+is good.
+Please send it for repair.
+
+Over-voltage at stop
+Over-voltage at accel
+Over-voltage at
+constant speed
+Over-voltage at decel
+
+—_
+
+N
+
+: Extend the Ramp-down Time or add a braking
+
+resistor.
+
+: Improve the mains supply voltage and check
+
+whether there is any sudden change in the voltage.
+
+=: |L| Fuse break Fuse break. Please send it to the factory for repair.
+| 1: Check whether the input voltage is normal.
+[ Low voltage 2: Check whether there is sudden change in load.
+
+3: Check whether there is any phase missing.
+
+61
+
+Overheat of inverter
+
+1: Check whether the fan is blocked and whether
+there is any foreign matter stuck in the cooling fins.
+
+: Check whether the ambient temperature is normal.
+
+: Check whether there is enough space for ventilation
+and good air convection.
+
+w N
+
+Inverter overload
+150% Per minute
+
+'y
+
+: Check whether the capacity of the inverter is lower
+Otherwise it should be increased.
+
+: Check whether there is any jamming in the
+mechanical load.
+
+: The setting of V/F curve is bad. Set it again.
+
+N
+
+w
+
+IZJ
+
+Motor overload
+150% Per minute
+
+—_
+
+: Check whether there is any sudden change in
+the mechanical load.
+
+The equipped motor is too small.
+
+The motor is hot and the insulation becomes bad.
+Check whether the voltage has big fluctuation.
+Check whether there is any phase missing.
+
+The mechanical load is increased.
+
+oorwn
+
+n
+
+1a_
+
+Motor over-torque
+
+'y
+
+: Check whether there is any fluctuation in the
+mechanical load.
+: Check whether the equipped motor is smaller.
+
+N
+
+I o o
+
+T
+N N
+
+a3 oo
+
+No feedback from
+auxiliary coil of
+
+the electromagnetic
+contactor
+
+Please contact the factory.
+
+n
+
+2
+
+Braking transistor
+damage
+
+Please send it for repair.
+
+=
+
+=7
+
+CPU fault
+
+Please contact the factory.
+
+L
+
+muinnianinn
+o
+
+L i o T |
+muinminninn
+
+E’Prom fault
+
+Please contact the factory.
+
+74— THE USE OF MANUAL
+
+Er External interferences Isolate the interference source
+ES Emergency Stop In Emergency Stop
+
+20 4-20mAz wire broken Join the broken wires
+
+Pr Setting error Correct the setting
+
+Dcb DC braking status In DC braking
+
+Note:
+(1) Fault Code Form as follows:
+
+E XX XY S: Atstopping
+T-’ Status Y A: Ataccel.
+Alarm message N: Atconstant speed run
+
+Fault
+D: Atdecel.
+
+(2) Code Comparison Table
+
+BI{C|D|E|F|G|H|O
+
+=
+|
+I_
+(|
+-
+IZ7
+_IZ
+[ I V)
+A
+0
+=
+(NN
+
+r_
+LI
+
+4. Faults and Analysis
+(1) When RUN key is pressed, the motor does not run.
+
+1) The setting of operation mode is wrong, i.e., under the operation mode of external control terminals,
+the inverter is started by the digital operator or under the operation mode of the digital operator it
+is started by the external control terminals.
+
+2) The frequency reference is too low or not set.
+
+3) The peripheral wiring is wrong. For example, the setting of wiring of two-wire system and three-
+
+wire system and other related parameters have errors.
+
+4) The setting of multi-function terminals is wrong (in the external control).
+
+5) The inverter is in the fault protection.
+
+6) The motor fails.
+
+7) The inverter fails.
+
+(2) The parameters cannot be set.
+1) Password locks. Please decrypt it first before resetting.
+2) The inverter is in running.
+3) The connection of the connecting parts is abnormal. The communication of the digital operator is
+abnormal. Take out the operator after power-off and then mount it again for a trial.
+
+63
+
+e R
+
+(3) The motor cannot rotate reverse.
+Reverse rotation is disabled.
+
+(4) The motor rotates in the opposite direction.
+The output line is wrongly connected. Please change any two lines of U.V.W over.
+
+(5) The deceleration of the motor is too slow.
+1) The setting of Ramp-down Time is too long. Decrease Ramp-down Time.
+
+2 ) Add abraking resistor.
+
+3 ) Add aDC brake.
+
+(6) Over—heat of the motor
+
+1) The load is too large. The actual torque has exceeded the rated torque of the motor. It is
+recommended to increase the capacity of the motor.
+2) The ambient temperature is too high. In a place with higher temperature the motor will be burn
+out. Please decrease the temperature around the motor.
+3) The phase to phase withstand voltage of the motor is insufficient.
+
+The switch actions of the inverter will make the winding coil of the motor produce shock wave.
+Typically the maximum shock voltage will reach 3 times that of input power of the inverter. Please
+select a motor with higher phase to phase withstand voltage against shock than the maximum shock
+
+voltage.
+
+(7)) The starting of the inverter interferes other control devices
+1) Decrease the carrier frequency and reduce the number of actions of internal switches.
+2 ) Install a noise filter at the power input of the inverter.
+3 ) Install a noise filter at the output of the inverter.
+4 ) Make correct grounding for the inverter and the motor.
+5 ) Use metal conduit to tube the cable to shield it.
+6 ) Make separate wiring for the main circuit wires and control wires.
+
+(8) When the fan starts the inverter detected an over—current stall.
+1) At start the fan rotates idly. Please set it for DC braking at start.
+2 ) When DC braking at start has been set increase the DC braking value.
+
+(9) The machine has the noise of vibration or roar
+1) The vibration frequency of mechanical system resonates with the carrier. Adjust the carrier to
+
+avoid the point of resonance.
+2) The vibration frequency of mechanical system resonates with the output frequency of the
+
+inverter.
+
+A.Set it for skip function to avoid the point of resonance.
+B.Put rubber vibration isolator on the base plate of motor.
+
+Xl. Selection of Peripheral Devices and Disposition
+
+1. Options
+Description Functions
+,N't:B or ?rofund fault | protect the wiring of the inverter. Be sure to install a breaker at the power.
+g‘oﬁ::é)ﬁi:l orwire Please select a ground fault circuit interrupter against high—order harmonics.
+
+Electromagnetic
+contactor
+
+In order to prevent the braking resistor from burning out, please add an electro—
+magnetic contactor and connect a surge absorber to the coil when using it.
+
+64
+
+74" — THE USE OF MANUAL
+
+\
+
+Absorb the switching surge current from the electromagnetic contactor and
+
+ea ber
+Surge absor control relays.
+
+Its function of isolating the input and output of the inverter is effective to reduce
+
+Isolating transformer . ) h
+9 the interference to other electric devices.
+
+DC reactor Improve the input power factor of the inverter.
+AC reactor Improve the input power factor of the inverter and prevent the shock of surge voltage.
+Errglk(iigg &tre]?tistor, Consume the regenerating energy of the motor and shorten the ramp-down time.
+
+1) Leakage switch
+
+There is earth static capacity inside of the inverter and the motor as well as the input and output leads.
+Due to higher carrier frequency of the inverter the inverter has higher earth leakage current,
+especially for the inverters of large capacity series. When using a leakage switch it may sometimes
+result in the error action of the protective circuit. So when using a leakage switch attention should be
+paid to its selection and the proper reduction of carrier frequency and shortening the leads, etc.
+
+2) AC reactors
+
+An AC reactor can constrict the high-order harmonic of input current of the inverter to improve its
+
+input power factor and prevent the shock of surge. It is recommended to use an input AC reactor
+
+under the following circumstances:
+
+a: Three-phase power supply is in unbalance.
+
+b: Any equipment with thyristor or power factor compensation unit with switching control is
+connected to the same power supply.
+
+3) DCreactors
+
+It is necessary to install a DC reactor when the capacity of power supply is more than 1000 KVA or
+the mains power capacity is higher than the rated capacity of the inverter. A DC reactor is also
+needed for the case with higher demand on the improvement of power factor of power supply. This
+DC reactor can be used together with an AC reactor to achieve the obvious effect of decreasing high-
+order harmonic at input. If it is necessary to install a DC reactor please contact the local distributor.
+
+Disposition of Braking Resistor
+
+Braking resistor
+Inverter Specification Braking torque Special
+Model W o 10%ED Motor KW
+HY00D423B 80 200 125 0.4
+HYO0D7523B 100 200 125 0.75
+HY01D523B 300 100 125 1.5
+HY02D223B 300 70 125 2.2
+HYOD7543B 80 750 125 0.75
+HY01D543B 300 400 125 1.5
+HY02D243B 300 250 125 2.2
+
+65
+HY03D743B 400 150 125 3.7
+HY05D543B 500 100 125 5.5
+HY07D543B 1000 75 125 7.5
+HY11D043B 1000 50 125 11
+HY15D043B 1500 40 125 15
+HY18D543B 4800 32 125 18.5
+HY22D043B 4800 27.2 125 22
+HY30D043B 6000 20 125 30
+HY37D043B 9600 16 125 37
+HY45D043B 9600 13.6 125 45
+HY55D043B 12000 20/2 125 55
+HY75D043B 18000 13.6/2 125 75
+HY90D043B 18000 20/3 125 90
+HY110D043B 18000 20/3 125 110
+HY132D043B 24000 20/4 125 132
+HY160D043B 36000 13.6/4 125 160
+HY200D043B 45000 13.6/5 125 200
+HY220D043B 48000 13.6/5 125 220
+HY315D043B 57600 13.6/6 125 300
+
+For the inverter of above 11KW to realize quick brake a braking unit must be added.
+
+Note:
+
+1: Please select the resistor value and operating frequency given by our company.
+
+2:If it causes any damage to the inverter and other devices due to the use of any braking resistor and
+braking model group not supplied by our company, we will take no responsibility.
+
+3: Be sure to consider the safety and ignitability of the environment when installing a braking resistor.
+The distance to the inverter should be at least 100 mm.
+
+4:If it is necessary to change the resistor value and power value, please contact the local distributor.
+
+5:Inneed of a braking resistor a separate order must be placed. Please contact the local distributor for
+
+details.
+
+66
+
+m7 THE USE OF MANUAL
+
+User Parameter Set
+
+Par. No. Function Name User Set Value
+
+Note:
+The Engineer is highly appreciated to fill the form above carefully and
+detailedly in order to be easily readjusted by the end customers.
+
+Engineer name:
+Telephone No.:
+
+Installing Date:
+
+67

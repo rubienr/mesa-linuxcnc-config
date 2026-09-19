@@ -1,0 +1,25 @@
+# Mesa 7I95T communication-only bench test at a 2 ms servo period.
+# No motion, spindle, enable, or SSR signals are connected to the card.
+
+loadrt hostmot2
+loadrt hm2_eth board_ip="192.168.1.121"
+
+addf hm2_7i95.0.read servo-thread 1
+addf hm2_7i95.0.write servo-thread
+
+# Allow five complete 2 ms cycles before the hardware watchdog trips.
+setp hm2_7i95.0.watchdog.timeout_ns 10000000
+
+setp hm2_7i95.0.stepgen.00.enable false
+setp hm2_7i95.0.stepgen.01.enable false
+setp hm2_7i95.0.stepgen.02.enable false
+setp hm2_7i95.0.stepgen.03.enable false
+setp hm2_7i95.0.stepgen.04.enable false
+setp hm2_7i95.0.stepgen.05.enable false
+
+setp hm2_7i95.0.ssr.00.out-00 false
+setp hm2_7i95.0.ssr.00.out-01 false
+setp hm2_7i95.0.ssr.00.out-02 false
+setp hm2_7i95.0.ssr.00.out-03 false
+setp hm2_7i95.0.ssr.00.out-04 false
+setp hm2_7i95.0.ssr.00.out-05 false

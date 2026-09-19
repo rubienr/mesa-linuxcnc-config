@@ -1,0 +1,1940 @@
+{
+  "captured_at": "2026-09-19T14:10:14.449665+00:00",
+  "device": "/dev/ttyUSB0",
+  "baud": 19200,
+  "format": "8N1",
+  "target": 1,
+  "protocol": "Huanyang proprietary RTU",
+  "transmitted_function_codes": [
+    1
+  ],
+  "registers": [
+    {
+      "parameter": "PD000",
+      "number": 0,
+      "status": "ok",
+      "request": "01 01 03 00 00 00 3c 4e",
+      "response": "01 01 02 00 00 b9 fc",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD001",
+      "number": 1,
+      "status": "ok",
+      "request": "01 01 03 01 00 00 6d 8e",
+      "response": "01 01 02 01 02 39 ad",
+      "raw_value": 2
+    },
+    {
+      "parameter": "PD002",
+      "number": 2,
+      "status": "ok",
+      "request": "01 01 03 02 00 00 9d 8e",
+      "response": "01 01 02 02 02 39 5d",
+      "raw_value": 2
+    },
+    {
+      "parameter": "PD003",
+      "number": 3,
+      "status": "ok",
+      "request": "01 01 03 03 00 00 cc 4e",
+      "response": "01 01 03 03 10 64 c0 65",
+      "raw_value": 4196
+    },
+    {
+      "parameter": "PD004",
+      "number": 4,
+      "status": "ok",
+      "request": "01 01 03 04 00 00 7d 8f",
+      "response": "01 01 03 04 9c 40 15 7f",
+      "raw_value": 40000
+    },
+    {
+      "parameter": "PD005",
+      "number": 5,
+      "status": "ok",
+      "request": "01 01 03 05 00 00 2c 4f",
+      "response": "01 01 03 05 9c 40 44 bf",
+      "raw_value": 40000
+    },
+    {
+      "parameter": "PD006",
+      "number": 6,
+      "status": "ok",
+      "request": "01 01 03 06 00 00 dc 4f",
+      "response": "01 01 03 06 07 d0 df e3",
+      "raw_value": 2000
+    },
+    {
+      "parameter": "PD007",
+      "number": 7,
+      "status": "ok",
+      "request": "01 01 03 07 00 00 8d 8f",
+      "response": "01 01 03 07 01 2c 8d c2",
+      "raw_value": 300
+    },
+    {
+      "parameter": "PD008",
+      "number": 8,
+      "status": "ok",
+      "request": "01 01 03 08 00 00 bd 8c",
+      "response": "01 01 03 08 08 98 bb e6",
+      "raw_value": 2200
+    },
+    {
+      "parameter": "PD009",
+      "number": 9,
+      "status": "ok",
+      "request": "01 01 03 09 00 00 ec 4c",
+      "response": "01 01 03 09 00 c8 ed da",
+      "raw_value": 200
+    },
+    {
+      "parameter": "PD010",
+      "number": 10,
+      "status": "ok",
+      "request": "01 01 03 0a 00 00 1c 4c",
+      "response": "01 01 03 0a 00 a0 1c 34",
+      "raw_value": 160
+    },
+    {
+      "parameter": "PD011",
+      "number": 11,
+      "status": "ok",
+      "request": "01 01 03 0b 00 00 4d 8c",
+      "response": "01 01 03 0b 05 3c 4e cd",
+      "raw_value": 1340
+    },
+    {
+      "parameter": "PD012",
+      "number": 12,
+      "status": "unsupported",
+      "request": "01 01 03 0c 00 00 fc 4d",
+      "response": "01 81 01 0c 50 65"
+    },
+    {
+      "parameter": "PD013",
+      "number": 13,
+      "status": "ok",
+      "request": "01 01 03 0d 00 00 ad 8d",
+      "response": "01 01 02 0d 58 bc 96",
+      "raw_value": 88
+    },
+    {
+      "parameter": "PD014",
+      "number": 14,
+      "status": "ok",
+      "request": "01 01 03 0e 00 00 5d 8d",
+      "response": "01 01 03 0e 00 28 5d 93",
+      "raw_value": 40
+    },
+    {
+      "parameter": "PD015",
+      "number": 15,
+      "status": "ok",
+      "request": "01 01 03 0f 00 00 0c 4d",
+      "response": "01 01 03 0f 00 32 8d 98",
+      "raw_value": 50
+    },
+    {
+      "parameter": "PD016",
+      "number": 16,
+      "status": "ok",
+      "request": "01 01 03 10 00 00 3d 8b",
+      "response": "01 01 03 10 00 c8 3c 1d",
+      "raw_value": 200
+    },
+    {
+      "parameter": "PD017",
+      "number": 17,
+      "status": "ok",
+      "request": "01 01 03 11 00 00 6c 4b",
+      "response": "01 01 03 11 00 c8 6d dd",
+      "raw_value": 200
+    },
+    {
+      "parameter": "PD018",
+      "number": 18,
+      "status": "ok",
+      "request": "01 01 03 12 00 00 9c 4b",
+      "response": "01 01 03 12 01 90 9d b7",
+      "raw_value": 400
+    },
+    {
+      "parameter": "PD019",
+      "number": 19,
+      "status": "ok",
+      "request": "01 01 03 13 00 00 cd 8b",
+      "response": "01 01 03 13 01 90 cc 77",
+      "raw_value": 400
+    },
+    {
+      "parameter": "PD020",
+      "number": 20,
+      "status": "ok",
+      "request": "01 01 03 14 00 00 7c 4a",
+      "response": "01 01 03 14 03 20 7d 62",
+      "raw_value": 800
+    },
+    {
+      "parameter": "PD021",
+      "number": 21,
+      "status": "ok",
+      "request": "01 01 03 15 00 00 2d 8a",
+      "response": "01 01 03 15 03 20 2c a2",
+      "raw_value": 800
+    },
+    {
+      "parameter": "PD022",
+      "number": 22,
+      "status": "ok",
+      "request": "01 01 03 16 00 00 dd 8a",
+      "response": "01 01 02 16 00 b7 9c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD023",
+      "number": 23,
+      "status": "ok",
+      "request": "01 01 03 17 00 00 8c 4a",
+      "response": "01 01 02 17 00 b6 0c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD024",
+      "number": 24,
+      "status": "ok",
+      "request": "01 01 03 18 00 00 bc 49",
+      "response": "01 01 02 18 01 72 3c",
+      "raw_value": 1
+    },
+    {
+      "parameter": "PD025",
+      "number": 25,
+      "status": "ok",
+      "request": "01 01 03 19 00 00 ed 89",
+      "response": "01 01 02 19 00 b2 6c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD026",
+      "number": 26,
+      "status": "ok",
+      "request": "01 01 03 1a 00 00 1d 89",
+      "response": "01 01 02 1a 00 b2 9c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD027",
+      "number": 27,
+      "status": "ok",
+      "request": "01 01 03 1b 00 00 4c 49",
+      "response": "01 01 03 1b 00 32 cd 9c",
+      "raw_value": 50
+    },
+    {
+      "parameter": "PD028",
+      "number": 28,
+      "status": "ok",
+      "request": "01 01 03 1c 00 00 fd 88",
+      "response": "01 01 03 1c 00 32 7c 5d",
+      "raw_value": 50
+    },
+    {
+      "parameter": "PD029",
+      "number": 29,
+      "status": "ok",
+      "request": "01 01 03 1d 00 00 ac 48",
+      "response": "01 01 02 1d 00 b0 ac",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD030",
+      "number": 30,
+      "status": "ok",
+      "request": "01 01 03 1e 00 00 5c 48",
+      "response": "01 01 02 1e 00 b0 5c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD031",
+      "number": 31,
+      "status": "ok",
+      "request": "01 01 03 1f 00 00 0d 88",
+      "response": "01 01 02 1f 14 b1 c3",
+      "raw_value": 20
+    },
+    {
+      "parameter": "PD032",
+      "number": 32,
+      "status": "ok",
+      "request": "01 01 03 20 00 00 3d 84",
+      "response": "01 01 02 20 32 21 e9",
+      "raw_value": 50
+    },
+    {
+      "parameter": "PD033",
+      "number": 33,
+      "status": "ok",
+      "request": "01 01 03 21 00 00 6c 44",
+      "response": "01 01 02 21 96 21 c2",
+      "raw_value": 150
+    },
+    {
+      "parameter": "PD034",
+      "number": 34,
+      "status": "ok",
+      "request": "01 01 03 22 00 00 9c 44",
+      "response": "01 01 02 22 05 61 5f",
+      "raw_value": 5
+    },
+    {
+      "parameter": "PD035",
+      "number": 35,
+      "status": "unsupported",
+      "request": "01 01 03 23 00 00 cd 84",
+      "response": "01 81 01 23 11 b9"
+    },
+    {
+      "parameter": "PD036",
+      "number": 36,
+      "status": "unsupported",
+      "request": "01 01 03 24 00 00 7c 45",
+      "response": "01 81 01 24 50 7b"
+    },
+    {
+      "parameter": "PD037",
+      "number": 37,
+      "status": "unsupported",
+      "request": "01 01 03 25 00 00 2d 85",
+      "response": "01 81 01 25 91 bb"
+    },
+    {
+      "parameter": "PD038",
+      "number": 38,
+      "status": "unsupported",
+      "request": "01 01 03 26 00 00 dd 85",
+      "response": "01 81 01 26 d1 ba"
+    },
+    {
+      "parameter": "PD039",
+      "number": 39,
+      "status": "unsupported",
+      "request": "01 01 03 27 00 00 8c 45",
+      "response": "01 81 01 27 10 7a"
+    },
+    {
+      "parameter": "PD040",
+      "number": 40,
+      "status": "unsupported",
+      "request": "01 01 03 28 00 00 bc 46",
+      "response": "01 81 01 28 50 7e"
+    },
+    {
+      "parameter": "PD041",
+      "number": 41,
+      "status": "ok",
+      "request": "01 01 03 29 00 00 ed 86",
+      "response": "01 01 02 29 0f e6 68",
+      "raw_value": 15
+    },
+    {
+      "parameter": "PD042",
+      "number": 42,
+      "status": "ok",
+      "request": "01 01 03 2a 00 00 1d 86",
+      "response": "01 01 03 2a 01 f4 1d 91",
+      "raw_value": 500
+    },
+    {
+      "parameter": "PD043",
+      "number": 43,
+      "status": "ok",
+      "request": "01 01 03 2b 00 00 4c 46",
+      "response": "01 01 03 2b 00 00 4c 46",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD044",
+      "number": 44,
+      "status": "ok",
+      "request": "01 01 03 2c 00 00 fd 87",
+      "response": "01 01 02 2c 02 24 fd",
+      "raw_value": 2
+    },
+    {
+      "parameter": "PD045",
+      "number": 45,
+      "status": "ok",
+      "request": "01 01 03 2d 00 00 ac 47",
+      "response": "01 01 02 2d 03 e4 ad",
+      "raw_value": 3
+    },
+    {
+      "parameter": "PD046",
+      "number": 46,
+      "status": "ok",
+      "request": "01 01 03 2e 00 00 5c 47",
+      "response": "01 01 02 2e 0e 25 98",
+      "raw_value": 14
+    },
+    {
+      "parameter": "PD047",
+      "number": 47,
+      "status": "ok",
+      "request": "01 01 03 2f 00 00 0d 87",
+      "response": "01 01 02 2f 16 24 02",
+      "raw_value": 22
+    },
+    {
+      "parameter": "PD048",
+      "number": 48,
+      "status": "ok",
+      "request": "01 01 03 30 00 00 3c 41",
+      "response": "01 01 02 30 18 ad f6",
+      "raw_value": 24
+    },
+    {
+      "parameter": "PD049",
+      "number": 49,
+      "status": "ok",
+      "request": "01 01 03 31 00 00 6d 81",
+      "response": "01 01 02 31 17 ec 62",
+      "raw_value": 23
+    },
+    {
+      "parameter": "PD050",
+      "number": 50,
+      "status": "ok",
+      "request": "01 01 03 32 00 00 9d 81",
+      "response": "01 01 02 32 01 6d 5c",
+      "raw_value": 1
+    },
+    {
+      "parameter": "PD051",
+      "number": 51,
+      "status": "ok",
+      "request": "01 01 03 33 00 00 cc 41",
+      "response": "01 01 02 33 05 6d 0f",
+      "raw_value": 5
+    },
+    {
+      "parameter": "PD052",
+      "number": 52,
+      "status": "ok",
+      "request": "01 01 03 34 00 00 7d 80",
+      "response": "01 01 02 34 08 ae fa",
+      "raw_value": 8
+    },
+    {
+      "parameter": "PD053",
+      "number": 53,
+      "status": "ok",
+      "request": "01 01 03 35 00 00 2c 40",
+      "response": "01 01 02 35 00 ae ac",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD054",
+      "number": 54,
+      "status": "ok",
+      "request": "01 01 03 36 00 00 dc 40",
+      "response": "01 01 02 36 00 ae 5c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD055",
+      "number": 55,
+      "status": "ok",
+      "request": "01 01 03 37 00 00 8d 80",
+      "response": "01 01 02 37 64 ae 27",
+      "raw_value": 100
+    },
+    {
+      "parameter": "PD056",
+      "number": 56,
+      "status": "ok",
+      "request": "01 01 03 38 00 00 bd 83",
+      "response": "01 01 03 38 00 00 bd 83",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD057",
+      "number": 57,
+      "status": "ok",
+      "request": "01 01 03 39 00 00 ec 43",
+      "response": "01 01 03 39 00 00 ec 43",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD058",
+      "number": 58,
+      "status": "ok",
+      "request": "01 01 03 3a 00 00 1c 43",
+      "response": "01 01 03 3a 00 00 1c 43",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD059",
+      "number": 59,
+      "status": "ok",
+      "request": "01 01 03 3b 00 00 4d 83",
+      "response": "01 01 03 3b 00 32 cc 56",
+      "raw_value": 50
+    },
+    {
+      "parameter": "PD060",
+      "number": 60,
+      "status": "ok",
+      "request": "01 01 03 3c 00 00 fc 42",
+      "response": "01 01 03 3c 27 10 e6 7e",
+      "raw_value": 10000
+    },
+    {
+      "parameter": "PD061",
+      "number": 61,
+      "status": "ok",
+      "request": "01 01 03 3d 00 00 ad 82",
+      "response": "01 01 03 3d 0d ac a9 6f",
+      "raw_value": 3500
+    },
+    {
+      "parameter": "PD062",
+      "number": 62,
+      "status": "ok",
+      "request": "01 01 03 3e 00 00 5d 82",
+      "response": "01 01 03 3e 03 e8 5d 3c",
+      "raw_value": 1000
+    },
+    {
+      "parameter": "PD063",
+      "number": 63,
+      "status": "ok",
+      "request": "01 01 03 3f 00 00 0c 42",
+      "response": "01 01 02 3f 01 69 cc",
+      "raw_value": 1
+    },
+    {
+      "parameter": "PD064",
+      "number": 64,
+      "status": "ok",
+      "request": "01 01 03 40 00 00 3d 9a",
+      "response": "01 01 02 40 01 49 fc",
+      "raw_value": 1
+    },
+    {
+      "parameter": "PD065",
+      "number": 65,
+      "status": "ok",
+      "request": "01 01 03 41 00 00 6c 5a",
+      "response": "01 01 03 41 00 00 6c 5a",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD066",
+      "number": 66,
+      "status": "ok",
+      "request": "01 01 03 42 00 00 9c 5a",
+      "response": "01 01 03 42 00 00 9c 5a",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD067",
+      "number": 67,
+      "status": "unsupported",
+      "request": "01 01 03 43 00 00 cd 9a",
+      "response": "01 81 01 43 11 91"
+    },
+    {
+      "parameter": "PD068",
+      "number": 68,
+      "status": "unsupported",
+      "request": "01 01 03 44 00 00 7c 5b",
+      "response": "01 81 01 44 50 53"
+    },
+    {
+      "parameter": "PD069",
+      "number": 69,
+      "status": "unsupported",
+      "request": "01 01 03 45 00 00 2d 9b",
+      "response": "01 81 01 45 91 93"
+    },
+    {
+      "parameter": "PD070",
+      "number": 70,
+      "status": "ok",
+      "request": "01 01 03 46 00 00 dd 9b",
+      "response": "01 01 02 46 01 4a 5c",
+      "raw_value": 1
+    },
+    {
+      "parameter": "PD071",
+      "number": 71,
+      "status": "ok",
+      "request": "01 01 03 47 00 00 8c 5b",
+      "response": "01 01 02 47 14 8a 03",
+      "raw_value": 20
+    },
+    {
+      "parameter": "PD072",
+      "number": 72,
+      "status": "ok",
+      "request": "01 01 03 48 00 00 bc 58",
+      "response": "01 01 03 48 9c 40 d4 a8",
+      "raw_value": 40000
+    },
+    {
+      "parameter": "PD073",
+      "number": 73,
+      "status": "ok",
+      "request": "01 01 03 49 00 00 ed 98",
+      "response": "01 01 03 49 00 00 ed 98",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD074",
+      "number": 74,
+      "status": "ok",
+      "request": "01 01 03 4a 00 00 1d 98",
+      "response": "01 01 02 4a 00 8e 9c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD075",
+      "number": 75,
+      "status": "ok",
+      "request": "01 01 03 4b 00 00 4c 58",
+      "response": "01 01 02 4b 00 8f 0c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD076",
+      "number": 76,
+      "status": "ok",
+      "request": "01 01 03 4c 00 00 fd 99",
+      "response": "01 01 02 4c 00 8d 3c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD077",
+      "number": 77,
+      "status": "ok",
+      "request": "01 01 03 4d 00 00 ac 59",
+      "response": "01 01 02 4d 00 8c ac",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD078",
+      "number": 78,
+      "status": "ok",
+      "request": "01 01 03 4e 00 00 5c 59",
+      "response": "01 01 02 4e 00 8c 5c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD079",
+      "number": 79,
+      "status": "ok",
+      "request": "01 01 03 4f 00 00 0d 99",
+      "response": "01 01 02 4f 01 4c 0c",
+      "raw_value": 1
+    },
+    {
+      "parameter": "PD080",
+      "number": 80,
+      "status": "ok",
+      "request": "01 01 03 50 00 00 3c 5f",
+      "response": "01 01 02 50 00 85 fc",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD081",
+      "number": 81,
+      "status": "ok",
+      "request": "01 01 03 51 00 00 6d 9f",
+      "response": "01 01 02 51 00 84 6c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD082",
+      "number": 82,
+      "status": "ok",
+      "request": "01 01 03 52 00 00 9d 9f",
+      "response": "01 01 02 52 00 84 9c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD083",
+      "number": 83,
+      "status": "ok",
+      "request": "01 01 03 53 00 00 cc 5f",
+      "response": "01 01 02 53 00 85 0c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD084",
+      "number": 84,
+      "status": "ok",
+      "request": "01 01 03 54 00 00 7d 9e",
+      "response": "01 01 03 54 00 00 7d 9e",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD085",
+      "number": 85,
+      "status": "ok",
+      "request": "01 01 03 55 00 00 2c 5e",
+      "response": "01 01 03 55 00 00 2c 5e",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD086",
+      "number": 86,
+      "status": "ok",
+      "request": "01 01 03 56 00 00 dc 5e",
+      "response": "01 01 03 56 05 dc de 97",
+      "raw_value": 1500
+    },
+    {
+      "parameter": "PD087",
+      "number": 87,
+      "status": "ok",
+      "request": "01 01 03 57 00 00 8d 9e",
+      "response": "01 01 03 57 07 d0 8e 32",
+      "raw_value": 2000
+    },
+    {
+      "parameter": "PD088",
+      "number": 88,
+      "status": "ok",
+      "request": "01 01 03 58 00 00 bd 9d",
+      "response": "01 01 03 58 09 c4 ba 5e",
+      "raw_value": 2500
+    },
+    {
+      "parameter": "PD089",
+      "number": 89,
+      "status": "ok",
+      "request": "01 01 03 59 00 00 ec 5d",
+      "response": "01 01 03 59 0b b8 eb 1f",
+      "raw_value": 3000
+    },
+    {
+      "parameter": "PD090",
+      "number": 90,
+      "status": "ok",
+      "request": "01 01 03 5a 00 00 1c 5d",
+      "response": "01 01 03 5a 0d ac 18 b0",
+      "raw_value": 3500
+    },
+    {
+      "parameter": "PD091",
+      "number": 91,
+      "status": "ok",
+      "request": "01 01 03 5b 00 00 4d 9d",
+      "response": "01 01 03 5b 0f a0 48 15",
+      "raw_value": 4000
+    },
+    {
+      "parameter": "PD092",
+      "number": 92,
+      "status": "ok",
+      "request": "01 01 03 5c 00 00 fc 5c",
+      "response": "01 01 03 5c 00 32 7d 89",
+      "raw_value": 50
+    },
+    {
+      "parameter": "PD093",
+      "number": 93,
+      "status": "ok",
+      "request": "01 01 03 5d 00 00 ad 9c",
+      "response": "01 01 03 5d 03 e8 ad 22",
+      "raw_value": 1000
+    },
+    {
+      "parameter": "PD094",
+      "number": 94,
+      "status": "ok",
+      "request": "01 01 03 5e 00 00 5d 9c",
+      "response": "01 01 03 5e 05 dc 5f 55",
+      "raw_value": 1500
+    },
+    {
+      "parameter": "PD095",
+      "number": 95,
+      "status": "ok",
+      "request": "01 01 03 5f 00 00 0c 5c",
+      "response": "01 01 03 5f 07 d0 0f f0",
+      "raw_value": 2000
+    },
+    {
+      "parameter": "PD096",
+      "number": 96,
+      "status": "ok",
+      "request": "01 01 03 60 00 00 3c 50",
+      "response": "01 01 03 60 09 c4 3b 93",
+      "raw_value": 2500
+    },
+    {
+      "parameter": "PD097",
+      "number": 97,
+      "status": "ok",
+      "request": "01 01 03 61 00 00 6d 90",
+      "response": "01 01 03 61 0b b8 6a d2",
+      "raw_value": 3000
+    },
+    {
+      "parameter": "PD098",
+      "number": 98,
+      "status": "ok",
+      "request": "01 01 03 62 00 00 9d 90",
+      "response": "01 01 03 62 0d ac 99 7d",
+      "raw_value": 3500
+    },
+    {
+      "parameter": "PD099",
+      "number": 99,
+      "status": "ok",
+      "request": "01 01 03 63 00 00 cc 50",
+      "response": "01 01 03 63 0f a0 c9 d8",
+      "raw_value": 4000
+    },
+    {
+      "parameter": "PD100",
+      "number": 100,
+      "status": "ok",
+      "request": "01 01 03 64 00 00 7d 91",
+      "response": "01 01 03 64 11 94 70 6e",
+      "raw_value": 4500
+    },
+    {
+      "parameter": "PD101",
+      "number": 101,
+      "status": "ok",
+      "request": "01 01 03 65 00 00 2c 51",
+      "response": "01 01 03 65 00 64 2d ba",
+      "raw_value": 100
+    },
+    {
+      "parameter": "PD102",
+      "number": 102,
+      "status": "ok",
+      "request": "01 01 03 66 00 00 dc 51",
+      "response": "01 01 03 66 00 64 dd ba",
+      "raw_value": 100
+    },
+    {
+      "parameter": "PD103",
+      "number": 103,
+      "status": "ok",
+      "request": "01 01 03 67 00 00 8d 91",
+      "response": "01 01 03 67 00 00 8d 91",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD104",
+      "number": 104,
+      "status": "ok",
+      "request": "01 01 03 68 00 00 bd 92",
+      "response": "01 01 03 68 00 00 bd 92",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD105",
+      "number": 105,
+      "status": "ok",
+      "request": "01 01 03 69 00 00 ec 52",
+      "response": "01 01 03 69 00 00 ec 52",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD106",
+      "number": 106,
+      "status": "ok",
+      "request": "01 01 03 6a 00 00 1c 52",
+      "response": "01 01 03 6a 00 00 1c 52",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD107",
+      "number": 107,
+      "status": "ok",
+      "request": "01 01 03 6b 00 00 4d 92",
+      "response": "01 01 03 6b 00 00 4d 92",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD108",
+      "number": 108,
+      "status": "ok",
+      "request": "01 01 03 6c 00 00 fc 53",
+      "response": "01 01 03 6c 00 00 fc 53",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD109",
+      "number": 109,
+      "status": "ok",
+      "request": "01 01 03 6d 00 00 ad 93",
+      "response": "01 01 03 6d 00 00 ad 93",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD110",
+      "number": 110,
+      "status": "ok",
+      "request": "01 01 03 6e 00 00 5d 93",
+      "response": "01 01 03 6e 00 00 5d 93",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD111",
+      "number": 111,
+      "status": "ok",
+      "request": "01 01 03 6f 00 00 0c 53",
+      "response": "01 01 03 6f 00 00 0c 53",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD112",
+      "number": 112,
+      "status": "ok",
+      "request": "01 01 03 70 00 00 3d 95",
+      "response": "01 01 03 70 00 00 3d 95",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD113",
+      "number": 113,
+      "status": "ok",
+      "request": "01 01 03 71 00 00 6c 55",
+      "response": "01 01 03 71 00 00 6c 55",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD114",
+      "number": 114,
+      "status": "ok",
+      "request": "01 01 03 72 00 00 9c 55",
+      "response": "01 01 03 72 00 00 9c 55",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD115",
+      "number": 115,
+      "status": "ok",
+      "request": "01 01 03 73 00 00 cd 95",
+      "response": "01 01 03 73 00 00 cd 95",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD116",
+      "number": 116,
+      "status": "ok",
+      "request": "01 01 03 74 00 00 7c 54",
+      "response": "01 01 03 74 00 00 7c 54",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD117",
+      "number": 117,
+      "status": "ok",
+      "request": "01 01 03 75 00 00 2d 94",
+      "response": "01 01 02 75 00 9f 6c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD118",
+      "number": 118,
+      "status": "ok",
+      "request": "01 01 03 76 00 00 dd 94",
+      "response": "01 01 02 76 01 5e 5c",
+      "raw_value": 1
+    },
+    {
+      "parameter": "PD119",
+      "number": 119,
+      "status": "ok",
+      "request": "01 01 03 77 00 00 8c 54",
+      "response": "01 01 02 77 00 9e 0c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD120",
+      "number": 120,
+      "status": "ok",
+      "request": "01 01 03 78 00 00 bc 57",
+      "response": "01 01 02 78 00 9b fc",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD121",
+      "number": 121,
+      "status": "ok",
+      "request": "01 01 03 79 00 00 ed 97",
+      "response": "01 01 02 79 32 1b b9",
+      "raw_value": 50
+    },
+    {
+      "parameter": "PD122",
+      "number": 122,
+      "status": "unsupported",
+      "request": "01 01 03 7a 00 00 1d 97",
+      "response": "01 81 01 7a d1 83"
+    },
+    {
+      "parameter": "PD123",
+      "number": 123,
+      "status": "ok",
+      "request": "01 01 03 7b 00 00 4c 57",
+      "response": "01 01 02 7b 00 9b 0c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD124",
+      "number": 124,
+      "status": "ok",
+      "request": "01 01 03 7c 00 00 fd 96",
+      "response": "01 01 02 7c 00 99 3c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD125",
+      "number": 125,
+      "status": "ok",
+      "request": "01 01 03 7d 00 00 ac 56",
+      "response": "01 01 02 7d 0a 18 ab",
+      "raw_value": 10
+    },
+    {
+      "parameter": "PD126",
+      "number": 126,
+      "status": "ok",
+      "request": "01 01 03 7e 00 00 5c 56",
+      "response": "01 01 02 7e 00 98 5c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD127",
+      "number": 127,
+      "status": "unsupported",
+      "request": "01 01 03 7f 00 00 0d 96",
+      "response": "01 81 01 7f 11 80"
+    },
+    {
+      "parameter": "PD128",
+      "number": 128,
+      "status": "unsupported",
+      "request": "01 01 03 80 00 00 3d a6",
+      "response": "01 81 01 80 51 c0"
+    },
+    {
+      "parameter": "PD129",
+      "number": 129,
+      "status": "unsupported",
+      "request": "01 01 03 81 00 00 6c 66",
+      "response": "01 81 01 81 90 00"
+    },
+    {
+      "parameter": "PD130",
+      "number": 130,
+      "status": "ok",
+      "request": "01 01 03 82 00 00 9c 66",
+      "response": "01 01 02 82 01 18 9c",
+      "raw_value": 1
+    },
+    {
+      "parameter": "PD131",
+      "number": 131,
+      "status": "ok",
+      "request": "01 01 03 83 00 00 cd a6",
+      "response": "01 01 03 83 00 3c cd b7",
+      "raw_value": 60
+    },
+    {
+      "parameter": "PD132",
+      "number": 132,
+      "status": "ok",
+      "request": "01 01 03 84 00 00 7c 67",
+      "response": "01 01 02 84 05 1a ff",
+      "raw_value": 5
+    },
+    {
+      "parameter": "PD133",
+      "number": 133,
+      "status": "ok",
+      "request": "01 01 03 85 00 00 2d a7",
+      "response": "01 01 02 85 05 1b 6f",
+      "raw_value": 5
+    },
+    {
+      "parameter": "PD134",
+      "number": 134,
+      "status": "ok",
+      "request": "01 01 03 86 00 00 dd a7",
+      "response": "01 01 02 86 05 1b 9f",
+      "raw_value": 5
+    },
+    {
+      "parameter": "PD135",
+      "number": 135,
+      "status": "ok",
+      "request": "01 01 03 87 00 00 8c 67",
+      "response": "01 01 02 87 28 da 12",
+      "raw_value": 40
+    },
+    {
+      "parameter": "PD136",
+      "number": 136,
+      "status": "ok",
+      "request": "01 01 03 88 00 00 bc 64",
+      "response": "01 01 02 88 05 1f ff",
+      "raw_value": 5
+    },
+    {
+      "parameter": "PD137",
+      "number": 137,
+      "status": "ok",
+      "request": "01 01 03 89 00 00 ed a4",
+      "response": "01 01 02 89 14 de 63",
+      "raw_value": 20
+    },
+    {
+      "parameter": "PD138",
+      "number": 138,
+      "status": "ok",
+      "request": "01 01 03 8a 00 00 1d a4",
+      "response": "01 01 03 8a 05 78 1e d6",
+      "raw_value": 1400
+    },
+    {
+      "parameter": "PD139",
+      "number": 139,
+      "status": "ok",
+      "request": "01 01 03 8b 00 00 4c 64",
+      "response": "01 01 02 8b 05 1f 0f",
+      "raw_value": 5
+    },
+    {
+      "parameter": "PD140",
+      "number": 140,
+      "status": "unsupported",
+      "request": "01 01 03 8c 00 00 fd a5",
+      "response": "01 81 01 8c 51 c5"
+    },
+    {
+      "parameter": "PD141",
+      "number": 141,
+      "status": "ok",
+      "request": "01 01 03 8d 00 00 ac 65",
+      "response": "01 01 03 8d 08 98 aa 0f",
+      "raw_value": 2200
+    },
+    {
+      "parameter": "PD142",
+      "number": 142,
+      "status": "ok",
+      "request": "01 01 03 8e 00 00 5c 65",
+      "response": "01 01 03 8e 00 64 5d 8e",
+      "raw_value": 100
+    },
+    {
+      "parameter": "PD143",
+      "number": 143,
+      "status": "ok",
+      "request": "01 01 03 8f 00 00 0d a5",
+      "response": "01 01 02 8f 02 5c 0d",
+      "raw_value": 2
+    },
+    {
+      "parameter": "PD144",
+      "number": 144,
+      "status": "ok",
+      "request": "01 01 03 90 00 00 3c 63",
+      "response": "01 01 03 90 0b b8 3b 21",
+      "raw_value": 3000
+    },
+    {
+      "parameter": "PD145",
+      "number": 145,
+      "status": "ok",
+      "request": "01 01 03 91 00 00 6d a3",
+      "response": "01 01 02 91 64 d5 87",
+      "raw_value": 100
+    },
+    {
+      "parameter": "PD146",
+      "number": 146,
+      "status": "ok",
+      "request": "01 01 03 92 00 00 9d a3",
+      "response": "01 01 02 92 12 54 91",
+      "raw_value": 18
+    },
+    {
+      "parameter": "PD147",
+      "number": 147,
+      "status": "ok",
+      "request": "01 01 03 93 00 00 cc 63",
+      "response": "01 01 03 93 00 64 cd 88",
+      "raw_value": 100
+    },
+    {
+      "parameter": "PD148",
+      "number": 148,
+      "status": "unsupported",
+      "request": "01 01 03 94 00 00 7d a2",
+      "response": "01 81 01 94 51 cf"
+    },
+    {
+      "parameter": "PD149",
+      "number": 149,
+      "status": "unsupported",
+      "request": "01 01 03 95 00 00 2c 62",
+      "response": "01 81 01 95 90 0f"
+    },
+    {
+      "parameter": "PD150",
+      "number": 150,
+      "status": "ok",
+      "request": "01 01 03 96 00 00 dc 62",
+      "response": "01 01 02 96 01 17 9c",
+      "raw_value": 1
+    },
+    {
+      "parameter": "PD151",
+      "number": 151,
+      "status": "ok",
+      "request": "01 01 03 97 00 00 8d a2",
+      "response": "01 01 02 97 00 d7 cc",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD152",
+      "number": 152,
+      "status": "ok",
+      "request": "01 01 03 98 00 00 bd a1",
+      "response": "01 01 02 98 0a 52 3b",
+      "raw_value": 10
+    },
+    {
+      "parameter": "PD153",
+      "number": 153,
+      "status": "ok",
+      "request": "01 01 03 99 00 00 ec 61",
+      "response": "01 01 02 99 00 d3 ac",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD154",
+      "number": 154,
+      "status": "ok",
+      "request": "01 01 03 9a 00 00 1c 61",
+      "response": "01 01 02 9a 05 13 5f",
+      "raw_value": 5
+    },
+    {
+      "parameter": "PD155",
+      "number": 155,
+      "status": "ok",
+      "request": "01 01 03 9b 00 00 4d a1",
+      "response": "01 01 02 9b 00 d2 cc",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD156",
+      "number": 156,
+      "status": "ok",
+      "request": "01 01 03 9c 00 00 fc 60",
+      "response": "01 01 03 9c 03 e8 fc de",
+      "raw_value": 1000
+    },
+    {
+      "parameter": "PD157",
+      "number": 157,
+      "status": "ok",
+      "request": "01 01 03 9d 00 00 ad a0",
+      "response": "01 01 03 9d 00 32 2c 75",
+      "raw_value": 50
+    },
+    {
+      "parameter": "PD158",
+      "number": 158,
+      "status": "ok",
+      "request": "01 01 03 9e 00 00 5d a0",
+      "response": "01 01 03 9e 00 00 5d a0",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD159",
+      "number": 159,
+      "status": "ok",
+      "request": "01 01 03 9f 00 00 0c 60",
+      "response": "01 01 03 9f 00 00 0c 60",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD160",
+      "number": 160,
+      "status": "ok",
+      "request": "01 01 03 a0 00 00 3c 6c",
+      "response": "01 01 02 a0 00 c1 fc",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD161",
+      "number": 161,
+      "status": "ok",
+      "request": "01 01 03 a1 00 00 6d ac",
+      "response": "01 01 02 a1 64 c1 87",
+      "raw_value": 100
+    },
+    {
+      "parameter": "PD162",
+      "number": 162,
+      "status": "ok",
+      "request": "01 01 03 a2 00 00 9d ac",
+      "response": "01 01 02 a2 00 c0 9c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD163",
+      "number": 163,
+      "status": "ok",
+      "request": "01 01 03 a3 00 00 cc 6c",
+      "response": "01 01 02 a3 01 00 cc",
+      "raw_value": 1
+    },
+    {
+      "parameter": "PD164",
+      "number": 164,
+      "status": "ok",
+      "request": "01 01 03 a4 00 00 7d ad",
+      "response": "01 01 02 a4 02 42 fd",
+      "raw_value": 2
+    },
+    {
+      "parameter": "PD165",
+      "number": 165,
+      "status": "ok",
+      "request": "01 01 03 a5 00 00 2c 6d",
+      "response": "01 01 02 a5 03 82 ad",
+      "raw_value": 3
+    },
+    {
+      "parameter": "PD166",
+      "number": 166,
+      "status": "ok",
+      "request": "01 01 03 a6 00 00 dc 6d",
+      "response": "01 01 02 a6 00 c2 5c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD167",
+      "number": 167,
+      "status": "ok",
+      "request": "01 01 03 a7 00 00 8d ad",
+      "response": "01 01 02 a7 00 c3 cc",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD168",
+      "number": 168,
+      "status": "ok",
+      "request": "01 01 03 a8 00 00 bd ae",
+      "response": "01 01 02 a8 00 c6 3c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD169",
+      "number": 169,
+      "status": "unsupported",
+      "request": "01 01 03 a9 00 00 ec 6e",
+      "response": "01 81 01 a9 90 1e"
+    },
+    {
+      "parameter": "PD170",
+      "number": 170,
+      "status": "ok",
+      "request": "01 01 03 aa 00 00 1c 6e",
+      "response": "01 01 02 aa 00 c7 5c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD171",
+      "number": 171,
+      "status": "ok",
+      "request": "01 01 03 ab 00 00 4d ae",
+      "response": "01 01 02 ab 07 87 0e",
+      "raw_value": 7
+    },
+    {
+      "parameter": "PD172",
+      "number": 172,
+      "status": "ok",
+      "request": "01 01 03 ac 00 00 fc 6f",
+      "response": "01 01 02 ac 58 c5 06",
+      "raw_value": 88
+    },
+    {
+      "parameter": "PD173",
+      "number": 173,
+      "status": "ok",
+      "request": "01 01 03 ad 00 00 ad af",
+      "response": "01 01 03 ad 09 f6 2b b9",
+      "raw_value": 2550
+    },
+    {
+      "parameter": "PD174",
+      "number": 174,
+      "status": "ok",
+      "request": "01 01 03 ae 00 00 5d af",
+      "response": "01 01 03 ae 00 6e dc 43",
+      "raw_value": 110
+    },
+    {
+      "parameter": "PD175",
+      "number": 175,
+      "status": "ok",
+      "request": "01 01 03 af 00 00 0c 6f",
+      "response": "01 01 02 af 00 c4 0c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD176",
+      "number": 176,
+      "status": "ok",
+      "request": "01 01 03 b0 00 00 3d a9",
+      "response": "01 01 02 b0 00 cc 3c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD177",
+      "number": 177,
+      "status": "ok",
+      "request": "01 01 03 b1 00 00 6c 69",
+      "response": "01 01 02 b1 5b 8c 57",
+      "raw_value": 91
+    },
+    {
+      "parameter": "PD178",
+      "number": 178,
+      "status": "ok",
+      "request": "01 01 03 b2 00 00 9c 69",
+      "response": "01 01 02 b2 5a 4d 67",
+      "raw_value": 90
+    },
+    {
+      "parameter": "PD179",
+      "number": 179,
+      "status": "ok",
+      "request": "01 01 03 b3 00 00 cd a9",
+      "response": "01 01 02 b3 59 0c f6",
+      "raw_value": 89
+    },
+    {
+      "parameter": "PD180",
+      "number": 180,
+      "status": "ok",
+      "request": "01 01 03 b4 00 00 7c 68",
+      "response": "01 01 02 b4 5b 8f 07",
+      "raw_value": 91
+    },
+    {
+      "parameter": "PD181",
+      "number": 181,
+      "status": "ok",
+      "request": "01 01 03 b5 00 00 2d a8",
+      "response": "01 01 02 b5 58 ce 96",
+      "raw_value": 88
+    },
+    {
+      "parameter": "PD182",
+      "number": 182,
+      "status": "ok",
+      "request": "01 01 03 b6 00 00 dd a8",
+      "response": "01 01 03 b6 42 9b ac a3",
+      "raw_value": 17051
+    },
+    {
+      "parameter": "PD183",
+      "number": 183,
+      "status": "ok",
+      "request": "01 01 03 b7 00 00 8c 68",
+      "response": "01 01 03 b7 ff ff 8d d8",
+      "raw_value": 65535
+    },
+    {
+      "parameter": "PD184",
+      "number": 184,
+      "status": "ok",
+      "request": "01 01 03 b8 00 00 bc 6b",
+      "response": "01 01 02 b8 14 cb f3",
+      "raw_value": 20
+    },
+    {
+      "parameter": "PD185",
+      "number": 185,
+      "status": "ok",
+      "request": "01 01 03 b9 00 00 ed ab",
+      "response": "01 01 02 b9 00 ca 6c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD186",
+      "number": 186,
+      "status": "ok",
+      "request": "01 01 03 ba 00 00 1d ab",
+      "response": "01 01 02 ba 00 ca 9c",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD187",
+      "number": 187,
+      "status": "unsupported",
+      "request": "01 01 03 bb 00 00 4c 6b",
+      "response": "01 81 01 bb 10 13"
+    },
+    {
+      "parameter": "PD188",
+      "number": 188,
+      "status": "unsupported",
+      "request": "01 01 03 bc 00 00 fd aa",
+      "response": "01 81 01 bc 51 d1"
+    },
+    {
+      "parameter": "PD189",
+      "number": 189,
+      "status": "unsupported",
+      "request": "01 01 03 bd 00 00 ac 6a",
+      "response": "01 81 01 bd 90 11"
+    },
+    {
+      "parameter": "PD190",
+      "number": 190,
+      "status": "unsupported",
+      "request": "01 01 03 be 00 00 5c 6a",
+      "response": "01 81 01 be d0 10"
+    },
+    {
+      "parameter": "PD191",
+      "number": 191,
+      "status": "unsupported",
+      "request": "01 01 03 bf 00 00 0d aa",
+      "response": "01 81 01 bf 11 d0"
+    },
+    {
+      "parameter": "PD192",
+      "number": 192,
+      "status": "unsupported",
+      "request": "01 01 03 c0 00 00 3c 72",
+      "response": "01 81 01 c0 50 30"
+    },
+    {
+      "parameter": "PD193",
+      "number": 193,
+      "status": "unsupported",
+      "request": "01 01 03 c1 00 00 6d b2",
+      "response": "01 81 01 c1 91 f0"
+    },
+    {
+      "parameter": "PD194",
+      "number": 194,
+      "status": "unsupported",
+      "request": "01 01 03 c2 00 00 9d b2",
+      "response": "01 81 01 c2 d1 f1"
+    },
+    {
+      "parameter": "PD195",
+      "number": 195,
+      "status": "unsupported",
+      "request": "01 01 03 c3 00 00 cc 72",
+      "response": "01 81 01 c3 10 31"
+    },
+    {
+      "parameter": "PD196",
+      "number": 196,
+      "status": "unsupported",
+      "request": "01 01 03 c4 00 00 7d b3",
+      "response": "01 81 01 c4 51 f3"
+    },
+    {
+      "parameter": "PD197",
+      "number": 197,
+      "status": "unsupported",
+      "request": "01 01 03 c5 00 00 2c 73",
+      "response": "01 81 01 c5 90 33"
+    },
+    {
+      "parameter": "PD198",
+      "number": 198,
+      "status": "unsupported",
+      "request": "01 01 03 c6 00 00 dc 73",
+      "response": "01 81 01 c6 d0 32"
+    },
+    {
+      "parameter": "PD199",
+      "number": 199,
+      "status": "unsupported",
+      "request": "01 01 03 c7 00 00 8d b3",
+      "response": "01 81 01 c7 11 f2"
+    },
+    {
+      "parameter": "PD200",
+      "number": 200,
+      "status": "ok",
+      "request": "01 01 03 c8 00 00 bd b0",
+      "response": "01 01 03 c8 00 00 bd b0",
+      "raw_value": 0
+    },
+    {
+      "parameter": "PD201",
+      "number": 201,
+      "status": "unsupported",
+      "request": "01 01 03 c9 00 00 ec 70",
+      "response": "01 81 01 c9 90 36"
+    },
+    {
+      "parameter": "PD202",
+      "number": 202,
+      "status": "unsupported",
+      "request": "01 01 03 ca 00 00 1c 70",
+      "response": "01 81 01 ca d0 37"
+    },
+    {
+      "parameter": "PD203",
+      "number": 203,
+      "status": "unsupported",
+      "request": "01 01 03 cb 00 00 4d b0",
+      "response": "01 81 01 cb 11 f7"
+    },
+    {
+      "parameter": "PD204",
+      "number": 204,
+      "status": "unsupported",
+      "request": "01 01 03 cc 00 00 fc 71",
+      "response": "01 81 01 cc 50 35"
+    },
+    {
+      "parameter": "PD205",
+      "number": 205,
+      "status": "unsupported",
+      "request": "01 01 03 cd 00 00 ad b1",
+      "response": "01 81 01 cd 91 f5"
+    },
+    {
+      "parameter": "PD206",
+      "number": 206,
+      "status": "unsupported",
+      "request": "01 01 03 ce 00 00 5d b1",
+      "response": "01 81 01 ce d1 f4"
+    },
+    {
+      "parameter": "PD207",
+      "number": 207,
+      "status": "unsupported",
+      "request": "01 01 03 cf 00 00 0c 71",
+      "response": "01 81 01 cf 10 34"
+    },
+    {
+      "parameter": "PD208",
+      "number": 208,
+      "status": "unsupported",
+      "request": "01 01 03 d0 00 00 3d b7",
+      "response": "01 81 01 d0 51 fc"
+    },
+    {
+      "parameter": "PD209",
+      "number": 209,
+      "status": "unsupported",
+      "request": "01 01 03 d1 00 00 6c 77",
+      "response": "01 81 01 d1 90 3c"
+    },
+    {
+      "parameter": "PD210",
+      "number": 210,
+      "status": "unsupported",
+      "request": "01 01 03 d2 00 00 9c 77",
+      "response": "01 81 01 d2 d0 3d"
+    },
+    {
+      "parameter": "PD211",
+      "number": 211,
+      "status": "unsupported",
+      "request": "01 01 03 d3 00 00 cd b7",
+      "response": "01 81 01 d3 11 fd"
+    },
+    {
+      "parameter": "PD212",
+      "number": 212,
+      "status": "unsupported",
+      "request": "01 01 03 d4 00 00 7c 76",
+      "response": "01 81 01 d4 50 3f"
+    },
+    {
+      "parameter": "PD213",
+      "number": 213,
+      "status": "unsupported",
+      "request": "01 01 03 d5 00 00 2d b6",
+      "response": "01 81 01 d5 91 ff"
+    },
+    {
+      "parameter": "PD214",
+      "number": 214,
+      "status": "unsupported",
+      "request": "01 01 03 d6 00 00 dd b6",
+      "response": "01 81 01 d6 d1 fe"
+    },
+    {
+      "parameter": "PD215",
+      "number": 215,
+      "status": "unsupported",
+      "request": "01 01 03 d7 00 00 8c 76",
+      "response": "01 81 01 d7 10 3e"
+    },
+    {
+      "parameter": "PD216",
+      "number": 216,
+      "status": "unsupported",
+      "request": "01 01 03 d8 00 00 bc 75",
+      "response": "01 81 01 d8 50 3a"
+    },
+    {
+      "parameter": "PD217",
+      "number": 217,
+      "status": "unsupported",
+      "request": "01 01 03 d9 00 00 ed b5",
+      "response": "01 81 01 d9 91 fa"
+    },
+    {
+      "parameter": "PD218",
+      "number": 218,
+      "status": "unsupported",
+      "request": "01 01 03 da 00 00 1d b5",
+      "response": "01 81 01 da d1 fb"
+    },
+    {
+      "parameter": "PD219",
+      "number": 219,
+      "status": "unsupported",
+      "request": "01 01 03 db 00 00 4c 75",
+      "response": "01 81 01 db 10 3b"
+    },
+    {
+      "parameter": "PD220",
+      "number": 220,
+      "status": "unsupported",
+      "request": "01 01 03 dc 00 00 fd b4",
+      "response": "01 81 01 dc 51 f9"
+    },
+    {
+      "parameter": "PD221",
+      "number": 221,
+      "status": "unsupported",
+      "request": "01 01 03 dd 00 00 ac 74",
+      "response": "01 81 01 dd 90 39"
+    },
+    {
+      "parameter": "PD222",
+      "number": 222,
+      "status": "unsupported",
+      "request": "01 01 03 de 00 00 5c 74",
+      "response": "01 81 01 de d0 38"
+    },
+    {
+      "parameter": "PD223",
+      "number": 223,
+      "status": "unsupported",
+      "request": "01 01 03 df 00 00 0d b4",
+      "response": "01 81 01 df 11 f8"
+    },
+    {
+      "parameter": "PD224",
+      "number": 224,
+      "status": "unsupported",
+      "request": "01 01 03 e0 00 00 3d b8",
+      "response": "01 81 01 e0 51 e8"
+    },
+    {
+      "parameter": "PD225",
+      "number": 225,
+      "status": "unsupported",
+      "request": "01 01 03 e1 00 00 6c 78",
+      "response": "01 81 01 e1 90 28"
+    },
+    {
+      "parameter": "PD226",
+      "number": 226,
+      "status": "unsupported",
+      "request": "01 01 03 e2 00 00 9c 78",
+      "response": "01 81 01 e2 d0 29"
+    },
+    {
+      "parameter": "PD227",
+      "number": 227,
+      "status": "unsupported",
+      "request": "01 01 03 e3 00 00 cd b8",
+      "response": "01 81 01 e3 11 e9"
+    },
+    {
+      "parameter": "PD228",
+      "number": 228,
+      "status": "unsupported",
+      "request": "01 01 03 e4 00 00 7c 79",
+      "response": "01 81 01 e4 50 2b"
+    },
+    {
+      "parameter": "PD229",
+      "number": 229,
+      "status": "unsupported",
+      "request": "01 01 03 e5 00 00 2d b9",
+      "response": "01 81 01 e5 91 eb"
+    },
+    {
+      "parameter": "PD230",
+      "number": 230,
+      "status": "unsupported",
+      "request": "01 01 03 e6 00 00 dd b9",
+      "response": "01 81 01 e6 d1 ea"
+    },
+    {
+      "parameter": "PD231",
+      "number": 231,
+      "status": "unsupported",
+      "request": "01 01 03 e7 00 00 8c 79",
+      "response": "01 81 01 e7 10 2a"
+    },
+    {
+      "parameter": "PD232",
+      "number": 232,
+      "status": "unsupported",
+      "request": "01 01 03 e8 00 00 bc 7a",
+      "response": "01 81 01 e8 50 2e"
+    },
+    {
+      "parameter": "PD233",
+      "number": 233,
+      "status": "unsupported",
+      "request": "01 01 03 e9 00 00 ed ba",
+      "response": "01 81 01 e9 91 ee"
+    },
+    {
+      "parameter": "PD234",
+      "number": 234,
+      "status": "unsupported",
+      "request": "01 01 03 ea 00 00 1d ba",
+      "response": "01 81 01 ea d1 ef"
+    },
+    {
+      "parameter": "PD235",
+      "number": 235,
+      "status": "unsupported",
+      "request": "01 01 03 eb 00 00 4c 7a",
+      "response": "01 81 01 eb 10 2f"
+    },
+    {
+      "parameter": "PD236",
+      "number": 236,
+      "status": "unsupported",
+      "request": "01 01 03 ec 00 00 fd bb",
+      "response": "01 81 01 ec 51 ed"
+    },
+    {
+      "parameter": "PD237",
+      "number": 237,
+      "status": "unsupported",
+      "request": "01 01 03 ed 00 00 ac 7b",
+      "response": "01 81 01 ed 90 2d"
+    },
+    {
+      "parameter": "PD238",
+      "number": 238,
+      "status": "unsupported",
+      "request": "01 01 03 ee 00 00 5c 7b",
+      "response": "01 81 01 ee d0 2c"
+    },
+    {
+      "parameter": "PD239",
+      "number": 239,
+      "status": "unsupported",
+      "request": "01 01 03 ef 00 00 0d bb",
+      "response": "01 81 01 ef 11 ec"
+    },
+    {
+      "parameter": "PD240",
+      "number": 240,
+      "status": "unsupported",
+      "request": "01 01 03 f0 00 00 3c 7d",
+      "response": "01 81 01 f0 50 24"
+    },
+    {
+      "parameter": "PD241",
+      "number": 241,
+      "status": "unsupported",
+      "request": "01 01 03 f1 00 00 6d bd",
+      "response": "01 81 01 f1 91 e4"
+    },
+    {
+      "parameter": "PD242",
+      "number": 242,
+      "status": "unsupported",
+      "request": "01 01 03 f2 00 00 9d bd",
+      "response": "01 81 01 f2 d1 e5"
+    },
+    {
+      "parameter": "PD243",
+      "number": 243,
+      "status": "unsupported",
+      "request": "01 01 03 f3 00 00 cc 7d",
+      "response": "01 81 01 f3 10 25"
+    },
+    {
+      "parameter": "PD244",
+      "number": 244,
+      "status": "unsupported",
+      "request": "01 01 03 f4 00 00 7d bc",
+      "response": "01 81 01 f4 51 e7"
+    },
+    {
+      "parameter": "PD245",
+      "number": 245,
+      "status": "unsupported",
+      "request": "01 01 03 f5 00 00 2c 7c",
+      "response": "01 81 01 f5 90 27"
+    },
+    {
+      "parameter": "PD246",
+      "number": 246,
+      "status": "unsupported",
+      "request": "01 01 03 f6 00 00 dc 7c",
+      "response": "01 81 01 f6 d0 26"
+    },
+    {
+      "parameter": "PD247",
+      "number": 247,
+      "status": "unsupported",
+      "request": "01 01 03 f7 00 00 8d bc",
+      "response": "01 81 01 f7 11 e6"
+    },
+    {
+      "parameter": "PD248",
+      "number": 248,
+      "status": "unsupported",
+      "request": "01 01 03 f8 00 00 bd bf",
+      "response": "01 81 01 f8 51 e2"
+    },
+    {
+      "parameter": "PD249",
+      "number": 249,
+      "status": "unsupported",
+      "request": "01 01 03 f9 00 00 ec 7f",
+      "response": "01 81 01 f9 90 22"
+    },
+    {
+      "parameter": "PD250",
+      "number": 250,
+      "status": "unsupported",
+      "request": "01 01 03 fa 00 00 1c 7f",
+      "response": "01 81 01 fa d0 23"
+    }
+  ]
+}

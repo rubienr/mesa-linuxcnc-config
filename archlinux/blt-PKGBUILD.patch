@@ -1,0 +1,24 @@
+diff --git a/PKGBUILD b/PKGBUILD
+index 30fca0a..d8d9645 100644
+--- a/PKGBUILD
++++ b/PKGBUILD
+@@ -18,7 +18,20 @@ md5sums=('SKIP'
+          '49ab6c4bd72e045108c92d839368df04')
+ _gitname=blt
+ 
++prepare() {
++    cd "${srcdir}/${pkgname}"
++
++    sed -i \
++      's/$(SHLIB_LIB_SPECS)/$(SHLIB_LIB_SPECS) $(LIBS)/' \
++      src/shared/Makefile.in
++
++    sed -i \
++      's/$(SHLIB_TCL_ONLY_LIB_SPECS)/$(SHLIB_TCL_ONLY_LIB_SPECS) $(TCL_ONLY_LIB_SPECS)/' \
++      src/shared/Makefile.in
++}
++
+ build() {
++  CFLAGS+=" -std=gnu17 -Wno-error=incompatible-pointer-types"
+   # configure
+   cd ${srcdir}/${pkgname}

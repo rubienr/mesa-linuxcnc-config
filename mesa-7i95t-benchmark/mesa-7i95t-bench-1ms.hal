@@ -1,0 +1,31 @@
+# Mesa 7I95T communication-only bench test at a 1 ms servo period
+#
+# The stock firmware resources are loaded, but no motion, spindle, enable,
+# or SSR signals are connected to the card. All hardware enables retain their
+# safe default values. XYZ motion in AXIS is supplied by basic_sim.tcl.
+
+loadrt hostmot2
+loadrt hm2_eth board_ip="192.168.1.121"
+
+# Read the card before the simulated motion functions and write it at the end
+# of every 1 ms servo cycle. This continuously exercises HostMot2 Ethernet.
+addf hm2_7i95.0.read servo-thread 1
+addf hm2_7i95.0.write servo-thread
+
+# Five missed 1 ms cycles will trip the hardware watchdog.
+setp hm2_7i95.0.watchdog.timeout_ns 5000000
+
+# Keep every hardware generator and isolated output explicitly disabled.
+setp hm2_7i95.0.stepgen.00.enable false
+setp hm2_7i95.0.stepgen.01.enable false
+setp hm2_7i95.0.stepgen.02.enable false
+setp hm2_7i95.0.stepgen.03.enable false
+setp hm2_7i95.0.stepgen.04.enable false
+setp hm2_7i95.0.stepgen.05.enable false
+
+setp hm2_7i95.0.ssr.00.out-00 false
+setp hm2_7i95.0.ssr.00.out-01 false
+setp hm2_7i95.0.ssr.00.out-02 false
+setp hm2_7i95.0.ssr.00.out-03 false
+setp hm2_7i95.0.ssr.00.out-04 false
+setp hm2_7i95.0.ssr.00.out-05 false

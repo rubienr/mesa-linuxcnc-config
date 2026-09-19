@@ -1,0 +1,33 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Vim / Neovim
+*.swp
+*.swo
+*.swn
+.*.sw?
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Nano emergency saves
+*.save
+
+# Sublime Text: keep *.sublime-project, ignore per-user session state
+*.sublime-workspace
+
+# Geany lock files and common editor locks
+.geany_socket_*
+.~lock.*#
+
+# General temporary files
+*.tmp
+*.temp
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db

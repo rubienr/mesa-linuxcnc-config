@@ -27,3 +27,17 @@ BeagleBone/Panther controller to a Mesa 7I95T.
 
 Start with the README in the relevant area. AI coding agents must follow the
 root and nearest scoped `AGENTS.md` files before changing this workspace.
+
+## Synchronizing to the target
+
+After making local changes, synchronize the complete workspace to the target
+checkout before target-host testing:
+
+```console
+./sync-to-target.sh
+```
+
+Use `./sync-to-target.sh --dry-run` to preview changes. The wrapper transfers the
+workspace to `frida@frida:/home/frida/linuxcnc/` over SSH, excludes `.git`, and
+does not delete files that exist only on the target. `TARGET_SSH_DESTINATION`
+and `TARGET_WORKSPACE` provide explicit overrides when needed.

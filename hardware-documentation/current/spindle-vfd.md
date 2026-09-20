@@ -35,13 +35,15 @@ Of 251 queries, 170 returned values, 81 returned CRC-valid unsupported-function
 responses, and none ended in error.
 
 - [`huanyang-hy02d223b-register-backup.md`](huanyang-hy02d223b-register-backup.md)
+  describes the capture and its important recovered settings.
+- [`huanyang-hy02d223b-register-backup-table.md`](huanyang-hy02d223b-register-backup-table.md)
   is the generated human-readable table.
 - [`data/huanyang-hy02d223b-registers-pd000-pd250-2026-09-19.json`](data/huanyang-hy02d223b-registers-pd000-pd250-2026-09-19.json)
   preserves every raw request and response.
 - [`tools/read-huanyang-vfd.py`](tools/read-huanyang-vfd.py) constructs only
   Huanyang function `0x01` read requests.
 - [`tools/render-huanyang-register-table.py`](tools/render-huanyang-register-table.py)
-  regenerates the Markdown record from JSON.
+  regenerates the table from JSON as Markdown by default or CSV on request.
 
 Recovered values include communications as both command and frequency source,
 400 Hz base/maximum, 13.40 Hz lower limit, reverse forbidden, and motor data of

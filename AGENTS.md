@@ -29,10 +29,11 @@ change.
   this workstation; LinuxCNC runs on the target host `frida`.
 - Access the target as `frida@frida`. Its checkout of this same repository is
   `/home/frida/linuxcnc`.
-- After changing files locally, synchronize the intended working-tree files to
-  that checkout with `rsync` over SSH before testing them. Preserve repository-
-  relative paths, exclude `.git`, and do not use `--delete` unless the user
-  explicitly requests deletion of confirmed remote paths.
+- After changing files locally, run `./sync-to-target.sh` before testing them on
+  the target. Use `./sync-to-target.sh --dry-run` when a preview is useful. This
+  is the default and required workspace-sync method for agents; do not replace
+  it with an ad hoc `rsync` command. The wrapper preserves repository-relative
+  paths, excludes `.git`, and never deletes remote files.
 - Run repository scripts and LinuxCNC/HAL commands on `frida`, normally through
   `ssh frida@frida 'cd /home/frida/linuxcnc && ...'`; do not treat local script
   execution as target-host validation.

@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-"""Render a Huanyang register-dump JSON file as a documented Markdown table."""
+"""Render a Huanyang register-dump JSON file as a Markdown or CSV table.
+
+All parameter names, translations, factory values, set ranges, units, and
+status rules needed for rendering are defined in this module.  Documentation
+files are provenance for those definitions, not runtime inputs.
+"""
 
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 from pathlib import Path
 
@@ -341,6 +347,85 @@ FACTORY_RAW = {
 }
 
 
+# Set ranges and units are transcribed from the handbook delivered with this
+# VFD.  ``Unit`` is the handbook's setting increment, not merely the physical
+# dimension.  Parameters without a documented minimum/maximum remain blank.
+SET_RANGES = {
+    0: "0–1", 1: "0–2", 2: "0–3", 3: "0.00–400.00", 4: "0.01–400.00",
+    5: "10.00–400.00", 6: "0.01–400.00", 7: "0.10–20.00", 8: "0.1–*",
+    9: "0.1–500.0", 10: "0.1–50.0", 11: "0.00–400.00", 13: "00–10",
+    23: "0–1", 24: "0–1", 25: "0–1", 26: "0–1", 27: "0.1–10.0",
+    28: "0.1–10.0", 29: "0.0–25.0", 30: "0.0–25.0", 31: "0.0–20.0",
+    32: "0.1–20.0", 33: "0–200", 34: "0.1–10.0", 41: "0–15",
+    42: "0.00–400.00", 43: "0–6500", 54: "0–7", 55: "0.0–100.0",
+    59: "0.10–10.00", 62: "0.10–10.00", 63: "0.1–10.0", 64: "1–100",
+    65: "0–65500", 66: "0–65500", 70: "0–4", 71: "0–50",
+    72: "0.00–400.00", 73: "0.00–400.00", 74: "0–1", 75: "0–1",
+    76: "0–1", 77: "0–1", 78: "0–1", 80: "0–5", 81: "0–3",
+    82: "0–255", 83: "0–255", 84: "0–65535", 85: "0–65535",
+    117: "0–1", 118: "0–1", 119: "0–200", 120: "0–200",
+    121: "0.1–25.5", 122: "0–200", 123: "0–3", 124: "0–200",
+    125: "0.1–20.0", 126: "0–1", 130: "0–2", 131: "1–9000",
+    132: "1–250", 133: "1–250", 134: "1–250", 135: "1–150",
+    136: "1–250", 137: "1–150", 138: "0.00–400.00", 139: "1–250",
+    143: "02–10", 144: "0–9999", 145: "0.1–10.0", 146: "0–99",
+    147: "0.0–10.0", 150: "0–1", 151: "0–20", 152: "0.2–25.0",
+    153: "0–1", 154: "0.1–5.0", 155: "00–10", 156: "0.0–1000.0",
+    157: "0.1–3600.0", 158: "0.01–10.00", 159: "0.0–100.0",
+    160: "0–1", 161: "0–100", 162: "0–100", 163: "0–250",
+    164: "0–3", 165: "0–5", 170: "0–5", 171: "0–15",
+    172: "00–10", 175: "0–1", 176: "0–1",
+}
+
+for parameter in range(14, 22):
+    SET_RANGES[parameter] = "0.1–6500.0"
+for parameter in range(44, 54):
+    SET_RANGES[parameter] = "00–32"
+for parameter in range(56, 59):
+    SET_RANGES[parameter] = "0.00–400.00"
+for parameter in (60, 61):
+    SET_RANGES[parameter] = "0.00–400.00"
+for parameter in range(86, 101):
+    SET_RANGES[parameter] = "0.00–400.00"
+for parameter in range(101, 117):
+    SET_RANGES[parameter] = "0.0–6500.0"
+
+UNITS = {
+    0: "1", 1: "1", 2: "1", 3: "0.01 Hz", 4: "0.1 Hz", 5: "0.01 Hz",
+    6: "0.01 Hz", 7: "0.01 Hz", 8: "0.1 V", 9: "0.1 V", 10: "0.1 V",
+    11: "0.01 Hz", 13: "1", 23: "1", 24: "1", 25: "1", 26: "1",
+    27: "0.1 Hz", 28: "0.1 Hz", 29: "0.1 s", 30: "0.1 s", 31: "0.1%",
+    32: "0.1 s", 33: "1%", 34: "0.1 s", 41: "1", 42: "0.01 Hz",
+    43: "1 s", 54: "1", 55: "0.1%", 59: "0.01 Hz", 62: "0.01 Hz",
+    63: "0.1 s", 64: "1 s", 65: "1", 66: "1", 70: "1", 71: "1",
+    72: "0.01 Hz", 73: "0.01 Hz", 74: "1", 75: "1", 76: "1", 77: "1",
+    78: "1", 80: "1", 81: "1", 82: "1", 83: "1", 84: "1", 85: "1",
+    117: "1", 118: "1", 119: "1%", 120: "1%", 121: "0.1 s",
+    122: "1%", 123: "1", 124: "1%", 125: "0.1 s", 126: "1", 130: "1",
+    131: "1 min", 132: "1 s", 133: "1 s", 134: "1 s", 135: "1%",
+    136: "1 s", 137: "1%", 138: "0.01 Hz", 139: "1 s", 141: "0.1 V",
+    142: "0.1 A", 143: "1", 144: "1 rpm", 145: "0.1%", 146: "1%",
+    147: "0.1%", 150: "1", 151: "1%", 152: "0.1 s", 153: "1",
+    154: "0.1 s", 155: "1", 156: "0.1%", 157: "0.1 s", 158: "0.01 s",
+    159: "0.1%", 160: "1", 161: "1%", 162: "1%", 163: "1", 164: "1",
+    165: "1", 170: "1", 171: "1", 172: "1", 174: "1 A", 175: "1",
+    176: "1",
+}
+
+for parameter in range(14, 22):
+    UNITS[parameter] = "0.1 s"
+for parameter in range(44, 54):
+    UNITS[parameter] = "1"
+for parameter in range(56, 59):
+    UNITS[parameter] = "0.01 Hz"
+for parameter in (60, 61):
+    UNITS[parameter] = "0.01 Hz"
+for parameter in range(86, 101):
+    UNITS[parameter] = "0.01 Hz"
+for parameter in range(101, 117):
+    UNITS[parameter] = "0.1 s"
+
+
 def number(value: float, digits: int = 2) -> str:
     return f"{value:.{digits}f}".rstrip("0").rstrip(".")
 
@@ -409,7 +494,7 @@ def factory_difference(parameter: int, record: dict) -> str:
         or parameter not in FACTORY_RAW
     ):
         return "?"
-    return "" if record["raw_value"] == FACTORY_RAW[parameter] else "X"
+    return "" if record["raw_value"] == FACTORY_RAW[parameter] else "Y"
 
 
 def manual_status(parameter: int) -> str:
@@ -550,62 +635,8 @@ def decode(parameter: int, raw: int) -> str:
     return str(raw)
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("input", type=Path)
-    parser.add_argument("output", type=Path)
-    args = parser.parse_args()
-
-    data = json.loads(args.input.read_text(encoding="utf-8"))
-    supported = sum(record["status"] == "ok" for record in data["registers"])
-    unsupported = sum(record["status"] == "unsupported" for record in data["registers"])
-    errors = sum(record["status"] == "error" for record in data["registers"])
-    first = min(record["number"] for record in data["registers"])
-    last = max(record["number"] for record in data["registers"])
-    lines = [
-        "# Huanyang HY02D223B register backup",
-        "",
-        f"Captured `{data['captured_at']}` through `{data['device']}` at "
-        f"{data['baud']} bit/s, {data['format']}, station {data['target']}.",
-        "",
-        "The capture program transmitted only Huanyang function `0x01` "
-        "(read parameter). The raw, CRC-checked request and response frames are "
-        f"preserved in [`data/{args.input.name}`](data/{args.input.name}).",
-        "",
-        f"The capture covers `PD{first:03d}`–`PD{last:03d}`: {supported} registers returned "
-        f"values, {unsupported} returned CRC-valid unsupported replies, and {errors} ended in errors.",
-        "",
-        "Decoded units and descriptions initially came from "
-        "[`datasheets/huanyang-hy02d223b-manual.pdf`](datasheets/huanyang-hy02d223b-manual.pdf). "
-        "That project PDF is not the same revision as the handbook delivered with this VFD. "
-        "Owner-confirmed handbook corrections are applied here; untranscribed conflicts are marked pending rather than guessed.",
-        "",
-        "In its factory-setting column, `*` retains the manual's notation for a model- or application-specific value; "
-        "an em dash means the manual gives no fixed initial value.",
-        "",
-        "## Important recovered settings",
-        "",
-        "- Run commands and frequency both come from communications (`PD001=2`, `PD002=2`).",
-        "- Serial settings are station 1, 19,200 bit/s, 8N1 RTU (`PD163=1`, `PD164=2`, `PD165=3`).",
-        "- Base and maximum frequency are both 400 Hz (`PD004`, `PD005`).",
-        "- The lower operating limit is 13.40 Hz (`PD011`), corresponding to about 804 rpm with `PD144=3000 rpm at 50 Hz`.",
-        "- Motor data are 220 V, 10.0 A, 2 poles and 3000 rpm at 50 Hz (`PD141`–`PD144`). The 10.0 A setting conflicts with the spindle's informal paper value of 6 A and must be resolved before commissioning.",
-        "- Reverse rotation is forbidden (`PD023=0`) and the panel STOP key is enabled (`PD024=1`).",
-        "- One auxiliary pump is configured (`PD130=1`), and `PD133`–`PD139` contain non-default pump/sleep timings and thresholds. The coolant-pump conductor appears to be on `FA(MB)` or `FC(MB)`; verify it physically before changing anything.",
-        "- No automatic abnormal restart is configured (`PD155=0`), and restart after instantaneous power loss is disabled (`PD153=0`).",
-        "- The delivered handbook marks `PD184`–`PD250` reserved. The VFD nevertheless returned `PD184=20`, `PD185=0`, `PD186=0` and `PD200=0`; preserve these values without assigning a meaning or writing them. Apart from `PD200`, every query from `PD187`–`PD250` returned a CRC-valid unsupported reply.",
-        "",
-        "## Complete parameter table",
-        "",
-        "[1] Factory difference: blank = captured value equals the numeric factory setting; "
-        "`X` = differs; `?` = comparison is not possible from this capture/manual.",
-        "",
-        "[2] Manual status: `R` = explicitly marked reserved in the delivered handbook; "
-        "`N` = parameter is not present in the project PDF; blank = documented and not marked reserved.",
-        "",
-    ]
-
-    table_rows = []
+def table_rows(data: dict) -> list[list[str]]:
+    rows = []
     for record in data["registers"]:
         parameter = record["number"]
         if record["status"] == "ok":
@@ -616,44 +647,70 @@ def main() -> None:
             raw_text = "—"
             decoded = "Unsupported by this VFD (CRC-checked `0x81` reply)"
         row = [
-            f"`PD{parameter:03d}`",
+            f"PD{parameter:03d}",
             raw_text,
             decoded,
             factory_setting(parameter),
+            SET_RANGES.get(parameter, ""),
+            UNITS.get(parameter, ""),
             factory_difference(parameter, record),
             manual_status(parameter),
             name(parameter),
             purpose(parameter),
         ]
-        table_rows.append([item.replace("|", "\\|") for item in row])
+        rows.append(row)
+    return rows
 
-    lines.extend(
-        render_markdown_table(
-            [
-                "Parameter",
-                "Raw",
-                "Decoded/current setting",
-                "Factory setting",
-                "Δ factory [1]",
-                "Manual [2]",
-                "Name",
-                "What it controls",
-            ],
-            table_rows,
-            ["left", "right", "left", "left", "center", "center", "left", "left"],
-        )
+
+HEADERS = [
+    "Parameter",
+    "Raw",
+    "Decoded/current setting",
+    "Factory setting",
+    "Set range",
+    "Unit",
+    "Modified [1]",
+    "Reserved [2]",
+    "Name",
+    "What it controls",
+]
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("input", type=Path)
+    parser.add_argument("output", type=Path)
+    parser.add_argument(
+        "--format",
+        choices=("markdown", "csv"),
+        help="output format (default: CSV for a .csv output name, otherwise Markdown)",
     )
+    args = parser.parse_args()
 
-    lines += [
-        "",
-        "## Capture tool",
-        "",
-        "[`tools/read-huanyang-vfd.py`](tools/read-huanyang-vfd.py) is deliberately read-only: "
-        "its request builder contains only function `0x01`. Do not replace it with `hy_vfd --regdump` "
-        "for forensic captures, because the normal `hy_vfd` loop subsequently transmits control and frequency commands.",
-        "",
+    data = json.loads(args.input.read_text(encoding="utf-8"))
+    rows = table_rows(data)
+    output_format = args.format or ("csv" if args.output.suffix.lower() == ".csv" else "markdown")
+
+    if output_format == "csv":
+        with args.output.open("w", encoding="utf-8", newline="") as stream:
+            writer = csv.writer(stream)
+            writer.writerow(HEADERS)
+            writer.writerows(rows)
+        return
+
+    markdown_rows = [
+        [f"`{row[0]}`", *[item.replace("|", "\\|") for item in row[1:]]]
+        for row in rows
     ]
-    args.output.write_text("\n".join(lines), encoding="utf-8")
+    lines = render_markdown_table(
+        HEADERS,
+        markdown_rows,
+        [
+            "left", "right", "left", "left", "left", "left", "center", "center",
+            "left", "left",
+        ],
+    )
+    args.output.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

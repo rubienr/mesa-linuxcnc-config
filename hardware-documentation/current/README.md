@@ -28,7 +28,8 @@ machine without verification.
 | Tool sensing, touch-off, pendant, and front-panel controls | [`controls-and-probing.md`](controls-and-probing.md) |
 | Errors in the legacy schematic and the wiring-record format | [`legacy-and-wiring.md`](legacy-and-wiring.md) |
 | Unresolved decisions and physical verification work | [`TODO.md`](TODO.md) |
-| Generated VFD parameter table | [`huanyang-hy02d223b-register-backup.md`](huanyang-hy02d223b-register-backup.md) |
+| VFD parameter backup description | [`huanyang-hy02d223b-register-backup.md`](huanyang-hy02d223b-register-backup.md) |
+| Generated VFD parameter table | [`huanyang-hy02d223b-register-backup-table.md`](huanyang-hy02d223b-register-backup-table.md) |
 
 The proposed current terminal allocation is
 [`../../config/frida-mesa/wiring.csv`](../../config/frida-mesa/wiring.csv).

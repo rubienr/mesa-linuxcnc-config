@@ -1,0 +1,66 @@
+# Mesa 7I95T core and X/Y/Z step generators.
+# Physical mapping: stepgen 0 = X, 1 = Y, 2 = Z.
+
+loadrt [KINS]KINEMATICS
+loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS
+
+loadrt hostmot2
+loadrt hm2_eth board_ip=[HOSTMOT2]BOARD_IP config="num_encoders=0 num_stepgens=6"
+
+# Read physical inputs first on every 1 ms cycle. motion.hal is deliberately
+# loaded last so input logic and pendant filters run before motion, and the
+# resulting hardware commands are written at the end of the cycle.
+addf hm2_7i95.0.read servo-thread 1
+
+# Five missed servo cycles trip the hardware watchdog.
+setp hm2_7i95.0.watchdog.timeout_ns 5000000
+
+# X axis.
+setp hm2_7i95.0.stepgen.00.dirsetup [JOINT_0]DIRSETUP
+setp hm2_7i95.0.stepgen.00.dirhold [JOINT_0]DIRHOLD
+setp hm2_7i95.0.stepgen.00.steplen [JOINT_0]STEPLEN
+setp hm2_7i95.0.stepgen.00.stepspace [JOINT_0]STEPSPACE
+setp hm2_7i95.0.stepgen.00.position-scale [JOINT_0]SCALE
+setp hm2_7i95.0.stepgen.00.maxvel [JOINT_0]STEPGEN_MAX_VEL
+setp hm2_7i95.0.stepgen.00.maxaccel [JOINT_0]STEPGEN_MAX_ACC
+setp hm2_7i95.0.stepgen.00.step_type 0
+net x-enable joint.0.amp-enable-out => hm2_7i95.0.stepgen.00.enable
+net x-position-command joint.0.motor-pos-cmd => hm2_7i95.0.stepgen.00.position-cmd
+net x-position-feedback hm2_7i95.0.stepgen.00.position-fb => joint.0.motor-pos-fb
+
+# Y axis.
+setp hm2_7i95.0.stepgen.01.dirsetup [JOINT_1]DIRSETUP
+setp hm2_7i95.0.stepgen.01.dirhold [JOINT_1]DIRHOLD
+setp hm2_7i95.0.stepgen.01.steplen [JOINT_1]STEPLEN
+setp hm2_7i95.0.stepgen.01.stepspace [JOINT_1]STEPSPACE
+setp hm2_7i95.0.stepgen.01.position-scale [JOINT_1]SCALE
+setp hm2_7i95.0.stepgen.01.maxvel [JOINT_1]STEPGEN_MAX_VEL
+setp hm2_7i95.0.stepgen.01.maxaccel [JOINT_1]STEPGEN_MAX_ACC
+setp hm2_7i95.0.stepgen.01.step_type 0
+net y-enable joint.1.amp-enable-out => hm2_7i95.0.stepgen.01.enable
+net y-position-command joint.1.motor-pos-cmd => hm2_7i95.0.stepgen.01.position-cmd
+net y-position-feedback hm2_7i95.0.stepgen.01.position-fb => joint.1.motor-pos-fb
+
+# Z axis.
+setp hm2_7i95.0.stepgen.02.dirsetup [JOINT_2]DIRSETUP
+setp hm2_7i95.0.stepgen.02.dirhold [JOINT_2]DIRHOLD
+setp hm2_7i95.0.stepgen.02.steplen [JOINT_2]STEPLEN
+setp hm2_7i95.0.stepgen.02.stepspace [JOINT_2]STEPSPACE
+setp hm2_7i95.0.stepgen.02.position-scale [JOINT_2]SCALE
+setp hm2_7i95.0.stepgen.02.maxvel [JOINT_2]STEPGEN_MAX_VEL
+setp hm2_7i95.0.stepgen.02.maxaccel [JOINT_2]STEPGEN_MAX_ACC
+setp hm2_7i95.0.stepgen.02.step_type 0
+net z-enable joint.2.amp-enable-out => hm2_7i95.0.stepgen.02.enable
+net z-position-command joint.2.motor-pos-cmd => hm2_7i95.0.stepgen.02.position-cmd
+net z-position-feedback hm2_7i95.0.stepgen.02.position-fb => joint.2.motor-pos-fb
+
+# No wiring is assigned to step generators 3..5 or any isolated output.
+setp hm2_7i95.0.stepgen.03.enable false
+setp hm2_7i95.0.stepgen.04.enable false
+setp hm2_7i95.0.stepgen.05.enable false
+setp hm2_7i95.0.ssr.00.out-00 false
+setp hm2_7i95.0.ssr.00.out-01 false
+setp hm2_7i95.0.ssr.00.out-02 false
+setp hm2_7i95.0.ssr.00.out-03 false
+setp hm2_7i95.0.ssr.00.out-04 false
+setp hm2_7i95.0.ssr.00.out-05 false

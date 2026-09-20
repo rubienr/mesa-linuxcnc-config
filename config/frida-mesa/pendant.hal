@@ -1,0 +1,111 @@
+# XHC WHB04B-6 basic integration for LinuxCNC 2.9.10.
+# Hazardous custom MDI/probe macro buttons remain deliberately unassigned.
+
+loadusr -W xhc-whb04b-6 -H -t -n
+
+# Smooth and rescale the pendant wheel counts as in the legacy configuration.
+loadrt ilowpass names=pendant-x-filter,pendant-y-filter,pendant-z-filter
+loadrt scale names=pendant-x-scale,pendant-y-scale,pendant-z-scale
+
+addf pendant-x-filter servo-thread
+addf pendant-y-filter servo-thread
+addf pendant-z-filter servo-thread
+addf pendant-x-scale servo-thread
+addf pendant-y-scale servo-thread
+addf pendant-z-scale servo-thread
+
+setp pendant-x-filter.scale 100
+setp pendant-y-filter.scale 100
+setp pendant-z-filter.scale 100
+setp pendant-x-filter.gain 0.2
+setp pendant-y-filter.gain 0.2
+setp pendant-z-filter.gain 0.2
+setp pendant-x-scale.gain 0.01
+setp pendant-y-scale.gain 0.01
+setp pendant-z-scale.gain 0.01
+
+net pendant-x-wheel whb.axis.x.jog-counts => pendant-x-filter.in
+net pendant-y-wheel whb.axis.y.jog-counts => pendant-y-filter.in
+net pendant-z-wheel whb.axis.z.jog-counts => pendant-z-filter.in
+net pendant-x-filtered pendant-x-filter.out => axis.x.jog-counts
+net pendant-y-filtered pendant-y-filter.out => axis.y.jog-counts
+net pendant-z-filtered pendant-z-filter.out => axis.z.jog-counts
+
+net pendant-x-increment whb.axis.x.jog-scale => pendant-x-scale.in
+net pendant-y-increment whb.axis.y.jog-scale => pendant-y-scale.in
+net pendant-z-increment whb.axis.z.jog-scale => pendant-z-scale.in
+net pendant-x-scale pendant-x-scale.out => axis.x.jog-scale
+net pendant-y-scale pendant-y-scale.out => axis.y.jog-scale
+net pendant-z-scale pendant-z-scale.out => axis.z.jog-scale
+
+net pendant-x-jog-enable whb.axis.x.jog-enable => axis.x.jog-enable
+net pendant-y-jog-enable whb.axis.y.jog-enable => axis.y.jog-enable
+net pendant-z-jog-enable whb.axis.z.jog-enable => axis.z.jog-enable
+net pendant-x-velocity-mode whb.axis.x.jog-vel-mode => axis.x.jog-vel-mode
+net pendant-y-velocity-mode whb.axis.y.jog-vel-mode => axis.y.jog-vel-mode
+net pendant-z-velocity-mode whb.axis.z.jog-vel-mode => axis.z.jog-vel-mode
+
+# Axis selector and homed state.
+net pendant-select-x whb.halui.axis.x.select => halui.axis.x.select
+net pendant-select-y whb.halui.axis.y.select => halui.axis.y.select
+net pendant-select-z whb.halui.axis.z.select => halui.axis.z.select
+net pendant-x-homed halui.joint.0.is-homed => whb.halui.joint.x.is-homed
+net pendant-y-homed halui.joint.1.is-homed => whb.halui.joint.y.is-homed
+net pendant-z-homed halui.joint.2.is-homed => whb.halui.joint.z.is-homed
+
+# DRO feedback.
+net pendant-x-position halui.axis.x.pos-feedback => whb.halui.axis.x.pos-feedback
+net pendant-y-position halui.axis.y.pos-feedback => whb.halui.axis.y.pos-feedback
+net pendant-z-position halui.axis.z.pos-feedback => whb.halui.axis.z.pos-feedback
+net pendant-x-relative halui.axis.x.pos-relative => whb.halui.axis.x.pos-relative
+net pendant-y-relative halui.axis.y.pos-relative => whb.halui.axis.y.pos-relative
+net pendant-z-relative halui.axis.z.pos-relative => whb.halui.axis.z.pos-relative
+
+# Machine and program controls.
+net pendant-machine-is-on halui.machine.is-on => whb.halui.machine.is-on
+net pendant-machine-on whb.halui.machine.on => halui.machine.on
+net pendant-machine-off whb.halui.machine.off => halui.machine.off
+net pendant-program-idle halui.program.is-idle => whb.halui.program.is-idle
+net pendant-program-paused halui.program.is-paused => whb.halui.program.is-paused
+net pendant-program-running halui.program.is-running => whb.halui.program.is-running
+net pendant-program-run whb.halui.program.run => halui.program.run
+net pendant-program-pause whb.halui.program.pause => halui.program.pause
+net pendant-program-resume whb.halui.program.resume => halui.program.resume
+net pendant-program-stop whb.halui.program.stop => halui.program.stop
+
+# Operating modes.
+net pendant-mode-auto whb.halui.mode.auto => halui.mode.auto
+net pendant-mode-joint whb.halui.mode.joint => halui.mode.joint
+net pendant-mode-manual whb.halui.mode.manual => halui.mode.manual
+net pendant-mode-mdi whb.halui.mode.mdi => halui.mode.mdi
+net pendant-mode-teleop whb.halui.mode.teleop => halui.mode.teleop
+net pendant-mode-is-auto halui.mode.is-auto => whb.halui.mode.is-auto
+net pendant-mode-is-joint halui.mode.is-joint => whb.halui.mode.is-joint
+net pendant-mode-is-manual halui.mode.is-manual => whb.halui.mode.is-manual
+net pendant-mode-is-mdi halui.mode.is-mdi => whb.halui.mode.is-mdi
+net pendant-mode-is-teleop halui.mode.is-teleop => whb.halui.mode.is-teleop
+
+# Feed and maximum velocity display/control.
+net pendant-feed-value halui.feed-override.value => whb.halui.feed-override.value
+net pendant-feed-scale whb.halui.feed-override.scale => halui.feed-override.scale
+net pendant-feed-increase whb.halui.feed-override.increase => halui.feed-override.increase
+net pendant-feed-decrease whb.halui.feed-override.decrease => halui.feed-override.decrease
+net pendant-max-velocity halui.max-velocity.value => whb.halui.max-velocity.value
+
+# Spindle commands and display.
+net pendant-spindle-is-on halui.spindle.0.is-on => whb.halui.spindle.is-on
+net pendant-spindle-start whb.halui.spindle.start => halui.spindle.0.start
+net pendant-spindle-stop whb.halui.spindle.stop => halui.spindle.0.stop
+net pendant-spindle-forward whb.halui.spindle.forward => halui.spindle.0.forward
+net pendant-spindle-reverse whb.halui.spindle.reverse => halui.spindle.0.reverse
+net pendant-spindle-increase whb.halui.spindle.increase => halui.spindle.0.increase
+net pendant-spindle-decrease whb.halui.spindle.decrease => halui.spindle.0.decrease
+net pendant-spindle-override-value halui.spindle.0.override.value => whb.halui.spindle-override.value
+net pendant-spindle-override-scale whb.halui.spindle-override.scale => halui.spindle.0.override.scale
+net pendant-spindle-override-increase whb.halui.spindle-override.increase => halui.spindle.0.override.increase
+net pendant-spindle-override-decrease whb.halui.spindle-override.decrease => halui.spindle.0.override.decrease
+net spindle-speed-absolute spindle.0.speed-out-abs => whb.halui.spindle-speed-cmd
+
+# Raw macro/button pins remain visible in HAL but are not connected here.
+net pendant-connected whb.pendant.is-connected
+net pendant-sleeping whb.pendant.is-sleeping

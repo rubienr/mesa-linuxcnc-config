@@ -1,0 +1,6 @@
+# Load this file last. It places motion after input/filter logic and places the
+# Mesa hardware write at the end of every servo cycle.
+
+addf motion-command-handler servo-thread
+addf motion-controller servo-thread
+addf hm2_7i95.0.write servo-thread

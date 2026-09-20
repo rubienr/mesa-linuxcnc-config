@@ -41,6 +41,16 @@ LinuxCNC and Mesa physical cores:
 ./start-stress-test.sh
 ```
 
+Watch all benchmark-relevant HostMot2 error flags, read/write maxima, and the
+servo-thread row in one display:
+
+```bash
+./watch-counters.sh
+```
+
+It refreshes once per second. Set `WATCH_INTERVAL` to another positive interval
+or use `./watch-counters.sh --once` for a scriptable snapshot.
+
 The optional communication-only check is `halrun validate-7i95t.hal` when no
 other HAL session is running. To exercise Wi-Fi reconnection locally, use:
 
@@ -78,20 +88,9 @@ worthwhile comparison is an Xorg desktop session using Xorg's built-in
 choice replaces the `amdgpu` kernel driver. Zink (OpenGL over RADV/Vulkan) is
 another experimental diagnostic path, not the recommended LinuxCNC setup.
 
-## Watch the result
+## Interpret the result
 
-Run `halcmd` as the same desktop user that launched LinuxCNC:
-
-```bash
-echo -n 'total:    '; halcmd getp hm2_7i95.0.packet-error-total
-echo -n 'level:    '; halcmd getp hm2_7i95.0.packet-error-level
-echo -n 'packet:   '; halcmd getp hm2_7i95.0.packet-error
-echo -n 'exceeded: '; halcmd getp hm2_7i95.0.packet-error-exceeded
-echo -n 'io_error: '; halcmd getp hm2_7i95.0.io_error
-echo -n 'read ns:  '; halcmd getp hm2_7i95.0.read.tmax
-echo -n 'write ns: '; halcmd getp hm2_7i95.0.write.tmax
-halcmd show thread | grep servo-thread
-```
+Run the watcher as the same desktop user that launched LinuxCNC.
 
 Packet totals should remain zero, Boolean error flags should remain `FALSE`,
 and the servo maximum must remain below its `1,000,000 ns` period with useful

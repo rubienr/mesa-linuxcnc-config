@@ -1,0 +1,39 @@
+# General machine signals on Mesa isolated inputs.
+# See wiring.csv and ../README.md before connecting field wiring.
+
+loadrt and2 count=1
+addf and2.0 servo-thread
+
+# Hard E-stop status and the LinuxCNC user request must both be true.
+# TB6-19 INPUT12, with TB6-21 INCOM12/13 at field 0 V for the legacy
+# positive-voltage, closed/healthy signal.
+net estop-chain-ok hm2_7i95.0.inmux.00.input-12 => and2.0.in0
+net user-enable-request iocontrol.0.user-enable-out => and2.0.in1
+net machine-enable-ok and2.0.out => iocontrol.0.emc-enable-in
+
+# X: TB6 inputs 0..2. NPN-NC sensors use the inverted logical pin.
+net x-negative-limit hm2_7i95.0.inmux.00.input-00-not => joint.0.neg-lim-sw-in joint.0.home-sw-in
+net x-dedicated-home hm2_7i95.0.inmux.00.input-01-not
+net x-positive-limit hm2_7i95.0.inmux.00.input-02-not => joint.0.pos-lim-sw-in
+
+# Y: TB6 inputs 4..6. Preserve legacy homing on Y+.
+net y-negative-limit hm2_7i95.0.inmux.00.input-04-not => joint.1.neg-lim-sw-in
+net y-dedicated-home hm2_7i95.0.inmux.00.input-05-not
+net y-positive-limit hm2_7i95.0.inmux.00.input-06-not => joint.1.pos-lim-sw-in joint.1.home-sw-in
+
+# Z: TB6 inputs 8 and 9. Z+ is both upper limit and home.
+net z-negative-limit hm2_7i95.0.inmux.00.input-08-not => joint.2.neg-lim-sw-in
+net z-positive-limit hm2_7i95.0.inmux.00.input-09-not => joint.2.pos-lim-sw-in joint.2.home-sw-in
+
+# Legacy positive-voltage probe switch: TB6-16 INPUT10, common on TB6-18.
+net probe-active hm2_7i95.0.inmux.00.input-10 => motion.probe-input
+
+# AM882 alarm open-collector outputs on TB5 inputs 16..18.
+net x-drive-fault hm2_7i95.0.inmux.00.input-16 => joint.0.amp-fault-in
+net y-drive-fault hm2_7i95.0.inmux.00.input-17 => joint.1.amp-fault-in
+net z-drive-fault hm2_7i95.0.inmux.00.input-18 => joint.2.amp-fault-in
+
+# The legacy configuration bypassed manual tool-change handshakes. No remapped
+# probe/tool-change motion is enabled in this commissioning profile.
+net tool-prepare-loop iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
+net tool-change-loop iocontrol.0.tool-change => iocontrol.0.tool-changed

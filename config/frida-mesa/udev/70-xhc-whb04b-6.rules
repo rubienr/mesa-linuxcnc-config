@@ -1,0 +1,2 @@
+# XHC WHB04B-6 receiver: grant the active local desktop user read/write access.
+SUBSYSTEM=="usb", ATTR{idVendor}=="10ce", ATTR{idProduct}=="eb93", TAG+="uaccess"

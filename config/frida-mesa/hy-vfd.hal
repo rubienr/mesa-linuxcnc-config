@@ -1,0 +1,24 @@
+# Huanyang HY02D223B via the existing USB/RS-485 tty adapter.
+# This adapter is not galvanically isolated. Bench-test all failure modes with
+# the spindle power stage made safe before operational use.
+
+loadusr -Wn hyvfd hy_vfd --name hyvfd --device [HY_VFD]DEVICE --bits 8 --parity none --rate [HY_VFD]BAUD --stopbits 1 --target [HY_VFD]TARGET
+
+setp hyvfd.enable true
+setp hyvfd.spindle-at-speed-tolerance 0.05
+
+net spindle-forward spindle.0.forward => hyvfd.spindle-forward
+net spindle-reverse spindle.0.reverse => hyvfd.spindle-reverse
+net spindle-on spindle.0.on => hyvfd.spindle-on
+net spindle-speed-command spindle.0.speed-out => hyvfd.speed-command
+net spindle-speed-feedback hyvfd.spindle-speed-fb => spindle.0.speed-in
+net spindle-at-speed hyvfd.spindle-at-speed => spindle.0.at-speed
+
+# Diagnostics visible in halshow/halcmd.
+net vfd-communications-ok hyvfd.hycomm-ok
+net vfd-commanded-frequency hyvfd.frequency-command
+net vfd-output-frequency hyvfd.OutF
+net vfd-output-current hyvfd.OutA
+net vfd-dc-bus-voltage hyvfd.DCV
+net vfd-ac-output-voltage hyvfd.ACV
+net vfd-temperature hyvfd.Tmp

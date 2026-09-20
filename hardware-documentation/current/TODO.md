@@ -2,8 +2,8 @@
 
 This file contains every known uncertainty or task that must be resolved before
 the current machine schematic and production LinuxCNC configuration can be
-considered complete. Check an item only after recording the result in
-`README.md`, the connection inventory, or the future KiCad project.
+considered complete. Check an item only after recording the result in the
+relevant topic document, the connection inventory, or the future KiCad project.
 
 Do not inspect, disconnect or measure energized mains equipment. Record
 nameplates and wiring photographs before moving conductors.
@@ -294,8 +294,10 @@ alarm wiring.
 ## Documentation deliverables
 
 - [ ] Create the device inventory with stable reference identifiers.
-- [ ] Create the point-to-point connection CSV/YAML described in `README.md`.
-- [ ] Record every resolved checklist result in the main documentation.
+- [x] Create the initial point-to-point connection CSV described in
+  [`legacy-and-wiring.md`](legacy-and-wiring.md); complete its unverified fields
+  during physical tracing.
+- [ ] Record every resolved checklist result in the relevant topic document.
 - [ ] Create and review the corrected KiCad schematic.
 - [ ] Generate a PDF schematic and wiring/terminal schedules.
 - [ ] Create a Mesa I/O allocation table and cross-reference it to HAL signal

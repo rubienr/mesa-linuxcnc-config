@@ -51,6 +51,72 @@ servo-thread row in one display:
 It refreshes once per second. Set `WATCH_INTERVAL` to another positive interval
 or use `./watch-counters.sh --once` for a scriptable snapshot.
 
+## Record intermittent communication errors
+
+Use the diagnostic monitor to establish a counter baseline and append rich
+snapshots when communication counters, timing maxima, NIC errors, affinity, or
+the monitored workload changes:
+
+```bash
+./monitor-diagnostics.sh
+```
+
+The monitor samples once per second and writes a private, timestamped log below
+`diagnostic-logs/`. Generated logs and the instance lock are ignored by Git;
+only the directory placeholder and ignore rules are tracked. The monitor pins
+itself and all child commands to CPUs `0-1,3-4,6-7,9-10`, away from the Mesa
+and LinuxCNC physical cores.
+
+The default mode is read-only: it does not start or stop LinuxCNC, reset HAL
+state, or change affinity or network settings. A startup record contains the
+absolute HAL, NIC, IRQ, process, kernel, and host baseline. Subsequent records
+contain absolute values and deltas from both startup and the preceding sample.
+Each complete record is bounded by matching `BEGIN_RECORD` and `END_RECORD`
+lines, so an incomplete final record is easy to identify after an interruption.
+
+Useful options include:
+
+```bash
+# Name the log and write a rich heartbeat every ten minutes.
+./monitor-diagnostics.sh \
+    --output mesa-long-run.log \
+    --heartbeat 600
+
+# Diagnostic-state mutation: reset only writable timing maxima after an event.
+./monitor-diagnostics.sh --reset-tmax-after-event
+
+# Safe short test: no HAL or network access, including a simulated failure.
+./monitor-diagnostics.sh --mock --interval 0.1 --heartbeat 0.2 --max-samples 5
+```
+
+The reset option never clears packet-error totals, `io_error`, or other safety
+state. It is disabled by default because resetting timing maxima changes the
+diagnostic state. The monitor records the reset as a separate mutation record.
+
+Follow a running log and stop a foreground monitor with `Ctrl-C`:
+
+```bash
+tail -F diagnostic-logs/mesa-long-run.log
+```
+
+For a background monitor, record its shell PID and send `SIGTERM` to that exact
+PID. The monitor appends a shutdown record for either `SIGINT` or `SIGTERM`.
+It exits with status `130` after `SIGINT` and `143` after `SIGTERM`.
+Only one monitor may run at a time; `diagnostic-logs/.monitor.lock` contains its
+PID while it holds the instance lock.
+
+Logs rotate at 64 MiB by default and retain five rotated files. Override this
+with `--max-log-bytes` and `--rotated-logs`. To list complete records and their
+types using standard tools:
+
+```bash
+awk '/^BEGIN_RECORD|^END_RECORD/' diagnostic-logs/mesa-long-run.log
+```
+
+One-second polling cannot reliably observe millisecond-wide Boolean error
+flags. The cumulative packet-error total and monotonic timing maxima are the
+durable triggers; transient flags are recorded whenever a sample sees them.
+
 The optional communication-only check is `halrun validate-7i95t.hal` when no
 other HAL session is running. To exercise Wi-Fi reconnection locally, use:
 

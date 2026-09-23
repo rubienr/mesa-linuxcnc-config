@@ -7,31 +7,49 @@ description: Run or assess this repository's communication-only Mesa 7I95T bench
 
 Read `mesa-7i95t-benchmark/AGENTS.md` and its `README.md` before acting.
 
-Confirm that hazardous machine outputs are disconnected or unpowered and that
-no other LinuxCNC/HAL realtime session is active. Do not flash firmware, enable
-outputs, or substitute the Frida commissioning profile.
+For a new benchmark run, confirm that hazardous machine outputs are
+disconnected or unpowered and that no LinuxCNC/HAL realtime session is already
+active. For assessment of an existing run, identify the active profile and
+remain read-only unless the user explicitly requests a state change. Do not
+flash firmware, enable outputs, or substitute the Frida commissioning profile.
 
-The local checkout is for editing. Before any run, synchronize the intended
-changes with `rsync` to `frida@frida:/home/frida/linuxcnc/`, preserving relative
-paths and excluding `.git`. Do not use `--delete` without explicit approval.
-Execute every workflow command over SSH from `/home/frida/linuxcnc`; local
-execution is not a benchmark result.
+The local checkout is for editing. After local changes, synchronize with the
+repository's required `./sync-to-target.sh` wrapper; use `--dry-run` when a
+preview is useful. Never replace the wrapper with ad hoc `rsync`, and never add
+deletion behavior. Execute target validation over SSH from
+`/home/frida/linuxcnc`; local execution is not a benchmark result.
 
-Use the repository scripts for the workflow:
+For a new run, use the repository scripts for the workflow:
 
-1. On `frida`, apply network IRQ affinity with
-   `config/set-thread-affinity.sh`.
+1. Have the user or administrator apply network IRQ affinity with
+   `config/set-thread-affinity.sh` when root authority is required.
 2. Launch the explicitly requested benchmark INI through
    `config/start-linuxcnc.sh`; default to the documented 1 ms profile only when
    the user has not requested the 2 ms comparison.
-3. Reapply and check affinity after the servo thread exists.
+3. Have the user or administrator reapply affinity after the servo thread
+   exists, then check it with `config/check-thread-affinity.sh`.
 4. Start `mesa-7i95t-benchmark/start-stress-test.sh` only when sustained load is
    part of the requested run.
 5. Display or capture results with
    `mesa-7i95t-benchmark/watch-counters.sh`. Use `--once` for a snapshot.
 
+For intermittent-error assessment:
+
+- Use `watch-counters.sh --once` for a current snapshot.
+- Use `monitor-diagnostics.sh` for a timestamped baseline, periodic heartbeats,
+  and event records. Its default mode is read-only.
+- Treat `--reset-tmax-after-event` as a diagnostic-state mutation and use it
+  only when explicitly requested.
+- Do not stop or restart an active monitor unless explicitly requested. When
+  requested, use `stop-diagnostics.sh` so the monitor records shutdown and
+  releases its instance lock cleanly.
+- Correlate event timestamps and baseline-relative deltas with timer, service,
+  IRQ, NIC, and workload activity. One-second sampling can miss transient flags;
+  cumulative totals and timing maxima are the durable triggers.
+
 Report the profile, test duration and load, packet-error total and flags,
 HostMot2 read/write maxima, servo-thread maximum and period, CPU/IRQ placement,
-the synchronized revision or diff, and any deviation from the documented
-procedure. Zero packet flags and timing below the period are necessary
-regression criteria, not proof of machine safety.
+the synchronized revision or diff, monitor baseline and relevant event times
+when available, and any deviation from the documented procedure. Zero packet
+flags and timing below the period are necessary regression criteria, not proof
+of machine safety.

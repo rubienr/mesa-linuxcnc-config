@@ -29,6 +29,9 @@ change.
   this workstation; LinuxCNC runs on the target host `frida`.
 - Access the target as `frida@frida`. Its checkout of this same repository is
   `/home/frida/linuxcnc`.
+- The `frida` account has no sudo rights. Do not assume privileged access or
+  repeatedly retry privileged diagnostics. Record unavailable evidence and
+  hand actions requiring root authority back to the user or administrator.
 - After changing files locally, run `./sync-to-target.sh` before testing them on
   the target. Use `./sync-to-target.sh --dry-run` when a preview is useful. This
   is the default and required workspace-sync method for agents; do not replace

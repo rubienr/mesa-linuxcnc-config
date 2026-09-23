@@ -99,11 +99,19 @@ Follow a running log and stop a foreground monitor with `Ctrl-C`:
 tail -F diagnostic-logs/mesa-long-run.log
 ```
 
-For a background monitor, record its shell PID and send `SIGTERM` to that exact
-PID. The monitor appends a shutdown record for either `SIGINT` or `SIGTERM`.
-It exits with status `130` after `SIGINT` and `143` after `SIGTERM`.
-Only one monitor may run at a time; `diagnostic-logs/.monitor.lock` contains its
-PID while it holds the instance lock.
+For a background monitor, use the stop helper. It verifies the active lock and
+process identity before sending `SIGTERM`, then waits for the monitor to append
+its shutdown record and release the lock:
+
+```bash
+./stop-diagnostics.sh
+```
+
+Set another graceful-shutdown deadline with `--timeout SECONDS`. The helper
+never sends `SIGKILL` and does not start, stop, or change LinuxCNC or HAL. The
+monitor exits with status `130` after `SIGINT` and `143` after `SIGTERM`. Only
+one monitor may run at a time; `diagnostic-logs/.monitor.lock` contains its PID
+while it holds the instance lock.
 
 Logs rotate at 64 MiB by default and retain five rotated files. Override this
 with `--max-log-bytes` and `--rotated-logs`. To list complete records and their

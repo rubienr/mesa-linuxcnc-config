@@ -31,3 +31,6 @@ __pycache__/
 # Operating-system metadata
 .DS_Store
 Thumbs.db
+
+# FreeCAD
+*.FCBak

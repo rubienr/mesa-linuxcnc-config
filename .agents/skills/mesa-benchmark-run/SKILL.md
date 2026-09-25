@@ -5,7 +5,7 @@ description: Run or assess this repository's communication-only Mesa 7I95T bench
 
 # Mesa benchmark run
 
-Read `mesa-7i95t-benchmark/AGENTS.md` and its `README.md` before acting.
+Read `mesa-benchmark/AGENTS.md` and its `README.md` before acting.
 
 For a new benchmark run, confirm that hazardous machine outputs are
 disconnected or unpowered and that no LinuxCNC/HAL realtime session is already
@@ -28,10 +28,10 @@ For a new run, use the repository scripts for the workflow:
    the user has not requested the 2 ms comparison.
 3. Have the user or administrator reapply affinity after the servo thread
    exists, then check it with `config/thread-affinity-check.sh`.
-4. Start `mesa-7i95t-benchmark/stress-test-start.sh` only when sustained load is
+4. Start `mesa-benchmark/stress-test-start.sh` only when sustained load is
    part of the requested run.
 5. Display or capture results with
-   `mesa-7i95t-benchmark/counters-watch.sh`. Use `--once` for a snapshot.
+   `mesa-benchmark/counters-watch.sh`. Use `--once` for a snapshot.
 
 For intermittent-error assessment:
 

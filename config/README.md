@@ -36,7 +36,7 @@ benchmark cannot be started accidentally on a connected machine:
 
 ```bash
 LIBGL_ALWAYS_SOFTWARE=0 ./linuxcnc-start.sh \
-    ../mesa-7i95t-benchmark/mesa-7i95t-bench-1ms.ini
+    ../mesa-benchmark/mesa-7i95t-bench-1ms.ini
 ```
 
 Once LinuxCNC is open, rerun the setter so it can pin the new FIFO thread, then

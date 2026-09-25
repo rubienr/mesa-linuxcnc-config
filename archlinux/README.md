@@ -345,5 +345,5 @@ Expected essentials are realtime `1`, the isolation parameters above,
 permissions on `rtapi_app`.
 
 Use `../config/README.md` for the normal operating sequence and
-`../mesa-7i95t-benchmark/README.md` for the 1 ms/2 ms benchmark, load
+`../mesa-benchmark/README.md` for the 1 ms/2 ms benchmark, load
 generation, counters, and safety constraints.

@@ -29,7 +29,7 @@ __pycache__/
 *.temp
 
 # Archived Mesa diagnostic runs contain generated host evidence and logs.
-/mesa-7i95t-benchmark/diagnostic-logs-*/
+/mesa-benchmark/diagnostic-logs-*/
 
 # Operating-system metadata
 .DS_Store

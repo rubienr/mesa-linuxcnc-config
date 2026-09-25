@@ -24,7 +24,7 @@ with hardware rendering:
 ```bash
 sudo "$HOME/linuxcnc/config/thread-affinity-set.sh"
 LIBGL_ALWAYS_SOFTWARE=0 "$HOME/linuxcnc/config/linuxcnc-start.sh" \
-    "$HOME/linuxcnc/mesa-7i95t-benchmark/mesa-7i95t-bench-1ms.ini"
+    "$HOME/linuxcnc/mesa-benchmark/mesa-7i95t-bench-1ms.ini"
 ```
 
 After LinuxCNC creates its realtime thread, rerun the setter and checker:
@@ -220,7 +220,7 @@ Mesa's LLVMpipe software rendering:
 
 ```bash
 LIBGL_ALWAYS_SOFTWARE=1 "$HOME/linuxcnc/config/linuxcnc-start.sh" \
-    "$HOME/linuxcnc/mesa-7i95t-benchmark/mesa-7i95t-bench-1ms.ini"
+    "$HOME/linuxcnc/mesa-benchmark/mesa-7i95t-bench-1ms.ini"
 ```
 
 Software rendering is a diagnostic fallback and may increase latency. Another

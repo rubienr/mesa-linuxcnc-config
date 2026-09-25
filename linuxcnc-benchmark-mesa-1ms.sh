@@ -3,7 +3,7 @@ set -euo pipefail
 
 repository_directory=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
 launcher="$repository_directory/config/linuxcnc-start.sh"
-ini_file="$repository_directory/mesa-7i95t-benchmark/mesa-7i95t-bench-1ms.ini"
+ini_file="$repository_directory/mesa-benchmark/mesa-7i95t-bench-1ms.ini"
 session_name="${MESA_SCREEN_SESSION:-mesa-benchmark-1ms}"
 
 if (( $# != 0 )); then

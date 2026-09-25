@@ -12,7 +12,7 @@ all READMEs, legacy files, datasheets, or generated records.
 - `config/`: shared affinity/launcher scripts and the commissioning profile in
   `config/frida-mesa/`. Read `config/README.md` for runtime or machine-config
   work, then `config/frida-mesa/AGENTS.md` when touching that profile.
-- `mesa-7i95t-benchmark/`: communication-only HostMot2 Ethernet benchmark. Read
+- `mesa-benchmark/`: communication-only HostMot2 Ethernet benchmark. Read
   its README and scoped instructions for benchmark work.
 - `hardware-documentation/current/`: current hardware evidence, organized by
   topic. Start with its README index and open only the relevant topic file.

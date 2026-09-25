@@ -70,6 +70,15 @@ interface_irqs() {
     find "$irq_directory" -mindepth 1 -maxdepth 1 -printf '%f\n' | sort -n
 }
 
+irq_description() {
+    local irq=$1
+
+    awk -v irq="$irq:" '
+        $1 == irq { print $NF; found=1; exit }
+        END { if (!found) print "unavailable" }
+    ' /proc/interrupts
+}
+
 cpulist_contains() {
     local cpulist=$1
     local wanted=$2
@@ -110,12 +119,13 @@ if (( ${#lan_irqs[@]} == 0 )); then
     fail "no MSI IRQs found for LAN interface $lan_interface"
 else
     for irq in "${lan_irqs[@]}"; do
+        description=$(irq_description "$irq")
         requested=$(<"/proc/irq/$irq/smp_affinity_list")
         effective=$(<"/proc/irq/$irq/effective_affinity_list")
         if [[ "$effective" == "$lan_irq_cpu" ]]; then
-            pass "$lan_interface IRQ $irq requested=$requested effective=$effective"
+            pass "$lan_interface IRQ $irq description=$description requested=$requested effective=$effective"
         else
-            fail "$lan_interface IRQ $irq requested=$requested effective=$effective; expected CPU $lan_irq_cpu"
+            fail "$lan_interface IRQ $irq description=$description requested=$requested effective=$effective; expected CPU $lan_irq_cpu"
         fi
     done
 fi
@@ -125,6 +135,7 @@ if (( ${#wifi_irqs[@]} == 0 )); then
     warn "no MSI IRQs found for Wi-Fi interface $wifi_interface"
 else
     for irq in "${wifi_irqs[@]}"; do
+        description=$(irq_description "$irq")
         requested=$(<"/proc/irq/$irq/smp_affinity_list")
         effective=$(<"/proc/irq/$irq/effective_affinity_list")
         conflict=''
@@ -135,9 +146,9 @@ else
             fi
         done
         if [[ -n "$conflict" ]]; then
-            fail "$wifi_interface IRQ $irq requested=$requested effective=$effective uses protected CPU $conflict"
+            fail "$wifi_interface IRQ $irq description=$description requested=$requested effective=$effective uses protected CPU $conflict"
         else
-            pass "$wifi_interface IRQ $irq requested=$requested effective=$effective"
+            pass "$wifi_interface IRQ $irq description=$description requested=$requested effective=$effective"
         fi
     done
 fi

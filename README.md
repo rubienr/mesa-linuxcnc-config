@@ -61,7 +61,21 @@ screen -r mesa-benchmark-1ms
 The benchmark launcher refuses to run when it detects an existing LinuxCNC,
 LinuxCNC server, or RTAPI process. Override only the screen session name with
 `MESA_SCREEN_SESSION`. Affinity logs are written privately below
-`mesa-benchmark/diagnostic-logs/`.
+`mesa-benchmark/diagnostic-logs/`. A failed pre-start affinity check is logged
+as a warning and does not prevent startup because the LinuxCNC realtime task
+does not exist yet. A setter failure remains fatal, and the delayed post-start
+check records the authoritative realtime-task placement.
+
+Run the affinity tools directly from the repository root with:
+
+```console
+./thread-affinity-check.sh --brief
+./thread-affinity-set.sh
+```
+
+These convenience scripts delegate all arguments to their counterparts below
+`config/`; the root setter invokes `sudo` and therefore retains its interactive
+password prompt.
 
 Manage the graphics stress load and show a concise runtime overview from the
 repository root with:

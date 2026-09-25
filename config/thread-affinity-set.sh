@@ -51,6 +51,15 @@ interface_irqs() {
     find "$irq_directory" -mindepth 1 -maxdepth 1 -printf '%f\n' | sort -n
 }
 
+irq_description() {
+    local irq=$1
+
+    awk -v irq="$irq:" '
+        $1 == irq { print $NF; found=1; exit }
+        END { if (!found) print "unavailable" }
+    ' /proc/interrupts
+}
+
 cpulist_contains() {
     local cpulist=$1
     local wanted=$2
@@ -76,11 +85,14 @@ cpulist_contains() {
 set_irq_cpu() {
     local irq=$1
     local cpu=$2
+    local description
     local affinity_file="/proc/irq/$irq/smp_affinity_list"
 
+    description=$(irq_description "$irq")
     printf '%s\n' "$cpu" >"$affinity_file"
-    printf 'IRQ %-4s requested CPU %-2s effective=%s\n' \
-        "$irq" "$cpu" "$(<"/proc/irq/$irq/effective_affinity_list")"
+    printf 'IRQ %-4s description=%-24s requested CPU %-2s effective=%s\n' \
+        "$irq" "$description" "$cpu" \
+        "$(<"/proc/irq/$irq/effective_affinity_list")"
 }
 
 mapfile -t lan_irqs < <(interface_irqs "$lan_interface")

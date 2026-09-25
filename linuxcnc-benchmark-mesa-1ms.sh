@@ -57,7 +57,14 @@ affinity_log="$log_directory/thread-affinity-$timestamp.log"
 } | tee "$affinity_log"
 sudo "$affinity_setter" 2>&1 | tee -a "$affinity_log"
 printf '\nprestart_check:\n' | tee -a "$affinity_log"
-"$affinity_checker" 2>&1 | tee -a "$affinity_log"
+if "$affinity_checker" 2>&1 | tee -a "$affinity_log"; then
+    :
+else
+    prestart_check_status=$?
+    printf '%s\n' \
+        "WARN: pre-start affinity check exited with status $prestart_check_status; continuing because LinuxCNC realtime-task affinity is checked after startup." \
+        | tee -a "$affinity_log" >&2
+fi
 
 screen -DmS "$session_name" env RTAPI_CPU_NUMBER="$servo_cpu" \
     "$launcher" "$ini_file"

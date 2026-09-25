@@ -35,6 +35,12 @@ After LinuxCNC creates its realtime thread, verify that RTAPI created it on CPU
 "$HOME/linuxcnc/config/thread-affinity-check.sh"
 ```
 
+The repository-root `linuxcnc-benchmark-mesa-1ms.sh` launcher runs this check
+both before and after startup. A pre-start failure is advisory because the
+LinuxCNC realtime task does not exist yet; it is logged and startup continues.
+The delayed post-start result is the authoritative placement check. Failure of
+the privileged pre-start affinity setter still prevents startup.
+
 Start the reproducible CPU/memory load in another terminal. It excludes the
 LinuxCNC and Mesa physical cores:
 

@@ -52,6 +52,9 @@ convenience launchers perform this check automatically:
 ```
 
 Use `--brief` for a one-line result or `--wait-for-rt SECONDS` during startup.
+Detailed IRQ output includes the current kernel handler description from
+`/proc/interrupts`, such as `enp1s0-0` or `iwlwifi:default_queue`, so changing
+IRQ numbers remain identifiable after a reboot.
 
 `LIBGL_ALWAYS_SOFTWARE=0` selects hardware rendering. If AXIS crashes because
 of a GPU/driver problem, retry diagnostically with

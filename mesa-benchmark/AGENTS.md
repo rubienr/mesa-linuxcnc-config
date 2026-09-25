@@ -14,3 +14,6 @@ These rules apply to the communication-only Mesa 7I95T benchmark.
 - For multi-day logs, use `diagnostics-report.sh` to select run summaries and
   relevant events before reading complete rich snapshots. Do not dump entire
   logs when a targeted extract answers the diagnostic question.
+- Prefer `--investigation-bundle --max-lines 200`, then extract one
+  session-qualified record with only the necessary `--sections`. Run filtering
+  on `frida` so raw multi-day logs remain on the target.

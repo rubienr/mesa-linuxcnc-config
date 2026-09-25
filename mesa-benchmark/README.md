@@ -161,11 +161,16 @@ use the read-only report helper:
 
 ```bash
 ./diagnostics-report.sh --summary diagnostic-logs/mesa-long-run.log
-./diagnostics-report.sh --events packet_error \
+./diagnostics-report.sh --packet-errors \
     diagnostic-logs/mesa-long-run.log
 ./diagnostics-report.sh --around '2026-09-24T14:31' \
     diagnostic-logs/mesa-long-run.log
 ./diagnostics-report.sh --timeline --format tsv \
+    diagnostic-logs/mesa-long-run.log
+./diagnostics-report.sh --investigation-bundle --max-lines 200 \
+    diagnostic-logs/mesa-long-run.log
+./diagnostics-report.sh --record '<SESSION_ID>:<SEQUENCE>' \
+    --sections core,values,deltas,irq_details,realtime_task,kernel_messages \
     diagnostic-logs/mesa-long-run.log
 ```
 
@@ -173,6 +178,12 @@ Without an explicit log path, it reads the newest primary `.log` in
 `diagnostic-logs/`. Reports include only complete records. `--around` accepts a
 record sequence or timestamp substring and includes the adjacent records;
 `--since` accepts an ISO-8601 timestamp from the same host/timezone convention.
+`--investigation-bundle` emits a bounded summary plus each packet-error event
+and its compact neighbors. After selecting an event, `--record` extracts only
+the requested rich sections. A bare sequence is accepted only when it uniquely
+identifies one complete record across the supplied logs; otherwise include the
+session ID shown in timeline output. Avoid `--sections all` unless the complete
+selected record is genuinely necessary.
 
 To begin a clean diagnostic run while preserving the current run, use:
 

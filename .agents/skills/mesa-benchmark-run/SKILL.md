@@ -53,15 +53,19 @@ For intermittent-error assessment:
   IRQ, NIC, and workload activity. One-second sampling can miss transient flags;
   cumulative totals and timing maxima are the durable triggers.
 
-For multi-day log investigation, start with `diagnostics-report.sh --summary`,
-then select `--events packet_error`. Inspect the complete event record and the
-preceding heartbeat or event only when the compact timeline shows a relevant
-change. Compare packet-total deltas with HostMot2 and servo maxima, NIC
-error/drop deltas, sample lateness, IRQ counts and placement, realtime-task CPU,
+For multi-day log investigation, run parsing on `frida` and begin with
+`diagnostics-report.sh --investigation-bundle --max-lines 200`. Use
+`--packet-errors` for the compact event list. Only after selecting an event,
+use `--record SESSION_ID:SEQUENCE --sections LIST` to extract the minimum
+needed evidence. Start with `core,values,deltas`; add only relevant sections
+such as `irq_details`, `realtime_task`, or `kernel_messages`. Never ingest or
+print a complete multi-day log, full service inventory, journal, or ethtool
+dump by default, and do not use `--sections all` without a specific reason.
+Compare packet-total deltas with HostMot2 and servo maxima, NIC error/drop
+deltas, sample lateness, IRQ counts and placement, realtime-task CPU,
 load/pressure, and nearby kernel messages. Search narrow timestamp windows for
-timer or service activity; do not ingest or print the complete multi-day log by
-default. State observed facts separately from correlations and suspected
-causes.
+timer or service activity. State observed facts separately from correlations
+and suspected causes.
 
 `counters-reset.sh --timing-maxima` intentionally mutates diagnostic timing
 state. Use it only when explicitly requested. It never resets communication

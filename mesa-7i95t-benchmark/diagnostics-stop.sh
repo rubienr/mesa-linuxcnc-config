@@ -6,12 +6,13 @@ script_directory=$(
     pwd -P
 )
 lock_file="$script_directory/diagnostic-logs/.monitor.lock"
-monitor_path="$script_directory/monitor-diagnostics.sh"
+monitor_path="$script_directory/diagnostics-monitor.sh"
+legacy_monitor_path="$script_directory/monitor-diagnostics.sh"
 timeout_seconds="${MESA_MONITOR_STOP_TIMEOUT:-30}"
 
 usage() {
     cat <<'EOF'
-Usage: ./stop-diagnostics.sh [--timeout SECONDS]
+Usage: ./diagnostics-stop.sh [--timeout SECONDS]
 
 Gracefully stop the Mesa diagnostic monitor. The script verifies the active
 instance lock and process command line, sends SIGTERM, and waits for the lock
@@ -84,7 +85,8 @@ if [[ ! -r /proc/$monitor_pid/cmdline ]]; then
 fi
 
 process_command=$(tr '\0' ' ' <"/proc/$monitor_pid/cmdline")
-if [[ $process_command != *"$monitor_path"* ]]; then
+if [[ $process_command != *"$monitor_path"* &&
+    $process_command != *"$legacy_monitor_path"* ]]; then
     printf 'ERROR: refusing to signal PID %s; command does not match %s.\n' \
         "$monitor_pid" "$monitor_path" >&2
     printf 'Observed command: %s\n' "$process_command" >&2

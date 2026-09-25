@@ -279,8 +279,8 @@ The maintained workspace scripts implement the same dynamic IRQ discovery and
 also pin/check the LinuxCNC FIFO task once it exists:
 
 ```bash
-sudo "$HOME/linuxcnc/config/set-thread-affinity.sh"
-"$HOME/linuxcnc/config/check-thread-affinity.sh"
+sudo "$HOME/linuxcnc/config/thread-affinity-set.sh"
+"$HOME/linuxcnc/config/thread-affinity-check.sh"
 ```
 
 Run the setter once after boot for the network IRQs and again after LinuxCNC

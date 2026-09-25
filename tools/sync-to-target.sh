@@ -5,13 +5,14 @@ script_directory=$(
     cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
     pwd -P
 )
+workspace_directory=$(cd -- "$script_directory/.." && pwd -P)
 target_ssh_destination="${TARGET_SSH_DESTINATION:-frida@frida}"
-target_workspace="${TARGET_WORKSPACE:-/home/frida/linuxcnc}"
+target_workspace="${TARGET_WORKSPACE:-~/linuxcnc}"
 dry_run_args=()
 
 usage() {
     cat <<'EOF'
-Usage: ./sync-to-target.sh [--dry-run]
+Usage: ./tools/sync-to-target.sh [--dry-run]
 
 Synchronize this workspace to the LinuxCNC target over SSH. The Git directory
 is excluded, and files absent from the local workspace are never deleted from
@@ -19,7 +20,7 @@ the target.
 
 Environment overrides:
   TARGET_SSH_DESTINATION  SSH destination (default: frida@frida)
-  TARGET_WORKSPACE        Remote workspace (default: /home/frida/linuxcnc)
+  TARGET_WORKSPACE        Remote workspace (default: ~/linuxcnc)
 EOF
 }
 
@@ -45,7 +46,7 @@ if (( $# > 1 )); then
 fi
 
 printf 'Synchronizing %s/ to %s:%s/\n' \
-    "$script_directory" "$target_ssh_destination" "${target_workspace%/}"
+    "$workspace_directory" "$target_ssh_destination" "${target_workspace%/}"
 
 rsync \
     --archive \
@@ -54,5 +55,5 @@ rsync \
     --verbose \
     --exclude='/.git/' \
     "${dry_run_args[@]}" \
-    "$script_directory/" \
+    "$workspace_directory/" \
     "$target_ssh_destination:${target_workspace%/}/"

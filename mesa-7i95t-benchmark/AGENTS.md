@@ -7,7 +7,10 @@ These rules apply to the communication-only Mesa 7I95T benchmark.
 - Do not add motion, output control, firmware flashing, or machine commissioning
   behavior without an explicit request and safety review.
 - Do not run validation while another LinuxCNC/HAL realtime session is active.
-- Synchronize local changes to `frida@frida:/home/frida/linuxcnc/` and run the
+- Synchronize local changes to `frida@frida:~/linuxcnc/` and run the
   benchmark and its repository scripts on `frida`, not this workstation.
 - After script changes, run `bash -n` and `shellcheck` when available.
 - Keep `README.md`, profile names, scripts, and displayed counter names aligned.
+- For multi-day logs, use `diagnostics-report.sh` to select run summaries and
+  relevant events before reading complete rich snapshots. Do not dump entire
+  logs when a targeted extract answers the diagnostic question.

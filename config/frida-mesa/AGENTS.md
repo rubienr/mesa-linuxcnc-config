@@ -14,5 +14,5 @@ These rules apply to the unverified Frida machine configuration.
   schematic alone.
 - Validate configuration references and HAL syntax when the needed LinuxCNC
   tools are available on `frida`, after synchronizing local changes to
-  `/home/frida/linuxcnc`. Never start this profile alongside another realtime
+  `~/linuxcnc`. Never start this profile alongside another realtime
   session.

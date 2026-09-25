@@ -22,34 +22,61 @@ Apply IRQ placement after every boot, then explicitly launch the 1 ms profile
 with hardware rendering:
 
 ```bash
-sudo "$HOME/linuxcnc/config/set-thread-affinity.sh"
-LIBGL_ALWAYS_SOFTWARE=0 "$HOME/linuxcnc/config/start-linuxcnc.sh" \
+sudo "$HOME/linuxcnc/config/thread-affinity-set.sh"
+LIBGL_ALWAYS_SOFTWARE=0 "$HOME/linuxcnc/config/linuxcnc-start.sh" \
     "$HOME/linuxcnc/mesa-7i95t-benchmark/mesa-7i95t-bench-1ms.ini"
 ```
 
 After LinuxCNC creates its realtime thread, rerun the setter and checker:
 
 ```bash
-sudo "$HOME/linuxcnc/config/set-thread-affinity.sh"
-"$HOME/linuxcnc/config/check-thread-affinity.sh"
+sudo "$HOME/linuxcnc/config/thread-affinity-set.sh"
+"$HOME/linuxcnc/config/thread-affinity-check.sh"
 ```
 
 Start the reproducible CPU/memory load in another terminal. It excludes the
 LinuxCNC and Mesa physical cores:
 
 ```bash
-./start-stress-test.sh
+./stress-test-start.sh
 ```
+
+To replace an existing graphics load with ten `glxgears` instances whose
+entire process tree has enforced CPU affinity, run:
+
+```bash
+./glxgears-restart.sh
+```
+
+The script sends `SIGTERM` to existing `glxgears` processes, waits for them to
+exit without escalating to `SIGKILL`, and starts the replacements in the user
+service `mesa-glxgears-stress.service`. The service applies CPU affinity
+`0-1,3-4,6-7,9-10`. A process-local preload shim intersects affinity changes
+requested by Mesa renderer workers with that safe starting mask, preventing
+them from moving onto CPUs 2, 5, 8, or 11 without making Mesa's affinity call
+fail. The script builds the shim privately below `diagnostic-logs/` when its
+tracked source changes. It remains attached while the graphics load is
+running. Stop the load from another terminal with `pkill -TERM -x glxgears`.
+
+The target user hierarchy does not have the cgroup `cpuset` controller
+delegated, so a user scope with `AllowedCPUs=` records the requested property
+but does not enforce it on this host. The service affinity and preload shim are
+used instead. Building the shim requires the C compiler installed on `frida`.
+
+Override the defaults with `GLXGEARS_CPUSET`, `GLXGEARS_INSTANCES`,
+`GLXGEARS_NICE`, `GLXGEARS_SERVICE_UNIT`, or `GLXGEARS_STOP_TIMEOUT`. This
+script does not start, stop, or modify LinuxCNC, HAL, the diagnostic monitor,
+or machine outputs.
 
 Watch all benchmark-relevant HostMot2 error flags, read/write maxima, and the
 servo-thread row in one display:
 
 ```bash
-./watch-counters.sh
+./counters-watch.sh
 ```
 
 It refreshes once per second. Set `WATCH_INTERVAL` to another positive interval
-or use `./watch-counters.sh --once` for a scriptable snapshot.
+or use `./counters-watch.sh --once` for a scriptable snapshot.
 
 ## Record intermittent communication errors
 
@@ -58,7 +85,7 @@ snapshots when communication counters, timing maxima, NIC errors, affinity, or
 the monitored workload changes:
 
 ```bash
-./monitor-diagnostics.sh
+./diagnostics-monitor.sh
 ```
 
 The monitor samples once per second and writes a private, timestamped log below
@@ -78,15 +105,15 @@ Useful options include:
 
 ```bash
 # Name the log and write a rich heartbeat every ten minutes.
-./monitor-diagnostics.sh \
+./diagnostics-monitor.sh \
     --output mesa-long-run.log \
     --heartbeat 600
 
 # Diagnostic-state mutation: reset only writable timing maxima after an event.
-./monitor-diagnostics.sh --reset-tmax-after-event
+./diagnostics-monitor.sh --reset-tmax-after-event
 
 # Safe short test: no HAL or network access, including a simulated failure.
-./monitor-diagnostics.sh --mock --interval 0.1 --heartbeat 0.2 --max-samples 5
+./diagnostics-monitor.sh --mock --interval 0.1 --heartbeat 0.2 --max-samples 5
 ```
 
 The reset option never clears packet-error totals, `io_error`, or other safety
@@ -104,7 +131,7 @@ process identity before sending `SIGTERM`, then waits for the monitor to append
 its shutdown record and release the lock:
 
 ```bash
-./stop-diagnostics.sh
+./diagnostics-stop.sh
 ```
 
 Set another graceful-shutdown deadline with `--timeout SECONDS`. The helper
@@ -121,6 +148,46 @@ types using standard tools:
 awk '/^BEGIN_RECORD|^END_RECORD/' diagnostic-logs/mesa-long-run.log
 ```
 
+For a compact summary or event timeline without printing the rich snapshots,
+use the read-only report helper:
+
+```bash
+./diagnostics-report.sh --summary diagnostic-logs/mesa-long-run.log
+./diagnostics-report.sh --events packet_error \
+    diagnostic-logs/mesa-long-run.log
+./diagnostics-report.sh --around '2026-09-24T14:31' \
+    diagnostic-logs/mesa-long-run.log
+./diagnostics-report.sh --timeline --format tsv \
+    diagnostic-logs/mesa-long-run.log
+```
+
+Without an explicit log path, it reads the newest primary `.log` in
+`diagnostic-logs/`. Reports include only complete records. `--around` accepts a
+record sequence or timestamp substring and includes the adjacent records;
+`--since` accepts an ISO-8601 timestamp from the same host/timezone convention.
+
+To begin a clean diagnostic run while preserving the current run, use:
+
+```bash
+./diagnostics-restart.sh -- --output mesa-long-run.log --heartbeat 600
+```
+
+The helper gracefully stops the active monitor, moves `diagnostic-logs/` to a
+UTC timestamped sibling, recreates the private log directory, starts the new
+monitor under `nohup`, and verifies its lock. It does not restart LinuxCNC or
+HAL. If graceful shutdown fails, it leaves the existing log directory in
+place.
+
+To explicitly reset only the writable timing maxima while LinuxCNC is running:
+
+```bash
+./counters-reset.sh --timing-maxima
+```
+
+This changes diagnostic state and can make later intervals easier to
+correlate. It prints before/after values and never resets packet-error totals,
+error flags, or safety state.
+
 One-second polling cannot reliably observe millisecond-wide Boolean error
 flags. The cumulative packet-error total and monotonic timing maxima are the
 durable triggers; transient flags are recorded whenever a sample sees them.
@@ -129,7 +196,7 @@ The optional communication-only check is `halrun validate-7i95t.hal` when no
 other HAL session is running. To exercise Wi-Fi reconnection locally, use:
 
 ```bash
-WIFI_CONNECTION_NAME='<connection-name>' ./restart-wifi.sh
+WIFI_CONNECTION_NAME='<connection-name>' ./wifi-restart.sh
 ```
 
 The SSH connection will drop during that test.
@@ -152,7 +219,7 @@ If AXIS crashes in the current Wayland/XWayland session, first retry with
 Mesa's LLVMpipe software rendering:
 
 ```bash
-LIBGL_ALWAYS_SOFTWARE=1 "$HOME/linuxcnc/config/start-linuxcnc.sh" \
+LIBGL_ALWAYS_SOFTWARE=1 "$HOME/linuxcnc/config/linuxcnc-start.sh" \
     "$HOME/linuxcnc/mesa-7i95t-benchmark/mesa-7i95t-bench-1ms.ini"
 ```
 

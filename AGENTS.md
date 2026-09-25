@@ -28,18 +28,28 @@ change.
 - This checkout is the editing workspace. Prompts and file changes happen on
   this workstation; LinuxCNC runs on the target host `frida`.
 - Access the target as `frida@frida`. Its checkout of this same repository is
-  `/home/frida/linuxcnc`.
+  `~/linuxcnc`.
+- Refer to paths below the target user's home with `~/...`; do not spell out
+  that user's absolute home directory in scripts, documentation, examples, or
+  agent skills unless an external interface explicitly requires an absolute
+  path.
 - The `frida` account has no sudo rights. Do not assume privileged access or
   repeatedly retry privileged diagnostics. Record unavailable evidence and
   hand actions requiring root authority back to the user or administrator.
-- After changing files locally, run `./sync-to-target.sh` before testing them on
-  the target. Use `./sync-to-target.sh --dry-run` when a preview is useful. This
+- After changing files locally, run `./tools/sync-to-target.sh` before testing
+  them on the target. Use `./tools/sync-to-target.sh --dry-run` when a preview is
+  useful. This
   is the default and required workspace-sync method for agents; do not replace
   it with an ad hoc `rsync` command. The wrapper preserves repository-relative
   paths, excludes `.git`, and never deletes remote files.
 - Run repository scripts and LinuxCNC/HAL commands on `frida`, normally through
-  `ssh frida@frida 'cd /home/frida/linuxcnc && ...'`; do not treat local script
+  `ssh frida@frida 'cd ~/linuxcnc && ...'`; do not treat local script
   execution as target-host validation.
+
+If an applicable `AGENTS.md`, skill, or documented workflow appears outdated,
+misleading, contradictory, incomplete, or in need of refactoring, tell the
+user. Identify the affected file, explain the problem, and propose a correction
+instead of silently working around it.
 
 ## Host invariants
 

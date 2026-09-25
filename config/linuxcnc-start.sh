@@ -39,6 +39,6 @@ case "$LIBGL_ALWAYS_SOFTWARE" in
 esac
 
 printf 'INI: %s\nRendering: %s\n' "$ini_file" "$rendering_label"
-printf 'After AXIS opens, run sudo %s/set-thread-affinity.sh\n' "$script_dir"
+printf 'After AXIS opens, run sudo %s/thread-affinity-set.sh\n' "$script_dir"
 
 exec linuxcnc "$ini_file"

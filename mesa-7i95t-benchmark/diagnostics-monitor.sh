@@ -18,7 +18,7 @@ reset_tmax=false
 mock_mode=false
 max_samples=0
 
-format_version=1
+format_version=2
 network_interface="${MESA_MONITOR_INTERFACE:-enp1s0}"
 wifi_interface="${MESA_MONITOR_WIFI_INTERFACE:-wlp2s0}"
 hal_prefix="${MESA_MONITOR_HAL_PREFIX:-hm2_7i95.0}"
@@ -66,7 +66,7 @@ session_id=""
 
 usage() {
     cat <<'EOF'
-Usage: ./monitor-diagnostics.sh [OPTIONS]
+Usage: ./diagnostics-monitor.sh [OPTIONS]
 
 Append Mesa 7I95T communication and timing events to a diagnostic log. The
 monitor is read-only unless --reset-tmax-after-event is explicitly selected.
@@ -649,6 +649,13 @@ append_record() {
         printf 'sampling_interval_ns: %s\n' "$sample_interval_ns"
         printf 'sampling_lateness_ns: %s\n' "$sampling_lateness_ns"
         printf 'event_types: %s\n' "${event_types:-none}"
+        printf 'SUMMARY timestamp=%s kind=%s event_types=%s packet_total=%s packet_delta_start=%s read_tmax_ns=%s write_tmax_ns=%s servo_tmax_ns=%s sampling_lateness_ns=%s\n' \
+            "$timestamp" "$record_kind" "${event_types:-none}" \
+            "${current[packet_total]:-unknown}" \
+            "$(numeric_delta "${current[packet_total]:-unknown}" "${baseline[packet_total]:-unknown}")" \
+            "${current[read_tmax_ns]:-unknown}" \
+            "${current[write_tmax_ns]:-unknown}" \
+            "${current[servo_tmax_ns]:-unknown}" "$sampling_lateness_ns"
         printf 'read_only: %s\n' "$([[ $reset_tmax == true ]] && printf false || printf true)"
         printf 'mock_mode: %s\n' "$mock_mode"
         printf 'last_event_sample: %s\n' "$last_event_sample"

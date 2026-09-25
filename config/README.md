@@ -28,14 +28,14 @@ by the affinity and stress scripts.
 Apply network IRQ affinity once after each boot:
 
 ```bash
-sudo ./set-thread-affinity.sh
+sudo ./thread-affinity-set.sh
 ```
 
 The launcher intentionally has no default INI. Name the configuration so the
 benchmark cannot be started accidentally on a connected machine:
 
 ```bash
-LIBGL_ALWAYS_SOFTWARE=0 ./start-linuxcnc.sh \
+LIBGL_ALWAYS_SOFTWARE=0 ./linuxcnc-start.sh \
     ../mesa-7i95t-benchmark/mesa-7i95t-bench-1ms.ini
 ```
 
@@ -43,8 +43,8 @@ Once LinuxCNC is open, rerun the setter so it can pin the new FIFO thread, then
 verify everything:
 
 ```bash
-sudo ./set-thread-affinity.sh
-./check-thread-affinity.sh
+sudo ./thread-affinity-set.sh
+./thread-affinity-check.sh
 ```
 
 `LIBGL_ALWAYS_SOFTWARE=0` selects hardware rendering. If AXIS crashes because
@@ -179,8 +179,8 @@ Test every selector, wheel mode, and button with drives and spindle disabled.
 Launch only when no other LinuxCNC/HAL realtime session is active:
 
 ```bash
-sudo ./set-thread-affinity.sh
-LIBGL_ALWAYS_SOFTWARE=0 ./start-linuxcnc.sh ./frida-mesa/frida-mesa.ini
+sudo ./thread-affinity-set.sh
+LIBGL_ALWAYS_SOFTWARE=0 ./linuxcnc-start.sh ./frida-mesa/frida-mesa.ini
 ```
 
 Detailed physical evidence and open verification work live under

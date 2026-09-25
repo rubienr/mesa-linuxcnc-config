@@ -11,8 +11,8 @@ Read `hardware-documentation/current/AGENTS.md` and the VFD topic linked from
 Preserve these boundaries:
 
 - The local checkout is for editing. Synchronize intended changes to
-  `frida@frida:/home/frida/linuxcnc/` without `.git` or `--delete`, then run
-  repository tools over SSH from `/home/frida/linuxcnc`. Treat generated files
+  `frida@frida:~/linuxcnc/` without `.git` or `--delete`, then run repository
+  tools over SSH from `~/linuxcnc`. Treat generated files
   returned to the local checkout as pending evidence that still needs review.
 - Use `hardware-documentation/current/tools/read-huanyang-vfd.py` for live
   captures. It constructs only Huanyang function `0x01` read requests.

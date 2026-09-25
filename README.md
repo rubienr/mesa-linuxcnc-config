@@ -34,10 +34,26 @@ After making local changes, synchronize the complete workspace to the target
 checkout before target-host testing:
 
 ```console
-./sync-to-target.sh
+./tools/sync-to-target.sh
 ```
 
-Use `./sync-to-target.sh --dry-run` to preview changes. The wrapper transfers the
-workspace to `frida@frida:/home/frida/linuxcnc/` over SSH, excludes `.git`, and
-does not delete files that exist only on the target. `TARGET_SSH_DESTINATION`
-and `TARGET_WORKSPACE` provide explicit overrides when needed.
+Use `./tools/sync-to-target.sh --dry-run` to preview changes. The wrapper
+transfers the workspace to `frida@frida:~/linuxcnc/` over SSH,
+excludes `.git`, and does not delete files that exist only on the target.
+`TARGET_SSH_DESTINATION` and `TARGET_WORKSPACE` provide explicit overrides when
+needed.
+
+## Convenience launchers
+
+From the repository root, `./linuxcnc.sh /path/to/config.ini` forwards an
+explicit INI to `config/linuxcnc-start.sh`. To launch the communication-only
+1 ms Mesa profile in a detached screen session, use:
+
+```console
+./benchmark-mesa-1ms.sh
+screen -r mesa-benchmark-1ms
+```
+
+The benchmark launcher refuses to run when it detects an existing LinuxCNC,
+LinuxCNC server, or RTAPI process. Override only the screen session name with
+`MESA_SCREEN_SESSION`.

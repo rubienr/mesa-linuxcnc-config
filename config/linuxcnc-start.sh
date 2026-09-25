@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+servo_cpu="${SERVO_CPU:-11}"
 
 if (( $# != 1 )); then
     printf 'Usage: %s /path/to/config.ini\n' "${0##*/}" >&2
@@ -11,6 +11,12 @@ fi
 
 ini_file=$1
 export LIBGL_ALWAYS_SOFTWARE="${LIBGL_ALWAYS_SOFTWARE:-0}"
+export RTAPI_CPU_NUMBER="${RTAPI_CPU_NUMBER:-$servo_cpu}"
+
+if [[ ! $RTAPI_CPU_NUMBER =~ ^[0-9]+$ ]]; then
+    printf 'RTAPI_CPU_NUMBER must be a nonnegative integer CPU number.\n' >&2
+    exit 2
+fi
 
 if [[ ! -f "$ini_file" ]]; then
     printf 'LinuxCNC INI file not found: %s\n' "$ini_file" >&2
@@ -38,7 +44,7 @@ case "$LIBGL_ALWAYS_SOFTWARE" in
         ;;
 esac
 
-printf 'INI: %s\nRendering: %s\n' "$ini_file" "$rendering_label"
-printf 'After AXIS opens, run sudo %s/thread-affinity-set.sh\n' "$script_dir"
+printf 'INI: %s\nRendering: %s\nRTAPI realtime CPU: %s\n' \
+    "$ini_file" "$rendering_label" "$RTAPI_CPU_NUMBER"
 
 exec linuxcnc "$ini_file"

@@ -46,8 +46,11 @@ needed.
 ## Convenience launchers
 
 From the repository root, `./linuxcnc-start.sh /path/to/config.ini` forwards an
-explicit INI to `config/linuxcnc-start.sh`. To launch the communication-only
-1 ms Mesa profile in a detached screen session, use:
+explicit INI to `config/linuxcnc-start.sh` after interactively applying and
+checking IRQ affinity. LinuxCNC RTAPI creates its realtime task on CPU 11 via
+`RTAPI_CPU_NUMBER`; a second unprivileged check is logged after the task
+appears. To launch the communication-only 1 ms Mesa profile in a detached
+screen session, use:
 
 ```console
 ./linuxcnc-benchmark-mesa-1ms.sh
@@ -56,4 +59,17 @@ screen -r mesa-benchmark-1ms
 
 The benchmark launcher refuses to run when it detects an existing LinuxCNC,
 LinuxCNC server, or RTAPI process. Override only the screen session name with
-`MESA_SCREEN_SESSION`.
+`MESA_SCREEN_SESSION`. Affinity logs are written privately below
+`mesa-benchmark/diagnostic-logs/`.
+
+Manage the graphics stress load and show a concise runtime overview from the
+repository root with:
+
+```console
+./glxgears-restart.sh
+./glxgears-stop.sh
+./runtime-status.sh
+```
+
+The stop helper stops only the managed `mesa-glxgears-stress.service` and
+reports unrelated surviving `glxgears` processes instead of killing them.

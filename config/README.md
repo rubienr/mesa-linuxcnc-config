@@ -31,6 +31,11 @@ Apply network IRQ affinity once after each boot:
 sudo ./thread-affinity-set.sh
 ```
 
+The normal setter changes network IRQ placement only. LinuxCNC userspace RTAPI
+receives `RTAPI_CPU_NUMBER=11` before launch so the realtime task starts on its
+intended CPU. Use `sudo ./thread-affinity-set.sh --repair-running-rt` only when
+the checker finds that an already-running RTAPI task has the wrong affinity.
+
 The launcher intentionally has no default INI. Name the configuration so the
 benchmark cannot be started accidentally on a connected machine:
 
@@ -39,13 +44,14 @@ LIBGL_ALWAYS_SOFTWARE=0 ./linuxcnc-start.sh \
     ../mesa-benchmark/mesa-7i95t-bench-1ms.ini
 ```
 
-Once LinuxCNC is open, rerun the setter so it can pin the new FIFO thread, then
-verify everything:
+Once LinuxCNC is open, verify the new FIFO thread. The repository-root
+convenience launchers perform this check automatically:
 
 ```bash
-sudo ./thread-affinity-set.sh
 ./thread-affinity-check.sh
 ```
+
+Use `--brief` for a one-line result or `--wait-for-rt SECONDS` during startup.
 
 `LIBGL_ALWAYS_SOFTWARE=0` selects hardware rendering. If AXIS crashes because
 of a GPU/driver problem, retry diagnostically with
@@ -180,7 +186,8 @@ Launch only when no other LinuxCNC/HAL realtime session is active:
 
 ```bash
 sudo ./thread-affinity-set.sh
-LIBGL_ALWAYS_SOFTWARE=0 ./linuxcnc-start.sh ./frida-mesa/frida-mesa.ini
+RTAPI_CPU_NUMBER=11 LIBGL_ALWAYS_SOFTWARE=0 \
+    ./linuxcnc-start.sh ./frida-mesa/frida-mesa.ini
 ```
 
 Detailed physical evidence and open verification work live under

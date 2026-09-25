@@ -24,10 +24,13 @@ For a new run, use the repository scripts for the workflow:
 1. Have the user or administrator apply network IRQ affinity with
    `config/thread-affinity-set.sh` when root authority is required.
 2. Launch the explicitly requested benchmark INI through
-   `config/linuxcnc-start.sh`; default to the documented 1 ms profile only when
-   the user has not requested the 2 ms comparison.
-3. Have the user or administrator reapply affinity after the servo thread
-   exists, then check it with `config/thread-affinity-check.sh`.
+   `config/linuxcnc-start.sh` with `RTAPI_CPU_NUMBER=11`; default to the
+   documented 1 ms profile only when the user has not requested the 2 ms
+   comparison.
+3. After the servo thread exists, check it with
+   `config/thread-affinity-check.sh`. Do not mutate a running task unless the
+   check fails and the user explicitly requests
+   `thread-affinity-set.sh --repair-running-rt`.
 4. Start `mesa-benchmark/stress-test-start.sh` only when sustained load is
    part of the requested run.
 5. Display or capture results with

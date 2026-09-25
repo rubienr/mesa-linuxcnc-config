@@ -5,6 +5,38 @@ lan_interface="${LAN_INTERFACE:-enp1s0}"
 wifi_interface="${WIFI_INTERFACE:-wlp2s0}"
 lan_irq_cpu="${LAN_IRQ_CPU:-8}"
 servo_cpu="${SERVO_CPU:-11}"
+repair_running_rt=false
+
+usage() {
+    cat <<'EOF'
+Usage: ./thread-affinity-set.sh [--repair-running-rt]
+
+Place Mesa and Wi-Fi IRQs on the configured CPUs. LinuxCNC should be launched
+with RTAPI_CPU_NUMBER set to the servo CPU so its realtime task starts with the
+correct affinity. Use --repair-running-rt only to correct an already-running
+RTAPI task whose affinity check failed.
+EOF
+}
+
+case ${1:-} in
+    "")
+        ;;
+    --repair-running-rt)
+        repair_running_rt=true
+        ;;
+    -h|--help)
+        usage
+        exit 0
+        ;;
+    *)
+        usage >&2
+        exit 2
+        ;;
+esac
+(( $# <= 1 )) || {
+    usage >&2
+    exit 2
+}
 
 if (( EUID != 0 )); then
     printf 'Run this script with sudo.\n' >&2
@@ -89,8 +121,14 @@ else
     done
 fi
 
-# The realtime thread exists only after LinuxCNC starts. Pin every FIFO RTAPI
-# task (one for this servo-only benchmark) while leaving the UI unpinned.
+# LinuxCNC RTAPI selects its CPU when the realtime task is created. Mutating a
+# running task is retained only as an explicit repair operation.
+if [[ $repair_running_rt == false ]]; then
+    printf 'LinuxCNC realtime tasks were not modified. Launch with RTAPI_CPU_NUMBER=%s.\n' \
+        "$servo_cpu"
+    exit 0
+fi
+
 rt_count=0
 while read -r tid scheduler rtprio command_name; do
     [[ "$scheduler" == FF ]] || continue
@@ -102,6 +140,5 @@ while read -r tid scheduler rtprio command_name; do
 done < <(ps -eLo lwp=,cls=,rtprio=,comm=)
 
 if (( rt_count == 0 )); then
-    printf 'LinuxCNC realtime thread is not running; rerun this script after launch.\n'
+    printf 'LinuxCNC realtime thread is not running; nothing was repaired.\n'
 fi
-

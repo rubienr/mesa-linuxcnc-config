@@ -23,14 +23,15 @@ with hardware rendering:
 
 ```bash
 sudo "$HOME/linuxcnc/config/thread-affinity-set.sh"
-LIBGL_ALWAYS_SOFTWARE=0 "$HOME/linuxcnc/config/linuxcnc-start.sh" \
+RTAPI_CPU_NUMBER=11 LIBGL_ALWAYS_SOFTWARE=0 \
+    "$HOME/linuxcnc/config/linuxcnc-start.sh" \
     "$HOME/linuxcnc/mesa-benchmark/mesa-7i95t-bench-1ms.ini"
 ```
 
-After LinuxCNC creates its realtime thread, rerun the setter and checker:
+After LinuxCNC creates its realtime thread, verify that RTAPI created it on CPU
+11. No second privileged setter call is normally required:
 
 ```bash
-sudo "$HOME/linuxcnc/config/thread-affinity-set.sh"
 "$HOME/linuxcnc/config/thread-affinity-check.sh"
 ```
 
@@ -48,6 +49,12 @@ entire process tree has enforced CPU affinity, run:
 ./glxgears-restart.sh
 ```
 
+Stop only the managed graphics load with:
+
+```bash
+./glxgears-stop.sh
+```
+
 The script sends `SIGTERM` to existing `glxgears` processes, waits for them to
 exit without escalating to `SIGKILL`, and starts the replacements in the user
 service `mesa-glxgears-stress.service`. The service applies CPU affinity
@@ -56,7 +63,8 @@ requested by Mesa renderer workers with that safe starting mask, preventing
 them from moving onto CPUs 2, 5, 8, or 11 without making Mesa's affinity call
 fail. The script builds the shim privately below `diagnostic-logs/` when its
 tracked source changes. It remains attached while the graphics load is
-running. Stop the load from another terminal with `pkill -TERM -x glxgears`.
+running. The stop helper uses the managed user service and reports unrelated
+instances without killing them.
 
 The target user hierarchy does not have the cgroup `cpuset` controller
 delegated, so a user scope with `AllowedCPUs=` records the requested property
@@ -219,7 +227,8 @@ If AXIS crashes in the current Wayland/XWayland session, first retry with
 Mesa's LLVMpipe software rendering:
 
 ```bash
-LIBGL_ALWAYS_SOFTWARE=1 "$HOME/linuxcnc/config/linuxcnc-start.sh" \
+RTAPI_CPU_NUMBER=11 LIBGL_ALWAYS_SOFTWARE=1 \
+    "$HOME/linuxcnc/config/linuxcnc-start.sh" \
     "$HOME/linuxcnc/mesa-benchmark/mesa-7i95t-bench-1ms.ini"
 ```
 

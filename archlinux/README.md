@@ -276,15 +276,17 @@ These runtime assignments are not persistent across reboot. Reapply them
 after boot until a dedicated systemd unit is installed.
 
 The maintained workspace scripts implement the same dynamic IRQ discovery and
-also pin/check the LinuxCNC FIFO task once it exists:
+check the LinuxCNC FIFO task once it exists:
 
 ```bash
 sudo "$HOME/linuxcnc/config/thread-affinity-set.sh"
 "$HOME/linuxcnc/config/thread-affinity-check.sh"
 ```
 
-Run the setter once after boot for the network IRQs and again after LinuxCNC
-starts for its realtime task.
+Run the setter once after boot for the network IRQs. Normal launchers set
+`RTAPI_CPU_NUMBER=11` before LinuxCNC creates its realtime task. Use the
+setter's explicit `--repair-running-rt` mode only when the post-start check
+finds incorrect placement.
 
 The reproducible stress affinity deliberately excludes the two realtime and
 two Mesa-network CPUs:

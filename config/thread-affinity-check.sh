@@ -7,10 +7,60 @@ lan_irq_cpu="${LAN_IRQ_CPU:-8}"
 servo_cpu="${SERVO_CPU:-11}"
 protected_cpus=(2 5 8 11)
 failures=0
+warnings=0
+brief=false
+wait_for_rt=0
 
-pass() { printf 'PASS: %s\n' "$*"; }
-warn() { printf 'WARN: %s\n' "$*"; }
-fail() { printf 'FAIL: %s\n' "$*" >&2; ((failures += 1)); }
+usage() {
+    cat <<'EOF'
+Usage: ./thread-affinity-check.sh [--brief] [--wait-for-rt SECONDS]
+
+Check kernel isolation, network IRQ placement, and any active LinuxCNC RT task.
+--wait-for-rt waits up to SECONDS for the RT task before collecting the checks.
+EOF
+}
+
+while (( $# > 0 )); do
+    case $1 in
+        --brief)
+            brief=true
+            shift
+            ;;
+        --wait-for-rt)
+            (( $# >= 2 )) || { usage >&2; exit 2; }
+            wait_for_rt=$2
+            shift 2
+            ;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        *)
+            usage >&2
+            exit 2
+            ;;
+    esac
+done
+
+[[ $wait_for_rt =~ ^[0-9]+$ ]] || {
+    printf 'Wait timeout must be a nonnegative integer.\n' >&2
+    exit 2
+}
+
+pass() { $brief || printf 'PASS: %s\n' "$*"; }
+warn() { ((warnings += 1)); $brief || printf 'WARN: %s\n' "$*"; }
+fail() { ((failures += 1)); $brief || printf 'FAIL: %s\n' "$*" >&2; }
+
+rt_task_exists() {
+    ps -eLo cls=,comm= | awk '$1 == "FF" && $2 ~ /^rtapi_app:T#/ {found=1} END {exit !found}'
+}
+
+if (( wait_for_rt > 0 )); then
+    deadline=$((SECONDS + wait_for_rt))
+    while ! rt_task_exists && (( SECONDS < deadline )); do
+        sleep 0.1
+    done
+fi
 
 interface_irqs() {
     local interface=$1
@@ -110,9 +160,21 @@ if (( rt_count == 0 )); then
 fi
 
 if (( failures > 0 )); then
-    printf '\n%d affinity check(s) failed.\n' "$failures" >&2
+    if $brief; then
+        printf 'FAIL: %d affinity check(s) failed; warnings=%d.\n' \
+            "$failures" "$warnings" >&2
+    else
+        printf '\n%d affinity check(s) failed.\n' "$failures" >&2
+    fi
     exit 1
 fi
 
-printf '\nAll active affinity checks passed.\n'
-
+if $brief; then
+    if (( warnings > 0 )); then
+        printf 'WARN: active affinity checks passed with %d warning(s).\n' "$warnings"
+    else
+        printf 'PASS: all active affinity checks passed.\n'
+    fi
+else
+    printf '\nAll active affinity checks passed.\n'
+fi

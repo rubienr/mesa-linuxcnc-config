@@ -54,6 +54,11 @@ rsync \
     --itemize-changes \
     --verbose \
     --exclude='/.git/' \
+    --include='/mesa-benchmark/diagnostic-logs/' \
+    --include='/mesa-benchmark/diagnostic-logs/.gitignore' \
+    --include='/mesa-benchmark/diagnostic-logs/.keep' \
+    --exclude='/mesa-benchmark/diagnostic-logs/***' \
+    --exclude='/mesa-benchmark/diagnostic-logs-*/***' \
     "${dry_run_args[@]}" \
     "$workspace_directory/" \
     "$target_ssh_destination:${target_workspace%/}/"

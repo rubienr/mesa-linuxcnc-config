@@ -41,7 +41,8 @@ change.
   useful. This
   is the default and required workspace-sync method for agents; do not replace
   it with an ad hoc `rsync` command. The wrapper preserves repository-relative
-  paths, excludes `.git`, and never deletes remote files.
+  paths, excludes `.git` and generated diagnostic data, and never deletes
+  remote files.
 - Run repository scripts and LinuxCNC/HAL commands on `frida`, normally through
   `ssh frida@frida 'cd ~/linuxcnc && ...'`; do not treat local script
   execution as target-host validation.

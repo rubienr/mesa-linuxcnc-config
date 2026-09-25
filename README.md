@@ -41,7 +41,8 @@ Use `./tools/sync-to-target.sh --dry-run` to preview changes. The wrapper
 transfers the workspace to `frida@frida:~/linuxcnc/` over SSH,
 excludes `.git`, and does not delete files that exist only on the target.
 `TARGET_SSH_DESTINATION` and `TARGET_WORKSPACE` provide explicit overrides when
-needed.
+needed. Generated diagnostic logs, monitor locks, and archived diagnostic runs
+remain target-local; only the tracked log-directory placeholders are copied.
 
 ## Convenience launchers
 
